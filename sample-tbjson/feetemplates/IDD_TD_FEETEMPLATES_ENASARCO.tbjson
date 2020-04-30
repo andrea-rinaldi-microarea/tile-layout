@@ -1,0 +1,122 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_ENASARCO",
+  "type": "Tile",
+  "name": "ENASARCO",
+  "size": "Wide",
+  "text": "ENASARCO",
+  "collapsible": true,
+  "x": 0,
+  "y": 0,
+  "width": 654,
+  "height": 58,
+  "hasStaticArea": true,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_ENASARCO_SECURITY",
+      "labelOnLeft": true,
+      "text": "Social Security",
+      "textAlign": "Right",
+      "anchor": "COL1",
+      "type": "Check",
+      "vertAlign": "Top",
+      "width": 109,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "SocialSecurity"
+      },
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_FEETEMPLATES_PERCENTAGE_ENASARCOFIRM",
+      "controlCaption": "% debited to Company",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 44,
+      "height": 12,
+      "numberDecimal": 3,
+      "tabStop": true,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.ENASARCOPerc"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "id": "IDC_FEETEMPLATES_PERCENTAGE_ENASARCOSALESPERSON",
+      "controlCaption": "% debited to Salesperson",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 44,
+      "height": 12,
+      "autoHScroll": true,
+      "minValue": 0,
+      "maxValue": 100,
+      "numberDecimal": 3,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.ENASARCOPercSalesPerson"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_ENASARCO_WELFARE",
+      "labelOnLeft": true,
+      "text": "Social Welfare",
+      "textAlign": "Right",
+      "anchor": "COL2",
+      "type": "Check",
+      "vertAlign": "Top",
+      "width": 109,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "SocialWelfare"
+      },
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_FEETEMPLATES_PERCENTAGE_ENASARCOASS",
+      "controlCaption": "% debited to Company",
+      "anchor": "COL2",
+      "type": "Edit",
+      "width": 44,
+      "height": 12,
+      "autoHScroll": true,
+      "minValue": 0,
+      "maxValue": 100,
+      "numberDecimal": 3,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.ENASARCOAssPerc"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "id": "IDC_FEETEMPLATES_PERCENTAGE_ENASARCOASS_SP",
+      "controlCaption": "% debited to Salesperson",
+      "anchor": "COL2",
+      "type": "Edit",
+      "width": 44,
+      "height": 12,
+      "autoHScroll": true,
+      "minValue": 0,
+      "maxValue": 100,
+      "numberDecimal": 3,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.ENASARCOAssPercSP"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "grid": "col"
+}

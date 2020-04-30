@@ -1,0 +1,30 @@
+﻿{
+  "id": "IDR_FD_LOAD_QUOTATIONS_AUX_ACCELERATOR",
+  "type": 66,
+  "accelerators": [
+    {
+      "id": "ID_LOAD_QUOTATIONS_OPEN_DOC",
+      "key": 68,//D
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    },
+    {
+      "id": "ID_LOAD_QUOTATIONS_MODIFY_DETAIL",
+      "key": 82,//R
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    },
+    {
+      "id": "ID_LOAD_QUOTATIONS_SELECT_DESELECT",
+      "key": 84,//T
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    }
+  ]
+}

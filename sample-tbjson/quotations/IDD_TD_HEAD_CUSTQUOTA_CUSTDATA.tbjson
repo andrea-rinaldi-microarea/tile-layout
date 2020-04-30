@@ -1,0 +1,89 @@
+﻿{
+  "context": "uicustquota",
+  "height": 54,
+  "hasStaticArea": true,
+  "id": "IDD_TD_HEAD_CUSTQUOTA_CUSTDATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustomerQuotation.UseCustomerOrContact"
+      },
+      "comboType": 2,
+      "controlClass": "EnumCombo",
+      "height": 67,
+      "id": "IDC_QUOTATIONS_TST_TAKE_CUST_FROM_MASTER",
+      "sort": true,
+      "type": "Combo",
+      "width": 115,
+      "captionSize": 0,
+      "controlSize": 5
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TST_TAKE_CUST_FROM_MASTER",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.Customer",
+        "hotLink": "HKLMasterCustomer",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "border": true,
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_CUSTOMER",
+      "masterType": "Customer",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 0,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TST_CUSTOMER",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.Contact",
+        "hotLink": "HKLQuotationCustomer",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Contacts.Dbl.Contacts"
+      },
+      "border": true,
+      "controlClass": "ContactsMasterEdit",
+      "numberer": {
+        "serviceNs": "ERP.Contacts.Components.ContactsCounterManagerObj"
+      },
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_CUSTOMER_QUOTATION",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 0,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustDescription"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 36,
+      "id": "IDC_QUOTATIONS_TST_CUSTDESCRIPTION",
+      "isStatic": true,
+      "noPrefix": true,
+      "tabStop": false,
+      "textAlign": "Left",
+      "type": "Label",
+      "width": 279,
+      "captionSize": 0,
+      "controlSize": 7
+    }
+  ],
+  "tabStop": false,
+  "type": "Tile",
+  "width": 325,
+  "size": "Standard",
+  "name": "HeaderCustData",
+  "grid": "col",
+  "customGrid": true
+}

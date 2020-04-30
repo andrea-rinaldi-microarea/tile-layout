@@ -1,0 +1,95 @@
+﻿{
+  "activation": "ERP.MasterData_BR",
+  "collapsible": true,
+  "collapsed": true,
+  "context": "Document.ERP.CustomerQuotations.Documents.CustQuota",
+  "hasTitle": true,
+  "height": 54,
+  "id": "IDD_TD_CUSTQUOTA_CHARGES_BR",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.ShippingCharges"
+      },
+      "border": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "controlCaption": "Shipment",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_SHIPPING",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.ShippingChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.InsuranceCharges"
+      },
+      "border": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "controlCaption": "Insurance",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_INSURANCE",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.InsuranceChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.AdditionalCharges"
+      },
+      "border": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "controlCaption": "Additional",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_ADDITIONAL",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.AdditionalChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "overlapped": true,
+  "pinnable": false,
+  "tabStop": false,
+  "text": "Charges",
+  "tileStyle": "Normal",
+  "type": "Tile",
+  "width": 325,
+  "hasStaticArea": true,
+  "grid": "col"
+}

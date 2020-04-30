@@ -1,0 +1,99 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_NO",
+  "items": [
+    {
+      "href": "M.ERP.Core.Constants.CoreLen"
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllQuotationNo"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_QUOTATIONNO_ALL",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 52,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "QuotationNoSel"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_QUOTATIONNO_SELECTION",
+      "tabStop": false,
+      "text": "Selection",
+      "type": "Radio",
+      "width": 53,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "FromQuotationNo",
+        "hotLink": "HKLQuotationStart",
+        "hotLinkNS": "ERP.CustomerQuotations.Dbl.CustQuota"
+      },
+      "controlClass": "NoNonFiscalNBEdit",
+      "numberer": {
+        "serviceNs": "ERP.IdsMng.Components.NumNotFiscManager"
+      },
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_QUOTATIONNO_START",
+      "textLimit": {
+        "const": "LEN_NO_DOC"
+      },
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2,
+      "marginLeft": 55,
+      "controlCaption": "From"
+    },
+    {
+      "anchor": "COL1",
+      "marginLeft": 55,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "ToQuotationNo",
+        "hotLink": "HKLQuotationEnd",
+        "hotLinkNS": "ERP.CustomerQuotations.Dbl.CustQuota"
+      },
+      "controlCaption": "To",
+      "controlClass": "NoNonFiscalNBEdit",
+      "numberer": {
+        "serviceNs": "ERP.IdsMng.Components.NumNotFiscManager"
+      },
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_QUOTATIONNO_END",
+      "textLimit": {
+        "const": "LEN_NO_DOC"
+      },
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2
+    }
+  ],
+  "name": "QuotaNo",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "Number",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

@@ -1,0 +1,14 @@
+﻿{
+  "id": "IDR_FEETEMPLATES_AUX_ACCELERATOR",
+  "type": 66,
+  "accelerators": [
+    {
+      "id": "ID_COPY_TEMPLATE_FEES",
+      "key": 67,
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    }
+  ]
+}

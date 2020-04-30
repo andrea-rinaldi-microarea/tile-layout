@@ -1,0 +1,66 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_NUMBERING",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 48,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "Numbering",
+  "text": "Numbering",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_AUTOMATICNUMBERING",
+      "type": "Check",
+      "text": "Automatic Numbering  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.AutomaticNumbering"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_TAXJOURN_PROTOCOL",
+      "type": "Check",
+      "text": "Protocol Numbering  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.IsAProtocol"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_TAXJOURN_BRANCH",
+      "type": "Edit",
+      "width": 27,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "IntegerEdit",
+      "binding": {
+        "datasource": "TaxJournals.BranchNumber"
+      },
+      "controlCaption": "Branch Number",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

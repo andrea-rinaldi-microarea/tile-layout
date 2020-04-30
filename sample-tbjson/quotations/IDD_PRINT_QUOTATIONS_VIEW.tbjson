@@ -1,0 +1,80 @@
+﻿{
+  "id": "IDD_PRINT_QUOTATIONS_VIEW",
+  "text": "Print Customer Quotations",
+  "bold": false,
+  "italic": false,
+  "underline": false,
+  "type": 1,
+  "width": 395,
+  "height": 102,
+   "items": [
+    {
+      "id": "IDC_TB_ACTIVITY_DOCUMENT_TG",
+      "name": "ActivityTileGroup",
+      "type": 72 /*TileGroup*/,
+      "width": 392,
+      "height": 100,
+      "hasPinnableTiles": true,
+      "layoutType": 4, /*VBOX*/
+      "items": [
+        {
+          "href": "M.Framework.TbGes.TbActivityDocument.IDC_TB_ACTIVITY_DOCUMENT_FILTERS", //fisso
+          "name": "filters", //fisso
+          "type": 88, /*FilterGroup*/
+          "collapsible": false,
+          "collapsed": false,
+          "showAsTile": true,
+          "layoutType": 1, /*COLUMN*/
+          "layoutAlign": 0, /*BEGIN*/
+          "text": "{{FiltersPanelText}}",
+          "items": [
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_PERIOD"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_CUSTOMER"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_CONTACT"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_NO"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_PRINTED"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_EMAIL"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_POSTALITE",
+              "activation": "bIsPostaLiteEnabled"
+            }
+          ]
+        },
+        {
+          "href": "M.Framework.TbGes.TbActivityDocument.IDC_TB_ACTIVITY_DOCUMENT_ACTIONS", //fisso
+          "name": "actions", //fisso
+          "type": 88, //FilterGroup
+          "collapsible": false,
+          "showAsTile": true,
+          "layoutType": 1, /*COLUMN*/
+          "layoutAlign": 0, /*BEGIN*/
+          "text": "{{ActionsPanelText}}",
+          "items": [
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_OPERATIONS_DOCUMENT"
+            },
+            {
+              "href": "IDD_TD_PRINT_QUOTATIONS_SORTBY"
+            }
+          ]
+        },
+        {
+          "href": "M.Framework.TbGes.TBActivityDocument.IDD_TB_ACTIVITY_DOCUMENT_TD_PROGRESS"
+        }
+      ]
+
+    }
+  ]
+}

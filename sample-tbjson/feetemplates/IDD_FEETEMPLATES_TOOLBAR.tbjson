@@ -1,0 +1,25 @@
+﻿{
+  "id": "IDD_EXTDOC_TOOLBAR",
+  "items": [
+    {
+      "id": "ID_EXTDOC_TOOLBAR_MAIN",
+      "items": [
+        {
+          "id": "ID_SEPARATOR",
+          "isSeparator": true,
+          "type": 15 /*ToolbarButton*/
+        },
+        {
+          "icon": "Framework.TbFrameworkImages.Images.25x25.Copy.png",
+          "id": "ID_COPY_TEMPLATE_FEES",
+          "name": "CopyTemplateFees",
+          "text": "Copy",
+          "hint": "Copy\r\nCopy Fees Template",
+          "type": 15 /*ToolbarButton*/
+        }
+      ],
+      "name": "Main",
+      "type": 14 /*Toolbar*/
+    }
+  ]
+}

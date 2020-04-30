@@ -1,0 +1,14 @@
+﻿{
+    "id": "IDC_TG_TAXJOURNAL",
+    "name": "TaxJournals",
+    "type": 72 /*TileGroup*/,
+    "context": "uiomniataxjournals",
+    "items": [
+        {
+            "href": "ERP.OMNIAConnector.OMNIATaxJournals.IDD_TD_OMNIA_TAXJOURNALS_TAB",
+            "activation": "ERP.OMNIAConnector"
+        }
+    ]
+}
+
+

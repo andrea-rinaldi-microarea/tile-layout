@@ -1,0 +1,49 @@
+﻿{
+  "id": "IDD_TAXJOURNAL_VIEW",
+  "name": "TaxJournals",
+  "type": 1/*View*/,
+  "child": true,
+  "context": "uitaxjournals",
+  "items": [
+    {
+      "id": "IDC_TG_TAXJOURNAL",
+      "name": "TaxJournals",
+      "type": 72/*TileGroup*/,
+      "layoutType": 4/*VBOX*/,
+      "items": [
+        {
+          "type": 78/*LayoutContainer*/,
+          "layoutType": 1/*COLUMN*/,
+          "items": [
+            {
+              "href": "IDD_TD_TAXJOURNAL_MAIN"
+            },
+            {
+              "href": "IDD_TD_TAXJOURNAL_ADDITIONAL"
+            }
+          ]
+        },
+        {
+          "activation": "ERP.TravelAgencyVAT && bUseTravelAgencyVATRegime",
+          "href": "IDD_TD_TAXJOURNAL_TRAVELAGENCY"
+        },
+        {
+           "activation" :  "ERP.ProRata",
+           "href": "IDD_TD_TAXJOURNAL_PRORATA"
+        },
+        {
+            "activation" :  "ERP.EuropeanUnion",
+          "href": "IDD_TD_TAXJOURNAL_EU"
+        },
+        {
+           "activation" :  "ERP.MarginTAX",
+           "href": "IDD_TD_TAXJOURNAL_MARGIN"
+        },
+        {
+            "activation" :  "ERP.MasterData_BG",
+          "href": "IDD_TD_TAXJOURNAL_NUMBERING"
+        }
+      ]
+    }
+  ]
+}

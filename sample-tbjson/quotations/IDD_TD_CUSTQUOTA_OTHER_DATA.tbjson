@@ -1,0 +1,198 @@
+﻿{
+  "context": "uicustquota",
+  "hasStaticArea": true,
+  "height": 128,
+  "collapsible": true,
+  "collapsed": true,
+  "id": "IDD_TD_CUSTQUOTA_OTHER_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.OurReference"
+      },
+      "controlCaption": "Our Reference",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ANN_OURREF_REF",
+      "type": "Edit",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "CustomerQuotation.YourReference",
+        "hotLink": {
+          "name": "HKLYourReference",
+          "selector": "HKLSelectorYourRef",
+          "items": [
+            {
+              "name": "CustSuppPeopleInvDoc",
+              "namespace": "ERP.InvoiceMng.Components.CustSuppPeopleInvDoc",
+              "mustExistData": false,
+              "enableAddOnFly": false
+            },
+            {
+              "name": "ContactPeople",
+              "namespace": "ERP.Contacts.Dbl.ContactsPeople",
+              "mustExistData": false,
+              "enableAddOnFly": false
+            }
+          ]
+        }
+      },
+      "controlCaption": "Your Reference",
+      "controlClass": "StrComboCustSuppPeople",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ANN_YOURSREF_REF",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.Notes"
+      },
+      "controlCaption": "Notes",
+      "controlClass": "StringEdit",
+      "height": 36,
+      "id": "IDC_QUOTATIONS_ANN_NOTES",
+      "multiline": true,
+      "type": "Edit",
+      "vScroll": true,
+      "wantReturn": true,
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustomerQuotation.FromExternalProgram"
+      },
+      "border": true,
+      "controlCaption": "From External Program",
+      "controlClass": "EnumStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_FROM_EXTERNAL_PROGRAM",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 115,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_REQUEST",
+      "linePosition": 1,
+      "text": "Customer Quotation Request",
+      "type": "Label",
+      "width": 324,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.RequestNo"
+      },
+      "controlCaption": "No.",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_NUM_REQUEST",
+      "type": "Edit",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.RequestDate"
+      },
+      "controlCaption": "Of",
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DATE_REQUEST",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "activation": "ERP.Languages",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.Language",
+        "hotLink": "HKLLanguages",
+        "hotLinkNS": "ERP.Languages.Dbl.Languages"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Language",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_LANGUAGE",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_LANGUAGE",
+      "activation": "ERP.Languages",
+      "binding": {
+        "datasource": "HKLLanguages.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_LANGUAGE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Notes.Notes"
+      },
+      "controlCaption": "Memo",
+      "controlClass": "StringEdit",
+      "height": 36,
+      "id": "IDC_QUOTATIONS_ANN_MEMO",
+      "multiline": true,
+      "type": "Edit",
+      "wantReturn": true,
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "Other Data",
+  "size": "Wide",
+  "text": "Other Data",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

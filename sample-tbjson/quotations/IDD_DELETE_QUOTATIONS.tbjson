@@ -1,0 +1,12 @@
+﻿{
+  "href": "M.Framework.TbGes.TBActivityDocument.IDD_TB_ACTIVITY_FRAME",
+  "name": "DeleteQuotations",
+  "items": [
+    {
+      "href": "M.Framework.TbGes.TBActivityDocument.IDD_TB_ACTIVITY_NO_LOAD_DATA_FRAME"
+    },
+    {
+      "href": "IDD_DELETE_QUOTATIONS_VIEW"
+    }
+  ]
+}

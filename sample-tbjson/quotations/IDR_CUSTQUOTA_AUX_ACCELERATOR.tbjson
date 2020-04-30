@@ -1,0 +1,14 @@
+﻿{
+  "id": "IDR_CUSTQUOTA_AUX_ACCELERATOR",
+  "type": 66,
+  "accelerators": [
+    {
+      "id": "ID_QUOTATIONS_DOC_BE_FORCE_CHANGE_ITM",
+      "key": 73, //I
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    }
+  ]
+}

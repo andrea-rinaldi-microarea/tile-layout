@@ -1,0 +1,12 @@
+﻿{
+  "href": "M.Framework.TbGes.TbActivityDocument.IDD_TB_ACTIVITY_FRAME",
+  "name": "CustomerConfirmCopyFrame",
+  "items": [
+    {
+      "href": "M.Framework.TbGes.TBActivityDocument.IDD_TB_ACTIVITY_NO_LOAD_DATA_FRAME"
+    },
+    {
+      "href": "IDD_COPY_CUST_CONFIRM_VIEW"
+    }
+  ]
+}

@@ -1,0 +1,227 @@
+﻿{
+  "context": "uicustquota",
+  "height": 20,
+  "id": "IDD_TD_RW_CUSTQUOTA_TOTALS",
+  "name": "DetailTotals",
+  "overlapped": true,
+  "text": "Totals",
+  "type": "Tile",
+  "size": "Wide",
+  "width": 654,
+  "hasStaticArea": true,
+  "collapsible": true,
+  "grid": "col",
+  "items": [
+    {
+      "anchor": "COL1",
+      "activation": "ERP.VATCalculation",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CUSTQUOTA_DETAIL_RW_TAX_SUMMARY",
+      "linePosition": "Top",
+      "text": "Tax Summary",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.VATCalculation",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Detail.TaxCode",
+        "hotLink": "HKLTAXDetail",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Company.Dbl.Tax"
+      },
+      "controlCaption": "Tax Code",
+      "controlClass": "StringComboDropDown",
+      "height": 66,
+      "id": "IDC_QUOTATIONS_DETAIL_TAXCODE",
+      "sort": true,
+      "type": "Combo",
+      "width": 61,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_TAXCODE",
+      "activation": "ERP.VATCalculation",
+      "binding": {
+        "datasource": "HKLTAXDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_TAXCODEDESCRI",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 156,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.VATCalculation",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.TaxableAmount"
+      },
+      "border": true,
+      "controlCaption": "Taxable Amount",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_TOT_TAXABLEAMOUNT",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.VATCalculation",
+      "binding": {
+        "datasource": "Detail.TaxAmount"
+      },
+      "border": true,
+      "controlCaption": "Tax",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_TOT_TAXAMOUNT",
+      "noPrefix": true,
+      "textAlign": "Right",
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.TotalAmount"
+      },
+      "border": true,
+      "controlCaption": "Line Total",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_TOTALAMOUNT",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CUSTQUOTA_DETAIL_RW_SHIPPING_TOT",
+      "linePosition": 1,
+      "tabStop": false,
+      "text": "Shipping Totals",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.PacksUoM"
+      },
+      "controlCaption": "Packs UoM",
+      "controlClass": "StringComboDropDown",
+      "itemSource": {
+        "name": "UnitsOfMeasureInvoiceComboBox",
+        "namespace": "ERP.InvoiceMng.Components.UnitsOfMeasureInvoiceComboBox"
+      },
+      "height": 56,
+      "comboType": "DropDown",
+      "id": "IDC_QUOTATIONS_DETAIL_PACKSUOM",
+      "sort": false,
+      "type": "Combo",
+      "width": 61,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.NoOfPacks"
+      },
+      "border": true,
+      "controlCaption": "No. of Packs",
+      "controlClass": "IntegerEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_NOOFPACKS",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.GrossVolume"
+      },
+      "border": true,
+      "controlCaption": "Gross Volume",
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_GROSSVOLUME",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.NetWeight"
+      },
+      "border": true,
+      "controlClass": "DoubleEdit",
+      "controlCaption": "Net Weight",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_NETWEIGHT",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.GrossWeight"
+      },
+      "border": true,
+      "controlCaption": "Gross Weight",
+      "controlClass": "DoubleEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_GROSSWEIGHT",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ]
+}

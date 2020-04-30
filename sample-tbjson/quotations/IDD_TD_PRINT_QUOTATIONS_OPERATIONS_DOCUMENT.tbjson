@@ -1,0 +1,75 @@
+﻿{
+  "hasTitle": true,
+  "height": 55,
+  "id": "IDD_TD_PRINT_QUOTATIONS_OPERATIONS_DOCUMENT",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "bIssue"
+      },
+      "controlBehaviour": {
+        "name": "CustQuotaPrintActionListBehaviour",
+        "namespace": "ERP.CustomerQuotations.Documents.CustQuotaPrintActionListBehaviour",
+        "itemSource": true,
+        "commandHandler": false,
+        "dataAdapter": false,
+        "validator": false
+      },
+      "border": false,
+      "controlClass": "BoolCheckListBox",
+      "hScroll": true,
+      "hasStrings": true,
+      "height": 24,
+      "id": "IDC_STEXPECTEDEN_ITEMS_LBX",
+      "noIntegralHeight": true,
+      "ownerDraw": "Fixed",
+      "transparent": true,
+      "type": "List",
+      "vScroll": true,
+      "width": 300,
+      "controlSize": 12,
+      "captionSize": 0
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "PrintMail"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_PRINTMAIL",
+      "multiline": true,
+      "text": "Always print sent documents",
+      "type": "Check",
+      "width": 233,
+      "controlSize": 9,
+      "captionSize": 0
+    },
+    {
+      "activation": "bIsPostaLiteEnabled",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "PrintPostaLite"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_PRINTPOSTALITE",
+      "multiline": true,
+      "text": "Always print documents sent via PostaLite",
+      "type": "Check",
+      "width": 241,
+      "controlSize": 9,
+      "captionSize": 0
+    }
+  ],
+  "name": "Operations",
+  "pinnable": false,
+  "text": "Operations",
+  "tileStyle": "Filter",
+  "transparent": true,
+  "type": "Tile",
+  "width": 325,
+  "grid": "col col-md-4",
+  "customGrid": true
+}

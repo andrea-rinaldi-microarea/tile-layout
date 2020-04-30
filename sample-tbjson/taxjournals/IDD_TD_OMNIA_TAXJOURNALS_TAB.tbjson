@@ -1,0 +1,32 @@
+﻿{
+  "id": "IDD_TD_OMNIA_TAXJOURNALS_TAB",
+  "type": "Tile",
+  "name": "OMNIA",
+  "text": "OMNIA",
+  "size": "Standard",
+  "x": 0,
+  "y": 0,
+  "width": 153,
+  "height": 24,
+  "child": true,
+  "context": "uiomniataxjournals",
+  "items": [
+    {
+      "id": "IDC_OMNIA_TAXJOURNALS_TAB_OMNIASECTION",
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "TaxJournals.OMNIASection"
+      },
+      "type": "Edit",
+      "width": 42,
+      "height": 12,
+      "autoHScroll": true,
+      "controlCaption": "Tax Section",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

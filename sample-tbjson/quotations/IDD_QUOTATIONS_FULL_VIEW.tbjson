@@ -1,0 +1,194 @@
+﻿{
+	"id": "IDD_QUOTATIONS_FULL_VIEW",
+  "name": "CustQuota",
+  "text": "Customer Quotations",
+	"type": 1, //View
+	"child": true,
+	"context": "uicustquota",
+	"items": [
+		{
+			"id": "IDC_TG_HEAD_CUSTQUOTA",
+			"name": "HeadTileGrp",
+			"type": 72 /*TileGroup*/,
+			"layoutType": 3, /*HBOX*/
+			"tileStyle": 3, /*TDS_HEADER*/
+			"flex": 0,
+			"items": [
+				{
+					"href": "IDD_TD_HEAD_CUSTQUOTA_MAIN"
+				},
+				{
+					"href": "IDD_TD_HEAD_CUSTQUOTA_CUSTDATA"
+				}
+			]
+		},
+		{
+			"id": "IDC_TM_CUST_QUOTA",
+			"name": "CustQuota",
+			"type": 76 /*TileManager*/,
+			"items": [
+				{
+					"id": "IDC_TG_CUST_QUOTA_MAIN_DATA",
+					"name": "MainData",
+					"type": 72 /*TileGroup*/,
+					"text": "Main &Data",
+					"icon": "Image.ERP.Core.Images.25x25.Sales.png",
+					"hint": "Main Data",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_CUSTQUOTA_MAIN_DATA"
+						},
+						{
+							"type": 78, /*LayoutContainer*/
+							"layoutType": 1, /*COLUMN*/
+							"collapsible": true,
+							"items": [
+								{
+									"href": "IDD_TD_CUSTQUOTA_CURRENCY"
+								},
+								{
+									"href": "IDD_TD_CUSTQUOTA_DELIVERY"
+								}
+							]
+						},
+						{
+							"href": "IDD_TD_CUSTQUOTA_DETAIL_FULL"
+						},
+            {
+              "type": 78, /*LayoutContainer*/
+              "layoutType": 1, /*COLUMN*/
+              "id": "ID_CONTAINER_CUST_QUOTA_TOTALS",
+              "collapsible": true,
+              "items": [
+                {
+                  "href": "IDD_TD_FOOT_CUSTQUOTA_SHIPPING_TOTALS"
+                },
+                {
+                  "href": "IDD_TD_FOOT_CUSTQUOTA_TOTALS"
+                }
+              ]
+            }
+
+					]
+				},
+				{
+					"id": "IDC_TG_CUST_QUOTA_SUMMARY",
+					"name": "Summary",
+					"type": 72 /*TileGroup*/,
+					"text": "Summa&ry",
+					"icon": "Image.ERP.Core.Images.25x25.Money.png",
+					"hint": "Summary",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"type": 78, /*LayoutContainer*/
+							"layoutType": 1, /*COLUMN*/
+							"collapsible": true,
+							"items": [
+								{
+									"href": "IDD_TD_CUSTQUOTA_CHARGES_BR",
+									"activation": "Erp.MasterData_BR"
+								},
+								{
+									"href": "IDD_TD_CUSTQUOTA_CHARGES",
+									"activation": "!Erp.MasterData_BR"
+								}
+							]
+						},
+						{
+							"href": "IDD_TD_CUSTQUOTA_TOTALS"
+						},
+						{
+							"href": "IDD_TD_CUSTQUOTA_TAX_SUMMARY",
+							"activation": "Erp.VATCalculation"
+						}
+
+					]
+				},
+				{
+					"id": "IDC_TG_CUST_QUOTA_ADMINISTRATIVE_DATA",
+					"name": "Administrative Data",
+					"type": 72 /*TileGroup*/,
+					"text": "&Administrative Data",
+					"icon": "Image.ERP.Core.Images.25x25.Accounting.png",
+					"hint": "Administrative Data",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_CUSTQUOTA_ACCOUNTING"
+						},
+						{
+							"type": 78, /*LayoutContainer*/
+							"layoutType": 1, /*COLUMN*/
+							"collapsible": true,
+							"items": [
+								{
+									"href": "IDD_TD_CUSTQUOTA_BANKS"
+								},
+								{
+									"href": "IDD_TD_CUSTQUOTA_RECIPIENTS"
+								}
+							]
+						}
+
+					]
+				},
+				{
+					"id": "IDC_TG_CUST_QUOTA_DELIVERY",
+					"name": "Delivery",
+					"type": 72 /*TileGroup*/,
+					"text": "Del&ivery",
+					"icon": "Image.ERP.Core.Images.25x25.DeliveryNote.png",
+					"hint": "Delivery",
+					"layoutType": 1, /*COLUMN*/
+					"items": [
+						{
+							"activation": "Erp.Inventory",
+							"href": "IDD_TD_CUSTQUOTA_INVENTORY"
+						},
+						{
+							"activation": "Erp.MasterData_BR",
+							"href": "IDD_TD_CUSTQUOTA_SHIPPING_BR"
+						},
+
+						{
+							"activation": "!Erp.MasterData_BR",
+							"href": "IDD_TD_CUSTQUOTA_SHIPPING"
+						}
+
+					]
+				},
+				{
+					"id": "IDC_TG_CUST_QUOTA_OTHER_DATA",
+					"name": "OtherData",
+					"type": 72 /*TileGroup*/,
+					"text": "O&ther Data",
+					"icon": "Image.ERP.Core.Images.25x25.SalesMore.png",
+					"hint": "Other Data",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_CUSTQUOTA_OTHER_DATA"
+						}
+					]
+				},
+				{
+					"id": "IDC_TG_CUST_QUOTA_SALES_PEOPLE",
+					"name": "SalesPeople",
+					"type": 72 /*TileGroup*/,
+					"text": "Salespeop&le",
+					"icon": "Image.ERP.Core.Images.25x25.SalesPeople.png",
+					"hint": "Sales People",
+					"activation": "Erp.SalesPeople",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_CUSTQUOTA_SALESPEOPLE"
+						}
+					]
+				}
+			]
+		}
+	]
+}

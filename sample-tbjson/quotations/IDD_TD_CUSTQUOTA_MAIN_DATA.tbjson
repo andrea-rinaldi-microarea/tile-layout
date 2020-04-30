@@ -1,0 +1,106 @@
+﻿{
+  "collapsible": true,
+  "context": "uicustquota",
+  "height": 34,
+  "id": "IDD_TD_CUSTQUOTA_MAIN_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "CustomerQuotation.Payment",
+        "hotLink": "HKLPaymentTerms",
+        "hotLinkNS": "ERP.PaymentTerms.Dbl.PaymentTerms"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Payment",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_PYMTTERM",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TST_PYMTTERM",
+      "binding": {
+        "datasource": "HKLPaymentTerms.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_PYMTTERMDESCRI",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "datasource": "CustomerQuotation.PriceList",
+        "hotLink": "HKLPriceLists",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.PricePolicies.Dbl.PriceLists"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Price List",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_PRICELIST",
+      "activation": "ShowPriceList()",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_PRICELIST",
+      "binding": {
+        "datasource": "HKLPriceLists.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_PRICELIST",
+      "activation": "ShowPriceList()",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "activation": "bVATCalculationIsActivated",
+      "binding": {
+        "datasource": "CustomerQuotation.NetOfTax"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_QUOTATIONS_ADT_AMOUNTS_DETAIL_AL_NET_TAX",
+      "isText": true,
+      "labelOnLeft": true,
+      "text": "Prices do not include Tax  ",
+      "textAlign": "Center",
+      "type": "Check",
+      "vertAlign": "Top",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "name": "MainData",
+  "size": "Wide",
+  "text": "Main Data",
+  "collapsedTitle": "{{CollapsedTitleMainData}}",
+  "type": "Tile",
+  "width": 654,
+  "hasStaticArea": true,
+  "grid": "col"
+}

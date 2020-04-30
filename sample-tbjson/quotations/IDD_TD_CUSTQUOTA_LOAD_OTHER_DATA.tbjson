@@ -1,0 +1,67 @@
+﻿{
+  "collapsed": true,
+  "collapsible": true,
+  "context": "uicustquotaloading",
+  "hasStaticArea": true,
+  "height": 177,
+  "id": "IDD_TD_CUSTQUOTA_LOAD_OTHER_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaLoading.OurReference"
+      },
+      "border": true,
+      "controlCaption": "Our Reference",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_ANN_OURREF_REF",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 224,
+      "captionSize": 3,
+      "controlSize": 9
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaLoading.YourReference"
+      },
+      "border": true,
+      "controlCaption": "Your Reference",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_ANN_YOURSREF_REF",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 224,
+      "captionSize": 3,
+      "controlSize": 9
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotaLoading.Notes"
+      },
+      "border": true,
+      "controlCaption": "Notes",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 24,
+      "id": "IDC_LOAD_QUOTATION_ANN_NOTES",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 224,
+      "captionSize": 3,
+      "controlSize": 9
+    }
+  ],
+  "name": "OtherData",
+  "size": "Wide",
+  "text": "Other Data",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

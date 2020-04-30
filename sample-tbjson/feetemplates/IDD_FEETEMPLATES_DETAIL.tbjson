@@ -1,0 +1,39 @@
+﻿{
+    "id": "IDD_FEETEMPLATES_DETAIL",
+    "name": "FeeTemplateRow",
+    "type": 66 /*View*/,
+    "child": true,
+    "context": "uifeetemplates",
+    "items": [
+        {
+            "id": "IDC_TG_FEETEMPLATES_ROW",
+            "name": "FeeTemplatesRow",
+            "type": 72 /*TileGroup*/,
+            "layoutType": 4 /*VBOX*/,
+            "items": [
+                {
+                    "type": 78 /*LayoutContainer*/,
+                    "layoutType": 1 /*COLUMN*/,
+                    "items": [
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_ROW_MAIN_DATA"
+                        }
+                    ]
+                },
+                {
+                    "type": 78 /*LayoutContainer*/,
+                    "layoutType": 1 /*COLUMN*/,
+                    "items": [
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_ROW_CALCULATION"
+                        },
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_ROW_CONTRIBUTION",
+                            "activation": "bIsActivated_INPS || bIsActivated_Enasarco || bIsActivated_770"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,31 @@
+﻿{
+  "height": 30,
+  "id": "IDD_TD_CUST_CONFIRM_CODE",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Code"
+      },
+      "border": true,
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_SALESORDER_CONFIRM_CODE",
+      "masterType": "Customer",
+      "type": "Edit",
+      "width": 80,
+      "controlSize": 3,
+      "captionSize": 0
+    }
+  ],
+  "name": "CustCode",
+  "pinnable": false,
+  "overlapped": true,
+  "tabStop": false,
+  "text": "New Customer Code",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col"
+}

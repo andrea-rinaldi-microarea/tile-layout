@@ -1,0 +1,48 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 55,
+  "id": "IDD_TD_PRINT_QUOTATIONS_SORTBY",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "OrderedByCustomer"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_SORTTIFORCUSTOMER",
+      "tabStop": false,
+      "text": "Customer Code",
+      "type": "Radio",
+      "width": 96,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "OrderedByNo"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_SORTTIFORNUMBER",
+      "tabStop": false,
+      "text": "Number",
+      "type": "Radio",
+      "width": 95,
+      "controlSize": 1,
+      "captionSize": 2
+    }
+  ],
+  "name": "SortBy",
+  "pinnable": false,
+  "size": "Mini",
+  "text": "Sort by...",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

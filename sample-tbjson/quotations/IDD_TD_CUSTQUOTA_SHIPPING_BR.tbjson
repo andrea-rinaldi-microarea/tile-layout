@@ -1,0 +1,51 @@
+﻿{
+  "activation": "ERP.MasterData_BR and ERP.Shippings",
+  "context": "Document.ERP.CustomerQuotations.Documents.CustQuota",
+  "hasTitle": true,
+  "height": 40,
+  "id": "IDD_TD_CUSTQUOTA_SHIPPING_BR",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Shipping.Package",
+        "hotLink": "HKLPackages",
+        "hotLinkNS": "ERP.Shippings.Dbl.Packages"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Packing",
+      "height": 65,
+      "id": "IDC_QUOTATIONS_CSP_PACKAGE",
+      "type": "Combo",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CSP_PACKAGE",
+      "binding": {
+        "datasource": "HKLPackages.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CSP_DESCRI_PACKAGE",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "overlapped": true,
+  "tabStop": false,
+  "text": "Shipping",
+  "type": "Tile",
+  "width": 325,
+  "hasStaticArea": true,
+  "grid": "col"
+}

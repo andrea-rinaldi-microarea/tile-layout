@@ -1,0 +1,32 @@
+﻿{
+	"href": "M.ERP.InvoiceMng.UIInvoiceDoc.IDD_INVOICE_DOCUMENT",
+  "name": "CustQuotaFrame",
+  "id": "IDD_QUOTATIONS_FULL",
+  "items": [
+    {
+      "href": "IDD_QUOTATIONS_FULL_VIEW"
+    },
+    {
+      "activation": "ERP.BarcodeManager",
+      "href": "M.ERP.Barcode.BarcodeHelper.IDD_BARCODE_HELPER_TOOLBAR"
+    },
+    {
+      "href": "D.ERP.CustomerQuotations.LoadQuotations.IDD_CUSTQUOTA_LOAD_TOOLBAR"
+    },
+    {
+      "href": "M.ERP.InvoiceMng.UIInvoiceDoc.IDD_EXECUTETOTAL_TOOLBAR_MAIN"
+    },
+    {
+      "href": "M.ERP.Items.AlternativeCodificationSelection.IDD_SELECTIONS_CODIFICATION_ALTERNATIVE_TB_MAIN"
+    },
+    {
+      "href": "M.ERP.PricePolicies.CheckPrices.IDD_CHECK_PRICES_TOOLBAR_MAIN"
+    },
+    {
+      "href": "D.ERP.SupplierQuotations.SuppQuotaLoading.IDD_LOAD_SUPPQUOTATIONS_TOOLBAR"
+    },
+    {
+      "href": "M.ERP.Core.UILinksPanel.IDD_PNL_LINKSPANEL_DOCK_PANE"
+    }
+  ]
+}

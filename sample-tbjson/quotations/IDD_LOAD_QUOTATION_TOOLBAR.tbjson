@@ -1,0 +1,25 @@
+﻿{
+  "id": "IDD_EXTDOC_FINDER_TOOLBAR",
+  "items": [
+    {
+      "id": "ID_EXTDOC_TOOLBAR_MAIN",
+      "items": [
+        {
+          "icon": "Framework.TbFrameworkImages.Images.25x25.Open.png",
+          "id": "ID_LOAD_QUOTATIONS_OPEN_DOC",
+          "name": "OpenDocument",
+          "text": "Open Document",
+          "hint": "Open Selected Document",
+          "type": 15 /*ToolbarButton*/
+        },
+        {
+          "icon": "Framework.TbFrameworkImages.Images.25x25.Extract.png",
+          "id": "ID_EXTDOC_SAVE",
+          "type": 15 /*ToolbarButton*/
+        }
+      ],
+      "name": "Main",
+      "type": 14 /*Toolbar*/
+    }
+  ]
+}

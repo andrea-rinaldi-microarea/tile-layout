@@ -1,0 +1,48 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_EU",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 16,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "EU",
+  "text": "EU Data",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_ANNOTATIONINVOICEEU",
+      "type": "Check",
+      "text": "DEDICATED Sales Journal  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.EUAnnotation"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_STATIC_TAXJOURN_ANNOTATIONINVOICEEU",
+      "type": "Label",
+      "text": "(for Received EU Invoice Notes)",
+      "anchor": "IDC_TAXJOURN_ANNOTATIONINVOICEEU",
+      "width": 161,
+      "height": 8,
+      "textAlign": "Left",
+      "font": {
+        "italic": true
+      },
+      "captionSize": 6,
+      "controlSize": 6
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

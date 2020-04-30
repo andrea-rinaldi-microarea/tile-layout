@@ -1,0 +1,56 @@
+﻿{
+  "context": "uicustquota",
+  "height": 44,
+  "id": "IDD_TD_HEAD_CUSTQUOTA_MAIN",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustomerQuotation.QuotationNo"
+      },
+      "border": true,
+      "controlCaption": "Number",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_QUOTATIONNO",
+      "stateData": {
+        "binding": {
+          "datasource": "bAutomaticNumbering"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 90,
+      "controlClass": "NoNonFiscalEdit",
+      "numberer": {
+        "serviceNs": "ERP.IdsMng.Components.NumNotFiscManager",
+        "enableCtrlInEdit": "{{bEnableCtrlInEdit}}"
+      },
+      "controlSize": 4,
+      "captionSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.QuotationDate"
+      },
+      "border": true,
+      "controlClass": "DateEdit",
+      "controlCaption": "Of",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_QUOTATIONDATE",
+      "type": "Edit",
+      "width": 57,
+      "controlSize": 3,
+      "captionSize": 3
+    }
+  ],
+  "tabStop": false,
+  "type": "Tile",
+  "width": 161,
+  "size": "Mini",
+  "name": "HeaderMain",
+  "hasStaticArea": true,
+  "grid": "col",
+  "customGrid": true
+}

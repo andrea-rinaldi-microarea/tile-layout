@@ -1,0 +1,50 @@
+﻿{
+  "context": "uicustquota",
+  "height": 53,
+  "id": "IDD_TD_CUSTQUOTA_DELIVERY",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.ExpectedDeliveryDate"
+      },
+      "border": true,
+      "controlClass": "DateEdit",
+      "controlCaption": "Deliver on",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_EXPECTEDDELIVERYDATE",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.ValidityEndingDate"
+      },
+      "border": true,
+      "controlClass": "DateEdit",
+      "controlCaption": "Expire on",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPIRINGDATE",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "tabStop": false,
+  "type": "Tile",
+  "width": 325,
+  "size": "Standard",
+  "collapsible": true,
+  "collapsed": true,
+  "name": "Delivery",
+  "text": "Delivery",
+  "collapsedTitle": "{{CollapsedTitleDelivery}}",
+  "hasStaticArea": true,
+  "grid": "col"
+}

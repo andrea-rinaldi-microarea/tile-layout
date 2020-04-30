@@ -1,0 +1,62 @@
+﻿{
+  "context": "uicustquotadeleting",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_DELETE_QUOTATIONS_PRINTED",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllPrinted"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_RMEXPECTEDEN_ALLPRINTED",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 117,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "NoPrinted"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_RMEXPECTEDEN_NOPRINTED",
+      "tabStop": false,
+      "text": "Not Printed",
+      "type": "Radio",
+      "width": 115,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "Printed"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_RMEXPECTEDEN_PRINTED",
+      "tabStop": false,
+      "text": "Printed",
+      "type": "Radio",
+      "width": 112,
+      "controlSize": 1,
+      "captionSize": 2
+    }
+  ],
+  "name": "Printed",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "Printed",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col "
+}

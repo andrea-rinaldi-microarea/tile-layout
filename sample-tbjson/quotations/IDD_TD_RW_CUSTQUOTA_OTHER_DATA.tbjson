@@ -1,0 +1,111 @@
+﻿{
+  "context": "uicustquota",
+  "hasStaticArea": true,
+  "height": 177,
+  "id": "IDD_TD_RW_CUSTQUOTA_OTHER_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Detail.Notes"
+      },
+      "controlCaption": "Notes",
+      "controlClass": "StringEdit",
+      "height": 36,
+      "id": "IDC_QUOTATIONS_DETAIL_NOTES",
+      "multiline": true,
+      "type": "Edit",
+      "wantReturn": true,
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Detail.Department",
+        "hotLink": {
+          "name": "HKLDepartmentDetail",
+          "namespace": "ERP.Items.Dbl.Departments"
+        }
+      },
+      "controlCaption": "Department",
+      "controlClass": "StringComboDropDown",
+      "height": 30,
+      "id": "IDC_QUOTATIONS_DETAIL_DEPARTMENT",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_DEPARTMENT",
+      "binding": {
+        "datasource": "HKLDepartmentDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DEPARTMENTDESCRI",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 9,
+      "id": "IDC_STATIC_CUSTQUOTA_EXT_REF",
+      "linePosition": "Top",
+      "text": "External References",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.ReferenceDocNo"
+      },
+      "controlCaption": "Document Number",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_EXTREFERENCEDOCNO",
+      "type": "Edit",
+      "width": 93,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.ExternalLineReference"
+      },
+      "controlCaption": "Line",
+      "controlClass": "IntegerEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_EXTERNALLINEREFERENCE",
+      "type": "Edit",
+      "width": 48,
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "name": "OtherDataLine",
+  "text": "Other Data",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}

@@ -1,0 +1,517 @@
+﻿{
+  "context": "uicustquota",
+  "height": 167,
+  "id": "IDD_TD_RW_CUSTQUOTA_MAIN_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "Detail.LineType"
+      },
+      "comboType": 2,
+      "controlCaption": "Line Type",
+      "controlClass": "EnumCombo",
+      "height": 66,
+      "id": "IDC_QUOTATIONS_DETAIL_BE_LINETYPE",
+      "name": "LineType",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },	
+    {
+      "environment": "desktop",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.Item",
+        "hotLink": "HKLItemDetail",
+        "hotLinkNS": "ERP.Items.Components.ItemsForRadarSales",
+        "mustExistData": "{{bCheckExistItem}}",
+        "enableAddOnFly": true
+      },
+      "controlCaption": "Item",
+      "controlClass": "ItemsSubstituteInvoiceComboBox",
+      "href": "M.ERP.InvoiceMng.InvoiceMngControls.IDD_ITEMSUBSTITUTEINVOICE_CONTROLBEHAVIOUR",
+      "height": 30,
+      "id": "IDC_QUOTATIONS_DETAIL_ITEM",
+      "name": "Item",
+      "sort": false,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },    
+	{
+      "environment": "web",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.Item",
+        "hotLink": "HKLItemDetailByGoodType",
+        "hotLinkNS": "ERP.Items.Dbl.ItemsByGoodType",
+        "mustExistData": "{{bCheckExistItem}}",
+        "enableAddOnFly": true
+      },
+      "controlCaption": "Item",
+      "controlClass": "ItemsSubstituteInvoiceComboBox",
+      "href": "M.ERP.InvoiceMng.InvoiceMngControls.IDD_ITEMSUBSTITUTEINVOICE_CONTROLBEHAVIOUR",
+      "height": 30,
+      "id": "IDC_QUOTATIONS_DETAIL_ITEM",
+      "name": "Item",
+      "sort": false,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL1",
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Detail.Description"
+      },
+      "controlClass": "StringEdit",
+      "height": 24,
+      "id": "IDC_QUOTATIONS_DETAIL_COMPLETEDESCRI",
+      "multiline": true,
+      "type": "Edit",
+      "vScroll": true,
+      "wantReturn": true,
+      "chars": 32,
+      "rows": 4,
+      "width": 223,
+      "captionSize": 3,
+      "controlSize": 9
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.UoM"
+      },
+      "controlCaption": "UoM",
+      "controlClass": "StringComboDropDown",
+      "itemSource": {
+        "name": "UnitsOfMeasureInvoiceComboBox",
+        "namespace": "ERP.InvoiceMng.Components.UnitsOfMeasureInvoiceComboBox"
+      },
+      "comboType": "DropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_DETAIL_UOM",
+      "sort": false,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_UOM",
+      "marginLeft": 54,
+      "activation": "ERP.Variants",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Variant",
+        "hotLink": "HKLVariantDetail",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Variants.Dbl.Variants"
+      },
+      "controlCaption": "Variant",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DOC_DETAIL_VARIANT",
+      "type": "Edit",
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Qty"
+      },
+      "controlCaption": "Quantity",
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_QTY",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_QTY",
+      "marginLeft": 76,
+      "activation": "bDrawingAsItemAlias",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Drawing",
+        "hotLink": "HKLDrawingsDetail",
+        "hotLinkNS": "ERP.BillOfMaterials.Dbl.Drawings"
+      },
+      "controlCaption": "Drawing",
+      "controlClass": "ItemEdit", //ItemEdit gia' a Dicembre 2018
+      "textLimit": "{{nCodItemLength}}",
+      "numberer": {
+        "serviceNs": "ERP.Items.Components.NumeratorItemsManager"
+      },
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DOC_DETAIL_DRAWING",
+      "type": "Edit",
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_SALEORD_DETAIL_ADD_QTY",
+      "linePosition": 1,
+      "text": "Additional Quantities",
+      "type": "Label",
+      "width": 324,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.AdditionalQty",
+      "binding": {
+        "datasource": "AddQty1Descri"
+      },
+      "border": true,
+      "controlCaption": "1.",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY1",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 88,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY1",
+      "activation": "ERP.AdditionalQty",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AdditionalQty1"
+      },
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY1",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 0,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.AdditionalQty",
+      "binding": {
+        "datasource": "AddQty2Descri"
+      },
+      "border": true,
+      "controlCaption": "2.",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY2",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 88,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY2",
+      "activation": "ERP.AdditionalQty",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AdditionalQty2"
+      },
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY2",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 0,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.AdditionalQty",
+      "binding": {
+        "datasource": "AddQty3Descri"
+      },
+      "border": true,
+      "controlCaption": "3.",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY3",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 88,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY3",
+      "activation": "ERP.AdditionalQty",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AdditionalQty3"
+      },
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY3",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 0,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.AdditionalQty",
+      "binding": {
+        "datasource": "AddQty4Descri"
+      },
+      "border": true,
+      "controlCaption": "4.",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY4",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 88,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_DETAIL_RW_DESCRIADDQTY4",
+      "activation": "ERP.AdditionalQty",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AdditionalQty"
+      },
+      "controlClass": "QuantityEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY4",
+      "type": "Edit",
+      "width": 40,
+      "captionSize": 0,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL2",
+      "activation": "!ERP.MasterData_BR",
+      "binding": {
+        "datasource": "Detail.SaleType"
+      },
+      "controlCaption": "Sale Type",
+      "comboType": 2,
+      "controlClass": "EnumCombo",
+      "height": 30,
+      "id": "IDC_QUOTATIONS_DETAIL_SALETYPE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 100,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.UnitValue"
+      },
+      "controlCaption": "Unit Value",
+      "controlClass": "ValuesUnitaryCombo",
+      "href": "M.ERP.PricePolicies.PricePoliciesControls.IDD_VALUESUNITARY_CONTROLBEHAVIOUR",
+      "height": 30,
+      "id": "IDC_QUOTATIONS_DETAIL_VAL_UNIT",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 100,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "datasource": "Detail.DiscountFormula"
+      },
+      "controlCaption": "% Discount",
+      "href": "M.ERP.PricePolicies.PricePoliciesControls.IDD_DISCOUNTS_CONTROLBEHAVIOUR",
+      "controlClass": "DiscountsCombo",
+      "height": 56,
+      "id": "IDC_QUOTATIONS_DETAIL_DISCOUNT",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 100,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.DiscountAmount"
+      },
+      "controlCaption": "Discount Amount",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_TOT_DISCOUNT",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.NetPrice"
+      },
+      "controlCaption": "Net Price",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{NACurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_PRICE_NET",
+      "name": "NetPrice",
+      "stateData": {
+        "binding": {
+          "datasource": "Detail.NetPriceIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Position"
+      },
+      "controlCaption": "Position",
+      "controlClass": "IntegerEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_POSITION",
+      "type": "Edit",
+      "width": 48,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.ExpectedDeliveryDate"
+      },
+      "controlCaption": "Delivery Expected on",
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DATE_DELIVEXPECTED",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bPricePoliciesIsActivated && bManageDocumentRowPriceList",
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Detail.PriceList",
+        "hotLink": "HKLPriceListsDetail",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.PricePolicies.Dbl.PriceLists"
+      },
+      "controlCaption": "Price List",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_DETAIL_PRICELIST",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bPricePoliciesIsActivated && bManageDocumentRowPriceList",
+      "anchor": "IDC_QUOTATIONS_DETAIL_PRICELIST",
+      "binding": {
+        "datasource": "HKLPriceListsDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DESCRI_PRICELIST",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "Detail.NoPrint"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_QUOTATIONS_DETAIL_NOTPRINT",
+      "isText": true,
+      "labelOnLeft": true,
+      "text": "No Print ",
+      "textAlign": "Center",
+      "type": "Check",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "Detail.NoCopyOnOrder"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_QUOTATIONS_DETAIL_NOTINORDER",
+      "isText": true,
+      "labelOnLeft": true,
+      "text": "Not in Order ",
+      "textAlign": "Center",
+      "type": "Check",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "name": "DetailMainData",
+  "size": "Wide",
+  "text": "Main Data",
+  "type": "Tile",
+  "width": 654,
+  "hasStaticArea": true,
+  "grid": "col"
+}

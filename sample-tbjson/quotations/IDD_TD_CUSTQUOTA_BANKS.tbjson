@@ -1,0 +1,141 @@
+﻿{
+  "context": "uicustquota",
+  "height": 93,
+  "id": "IDD_TD_CUSTQUOTA_BANKS",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.CustomerBank",
+        "hotLink": "HKLCustomerBank",
+        "hotLinkNS": "ERP.Banks.Dbl.CompanyBanks"
+      },
+      "href": "D.ERP.Banks.SearchBankBranch.IDD_SEARCHBANKBRANCH_CONTROLBEHAVIOUR",
+      "controlCaption": "Customer's Bank",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_BANK_CUST",
+      "controlBehaviour": {
+        "name": "SearchBankBranchCBBankCust"
+      },
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_BANK_CUST",
+      "binding": {
+        "datasource": "HKLCustomerBank.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 24,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_BANK_CUST",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 157,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.CompanyBank",
+        "hotLink": "HKLCompanyBank",
+        "hotLinkNS": "ERP.Banks.Dbl.CompanyBanks"
+      },
+      "href": "D.ERP.Banks.SearchBankBranch.IDD_SEARCHBANKBRANCH_CONTROLBEHAVIOUR",
+      "controlCaption": "Business Bank",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_BANK_FIRM",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_BANK_FIRM",
+      "binding": {
+        "datasource": "HKLCompanyBank.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 24,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_BANK_FIRM",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 157,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.CompanyCA",
+        "hotLink": "HKLBillsCAs",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Banks.Dbl.BanksBillAccounts"
+      },
+      "border": true,
+      "controlClass": "StringEdit",
+      "controlCaption": "Business CA",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_CA_FIRM",
+      "type": "Edit",
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_CA_FIRM",
+      "activation": "ERP.BillsReceivables",
+      "binding": {
+        "datasource": "CustomerQuotation.Presentation"
+      },
+      "border": true,
+      "controlClass": "EnumStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_PRESENTATION",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 113,
+      "captionSize": 0,
+      "controlSize": 5
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.BillsReceivables || ERP.PVR",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.CompanyPymtCA",
+        "hotLink": "HKLBanksCAs",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Banks.Dbl.BanksAccounts"
+      },
+      "border": true,
+      "controlClass": "StringEdit",
+      "controlCaption": "Business Payment CA",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_CA_PYMT_FIRM",
+      "type": "Edit",
+      "width": 105,
+      "captionSize": 3,
+      "controlSize": 4
+    }
+  ],
+  "text": "Banks",
+  "type": "Tile",
+  "width": 325,
+  "hasStaticArea": true,
+  "grid": "col"
+}

@@ -1,0 +1,252 @@
+﻿{
+  "context": "uicustquotaloading",
+  "height": 177,
+  "id": "IDD_TD_CUSTQUOTA_LOAD_DETAIL",
+  "items": [
+    {
+      "binding": {
+        "datasource": "CustQuotaDetailLoading"
+      },
+      "height": 177,
+      "id": "IDC_LOAD_QUOTATION_DETAIL_BODY",
+      "items": [
+        {
+          "type": "Toolbar",
+          "items": [
+            {
+              "enabled": "{{bEnableBtn}}",
+              "icon": "Image.Framework.TbFrameworkImages.Images.25x25.Select.png",
+              "id": "ID_LOAD_QUOTATIONS_SELECT_DESELECT",
+              "name": "Deselect",
+              "text": "{{ButtonSelectedText}}",
+              "hint": "{{ButtonSelectedText}}",
+              "type": "ToolbarButton"
+            },
+            {
+              "icon": "Image.Framework.TbFrameworkImages.Images.25x25.Edit.png",
+              "id": "ID_LOAD_QUOTATIONS_MODIFY_DETAIL",
+              "name": "EditLines",
+              "text": "Edit Lines",
+              "hint": "Edit Lines",
+              "type": "ToolbarButton"
+            }
+          ]
+        },
+        {
+          "binding": {
+            "datasource": "Selected"
+          },
+          "controlClass": "CheckBox",
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_SELECTED",
+          "name": "Selected",
+          "text": "Selected",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "ExpectedDeliveryDate"
+          },
+          "controlClass": "DateEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_DATAPREVDELIV",
+          "name": "ExpectedDeliveryDate",
+          "noChangeGrayed": true,
+          "text": "Exp. Deliv.",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "LineType"
+          },
+          "controlClass": "EnumCombo",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_LINETYPE",
+          "name": "LineType",
+          "noChangeGrayed": true,
+          "text": "Line Type",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.BillOfMaterialsPlus",
+          "binding": {
+            "datasource": "Drawing"
+          },
+          "controlClass": "ItemEdit",
+          "textLimit": "{{nCodItemLength}}",
+          "numberer": {
+            "serviceNs": "ERP.Items.Components.NumeratorItemsManager"
+          },
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_DRAWING",
+          "name": "Drawing",
+          "noChangeGrayed": true,
+          "text": "Drawing",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "Item"
+          },
+          "controlClass": "ItemEdit",
+          "textLimit": "{{nCodItemLength}}",
+          "numberer": {
+            "serviceNs": "ERP.Items.Components.NumeratorItemsManager"
+          },
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_ITEM",
+          "name": "Item",
+          "noChangeGrayed": true,
+          "text": "Item",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "Description"
+          },
+          "chars": 32,
+          "rows": 4,
+          "controlClass": "StringEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_COMPLETEDESCRI",
+          "name": "CompleteDescri",
+          "noChangeGrayed": true,
+          "text": "Description",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "UoM"
+          },
+          "controlClass": "StringEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_UOM",
+          "name": "UoM",
+          "noChangeGrayed": true,
+          "text": "UoM",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "QtyToReceipt"
+          },
+          "controlClass": "QuantityEdit",
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_QTY",
+          "name": "QtyToReceipt",
+          "text": "Quantity",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.Variants",
+          "binding": {
+            "datasource": "Variant"
+          },
+          "controlClass": "ItemEdit", //ItemEdit gia' a Dicembre 2018
+          "textLimit": "{{nCodItemLength}}",
+          "numberer": {
+            "serviceNs": "ERP.Items.Components.NumeratorItemsManager"
+          },
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_VARIANT",
+          "name": "Variant",
+          "noChangeGrayed": true,
+          "text": "Variant",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "UnitValue"
+          },
+          "controlClass": "MoneyEdit",
+          "numberDecimal": "{{NACurrencyDecimal}}",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_VAL_UNIT",
+          "name": "UnitValue",
+          "noChangeGrayed": true,
+          "text": "Unit Value",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "TaxableAmount"
+          },
+          "controlClass": "MoneyEdit",
+          "numberDecimal": "{{CurrencyDecimal}}",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_TOT_TAXABLEAMOUNT",
+          "name": "TaxableAmount",
+          "noChangeGrayed": true,
+          "text": "Taxable Amount",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "DiscountFormula"
+          },
+          "controlClass": "StringEdit",
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_DISCOUNT",
+          "name": "DiscountFormula",
+          "text": "Discount",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "TaxCode"
+          },
+          "controlClass": "StringEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_TAXCODE",
+          "name": "TaxCode",
+          "noChangeGrayed": true,
+          "text": "Tax Code",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "NoPrint"
+          },
+          "controlClass": "BoolEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_NOTPRINT",
+          "name": "NotPrint",
+          "noChangeGrayed": true,
+          "text": "Not Print",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "NoCopyOnOrder"
+          },
+          "controlClass": "BoolEdit",
+          "grayed": true,
+          "id": "IDC_LOAD_QUOTATION_DETAIL_BE_NOTINORDER",
+          "name": "NotInOrder",
+          "noChangeGrayed": true,
+          "text": "No Order",
+          "type": "ColTitle"
+        }
+      ],
+      "name": "LoadQuotaDetails",
+      "showDataTip": true,
+      "showHeaderToolbar": true,
+      "showStatusBar": true,
+      "allowMultipleSel": true,
+      "addRowEnabled": false,
+      "insertRowEnabled": false,
+      "deleteRowEnabled": false,
+      "selectionColumn": true,
+      "selectionColumnField": "Selected",
+      "allowInsert": false,
+      "allowDelete": true,
+      "linesPerRow": 1,
+      "text": "Lines",
+      "type": "BodyEdit",
+      "width": 324,
+      "anchor": "COL1"
+    }
+  ],
+  "name": "Detail",
+  "size": "AutoFill",
+  "text": "Detail",
+  "type": "Tile",
+  "width": 325
+}

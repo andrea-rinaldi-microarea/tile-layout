@@ -1,0 +1,50 @@
+﻿{
+  "collapsible": false,
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_PERIOD",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "StartingDate"
+      },
+      "controlCaption": "From",
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_DATE_START",
+      "type": "Edit",
+      "width": 62,
+      "controlSize": 3,
+      "captionSize": 2,
+      "marginLeft": 45
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "EndingDate"
+      },
+      "controlCaption": "To",
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_DATE_END",
+      "type": "Edit",
+      "width": 62,
+      "controlSize": 3,
+      "captionSize": 2,
+      "marginLeft": 45
+    }
+  ],
+  "name": "Period",
+  "pinnable": false,
+  "size": "Mini",
+  "text": "Period",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

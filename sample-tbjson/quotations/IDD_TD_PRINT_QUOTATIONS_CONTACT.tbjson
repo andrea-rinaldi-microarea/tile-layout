@@ -1,0 +1,92 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_CONTACT",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllContact"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_CONTACTS_ALL",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 52,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "ContactSel"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_CONTACTS_SELECTION",
+      "tabStop": false,
+      "text": "Selection",
+      "type": "Radio",
+      "width": 53,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "FromContact",
+        "hotLink": "HKLFromContact",
+        "enableAddOnFly": false,
+        "hotLinkNS": "ERP.Contacts.Dbl.Contacts"
+      },
+      "controlClass": "ContactsMasterEdit",
+      "numberer": {
+        "serviceNs": "ERP.Contacts.Components.ContactsCounterManagerObj"
+      },
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_CONTACT_START",
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2,
+      "marginLeft": 55,
+      "controlCaption": "From"
+    },
+    {
+      "anchor": "COL1",
+      "marginLeft": 55,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "ToContact",
+        "hotLink": "HKLToContact",
+        "enableAddOnFly": false,
+        "hotLinkNS": "ERP.Contacts.Dbl.Contacts"
+      },
+      "controlCaption": "To",
+      "controlClass": "ContactsMasterEdit",
+      "numberer": {
+        "serviceNs": "ERP.Contacts.Components.ContactsCounterManagerObj"
+      },
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_CONTACT_END",
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2
+    }
+  ],
+  "name": "Contact",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "Contact",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

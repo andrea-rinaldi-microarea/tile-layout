@@ -1,0 +1,13 @@
+﻿{
+  "href": "M.Framework.TbGes.TbActivityDocument.IDD_TB_ACTIVITY_FRAME",
+  "id": "IDD_FEETEMPLATES_COPY",
+  "name": "FeeTemplatesCopy",
+  "items": [
+    {
+      "href": "M.Framework.TbGes.TBActivityDocument.IDD_TB_ACTIVITY_NO_LOAD_DATA_FRAME"
+    },
+    {
+      "href": "IDD_FEETEMPLATES_COPY_VIEW"
+    }
+  ]
+}

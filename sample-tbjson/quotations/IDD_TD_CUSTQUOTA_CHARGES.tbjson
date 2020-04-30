@@ -1,0 +1,132 @@
+﻿{
+  "collapsible": true,
+  "collapsed": true,
+  "context": "uicustquota",
+  "hasStaticArea": true,
+  "height": 85,
+  "id": "IDD_TD_CUSTQUOTA_CHARGES",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.ShippingCharges"
+      },
+      "controlCaption": "Shipment",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_SHIPPING",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.ShippingChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.PackagingCharges"
+      },
+      "controlCaption": "Packing",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_PACKAGE",
+      "minValue": 0,
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.PackagingChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.CollectionCharges"
+      },
+      "controlCaption": "Collection",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_COLLECTION",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.CollectionChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.AdditionalCharges"
+      },
+      "controlCaption": "Additional",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_ADDITIONAL",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.AdditionalChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.Stamps",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.StampsCharges"
+      },
+      "controlCaption": "Stamps",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_STAMPS",
+      "minValue": "0",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.StampsChargesIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "Charges",
+  "text": "Charges",
+  "collapsedTitle": "{{CollapsedTitleCharges}}",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}

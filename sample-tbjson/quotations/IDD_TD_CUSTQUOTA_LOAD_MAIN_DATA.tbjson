@@ -1,0 +1,121 @@
+﻿{
+  "collapsed": true,
+  "collapsible": true,
+  "context": "uicustquotaloading",
+  "hasStaticArea": true,
+  "height": 177,
+  "id": "IDD_TD_CUSTQUOTA_LOAD_MAIN_DATA",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaLoading.Payment",
+        "hotLink": "HKLPaymentTermsLoad",
+        "hotLinkNS": "ERP.PaymentTerms.Dbl.PaymentTerms"
+      },
+      "border": true,
+      "controlCaption": "Payment",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_PYMTTERM",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 53,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "IDC_LOAD_QUOTATION_PYMTTERM",
+      "binding": {
+        "datasource": "HKLPaymentTermsLoad.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_PYMTTERMDESCRI",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 166,
+      "captionSize": 3,
+      "controlSize": 7
+    },
+    {
+      "activation": "ERP.Currencies",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaLoading.Currency",
+        "hotLink": "HKLCurrenciesLoad",
+        "hotLinkNS": "ERP.Currencies.Dbl.Currencies"
+      },
+      "border": true,
+      "controlCaption": "Currency",
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CURRENCY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 53,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "activation": "ERP.Currencies",
+      "anchor": "IDC_LOAD_QUOTATION_CURRENCY",
+      "binding": {
+        "datasource": "HKLCurrenciesLoad.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CURRDESCRIPTION",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 166,
+      "captionSize": 3,
+      "controlSize": 7
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotaLoading.ExpectedDeliveryDate"
+      },
+      "border": true,
+      "controlCaption": "Deliver on",
+      "controlClass": "DateStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_EXPECTEDDELIVERYDATE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotaLoading.ValidityEndingDate"
+      },
+      "controlCaption": "Expire on",
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATIONS_EXPIRINGDATE",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "CustQuotaLoadMainData",
+  "size": "Wide",
+  "text": "Main Data",
+  "collapsedTitle": "{{MainDataTileTitleColl}}",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

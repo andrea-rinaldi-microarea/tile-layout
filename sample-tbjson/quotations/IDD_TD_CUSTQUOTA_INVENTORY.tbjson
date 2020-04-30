@@ -1,0 +1,247 @@
+﻿{
+  "context": "uicustquota",
+  "height": 101,
+  "id": "IDD_TD_CUSTQUOTA_INVENTORY",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.InvRsn",
+        "hotLink": "HKLInvEntr",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Inventory.Dbl.InventoryReasons"
+      },
+      "controlCaption": "Inventory Reason",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_RSN_RSN_ENTRY",
+      "name": "IDC_QUOTATIONS_RSN_RSN_ENTRY",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_RSN_RSN_ENTRY",
+      "binding": {
+        "datasource": "HKLInvEntr.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_RSN_ENTRY",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_RSN_ENTRY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.StubBook",
+        "hotLink": "HKLStubBook",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.IdsMng.Dbl.StubBooks"
+      },
+      "controlCaption": "Stub Book",
+      "controlClass": "StringComboDropDown",
+      "height": 63,
+      "id": "IDC_QUOTATIONS_RSN_STUBBOOK",
+      "name": "IDC_QUOTATIONS_RSN_STUBBOOK",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_RSN_STUBBOOK",
+      "binding": {
+        "datasource": "HKLStubBook.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_STUBBOOK",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_STUBBOOK",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.StoragePhase1",
+        "hotLink": "HKLStorageF1",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.MultiStorage.Dbl.Storages"
+      },
+      "controlCaption": "Phase 1 Storage",
+      "controlClass": "StringComboDropDown",
+      "height": 63,
+      "id": "IDC_QUOTATIONS_RSN_STORAGE_1",
+      "name": "IDC_QUOTATIONS_RSN_STORAGE_1",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "IDC_QUOTATIONS_RSN_STORAGE_1",
+      "binding": {
+        "datasource": "HKLStorageF1.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_STORAGE_1",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_STORAGE_1",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.SpecificatorPhase1",
+        "hotLink": "HKLSpecificatorF1",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "controlCaption": "Specificator Phase 1",
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 13,
+      "id": "IDC_QUOTATIONS_RSN_SPECIFICATOR_1",
+      "masterType": "{{sMasterTypeF1}}",
+      "name": "IDC_QUOTATIONS_RSN_SPECIFICATOR_1",
+      "type": "Edit",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "IDC_QUOTATIONS_RSN_SPECIFICATOR_1",
+      "binding": {
+        "datasource": "HKLSpecificatorF1.CompanyName"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_SPECIFICATOR_1",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_SPECIFICATOR_1",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.StoragePhase2",
+        "hotLink": "HKLStorageF2",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.MultiStorage.Dbl.Storages"
+      },
+      "controlCaption": "Phase 2 Storage",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_RSN_STORAGE_2",
+      "masterType": "{{sMasterTypeF2}}",
+      "name": "IDC_QUOTATIONS_RSN_STORAGE_2",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.SpecificatorPhase2",
+        "hotLink": "HKLSpecificatorF2",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "controlCaption": "Specificator Phase 2",
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_SPECIFICATOR_2",
+      "name": "IDC_QUOTATIONS_RSN_SPECIFICATOR_2",
+      "type": "Edit",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "IDC_QUOTATIONS_RSN_SPECIFICATOR_2",
+      "binding": {
+        "datasource": "HKLSpecificatorF2.CompanyName"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_SPECIFICATOR_2",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_SPECIFICATOR_2",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.MultiStorage",
+      "anchor": "IDC_QUOTATIONS_RSN_STORAGE_2",
+      "binding": {
+        "datasource": "HKLStorageF2.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_STORAGE_2",
+      "name": "IDC_QUOTATIONS_RSN_DESCRI_STORAGE_2",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "Inventory",
+  "text": "Inventory",
+  "type": "Tile",
+  "width": 325,
+  "hasStaticArea": true,
+  "grid": "col"
+}

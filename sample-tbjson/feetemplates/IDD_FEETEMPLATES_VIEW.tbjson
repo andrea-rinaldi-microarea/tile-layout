@@ -1,0 +1,59 @@
+﻿{
+    "id": "IDD_FEETEMPLATES_VIEW",
+    "name": "FeeTemplate",
+    "text": "Fee Templates",
+    "type": 1 /*View*/,
+    "child": true,
+    "context": "uifeetemplates",
+    "items": [
+        {
+            "id": "IDC_TG_FEETEMPLATES",
+            "name": "Header",
+            "type": 72 /*TileGroup*/,
+            "layoutType": 4 /*VBOX*/,
+            "items": [
+                {
+                    "type": 78 /*LayoutContainer*/,
+                    "layoutType": 1 /*COLUMN*/,
+                    "items": [
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_MAIN_DATA"
+                        },
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_PERCENTAGES"
+                        }
+                    ]
+                },
+                {
+                    "type": 78 /*LayoutContainer*/,
+                    "layoutType": 1 /*COLUMN*/,
+                    "collapsible": true,
+                    "items": [
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_DECLA_DATA"
+                        },
+                        {
+                            "href": "IDD_TD_FEETEMPLATES_INPS",
+                            "activation": "bIsActivated_INPS"
+                        }
+                    ]
+                },
+              {
+                "id": "IDC_CONTAINER_ENASARCO",
+                "type": 78 /*LayoutContainer*/,
+                "layoutType": 1 /*COLUMN*/,
+                "collapsible": true,
+                "activation": "bIsActivated_Enasarco",
+                "items": [
+                  {
+                    "href": "IDD_TD_FEETEMPLATES_ENASARCO"
+                  }
+                ]
+              },
+                {
+                    "href": "IDD_TD_FEETEMPLATES_DETAIL"
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+﻿{
+  "context": "uicustquota",
+  "height": 56,
+  "id": "IDD_TD_CUSTQUOTA_CURRENCY",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.Currency",
+        "hotLink": "HKLCurrenciesCurrObj",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Currencies.Dbl.Currencies"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Currency",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_CURRENCY",
+      "type": "Combo",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TST_CURRENCY",
+      "binding": {
+        "datasource": "HKLCurrenciesCurrObj.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_DESCRI_CURRENCY",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.FixingDate"
+      },
+      "border": true,
+      "controlClass": "DateEdit",
+      "controlCaption": "Fixing Date",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TST_DATE_FIXING",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TST_DATE_FIXING",
+      "marginLeft": 90,
+      "binding": {
+        "datasource": "CustomerQuotation.Fixing",
+        "hotLink": "HKLFixing",
+        "hotLinkNS": "ERP.Currencies.Components.FixingForCurrencyDoc",
+        "buttonId": 0
+      },
+      "controlClass": "FixingCtrl",
+      "controlCaption": "Fixing Value",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DOC_FIXING",
+      "type": "Combo",
+      "width": 68,
+      "stateData": {
+        "binding": {
+          "datasource": "CustomerQuotation.FixingIsManual"
+        },
+        "invertState": false
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "tabStop": false,
+  "type": "Tile",
+  "width": 325,
+  "collapsible": true,
+  "collapsed": true,
+  "name": "Currency",
+  "text": "Currency",
+  "collapsedTitle": "{{CollapsedTitleCurrency}}",
+  "size": "Standard",
+  "activation": "ERP.Currencies",
+  "hasStaticArea": true,
+  "grid": "col"
+}

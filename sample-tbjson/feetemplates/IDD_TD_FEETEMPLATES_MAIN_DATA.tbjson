@@ -1,0 +1,47 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_MAIN_DATA",
+  "type": "Tile",
+  "name": "MainData",
+  "size": "Standard",
+  "text": "Main Data",
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 58,
+  "hasStaticArea": true,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_CODE",
+      "controlCaption": "Template",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 62,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "FeeTemplates.FeeTpl"
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "id": "IDC_FEETEMPLATES_DESCRIPTION",
+      "controlCaption": "Description",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 154,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "FeeTemplates.Description"
+      },
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "grid": "col"
+}

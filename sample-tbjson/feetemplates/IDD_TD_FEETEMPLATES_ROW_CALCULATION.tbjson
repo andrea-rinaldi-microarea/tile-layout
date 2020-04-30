@@ -1,0 +1,83 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_ROW_CALCULATION",
+  "type": "Tile",
+  "name": "Calculation",
+  "size": "Mini",
+  "text": "Calculation Parameters",
+  "width": 161,
+  "height": 58,
+  "x": 0,
+  "y": 0,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_TAXINCLUDED",
+      "labelOnLeft": true,
+      "text": "Tax Calculation",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 127,
+      "anchor": "COL1",
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.Tax"
+      },
+      "controlSize": 1,
+      "captionSize": 3
+    },
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_WTINCLUDED",
+      "labelOnLeft": true,
+      "text": "WT Calculation",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 127,
+      "anchor": "COL1",
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.WithholdingTax"
+      },
+      "controlSize": 1,
+      "captionSize": 3
+    },
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_CHARGE_ANTICIALA",
+      "labelOnLeft": true,
+      "text": "Advance Expense",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 127,
+      "anchor": "COL1",
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.IsAnAdvanceExpense"
+      },
+      "activation": "bIsActivated_770",
+      "controlSize": 1,
+      "captionSize": 3
+    },
+    {
+      "height": 18,
+      "id": "IDC_FEETEMPLATES_DOPERATIONAMT",
+      "labelOnLeft": true,
+      "multiline": true,
+      "text": "WT Excluded for Double Taxation",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 127,
+      "anchor": "COL1",
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.WithholdingTaxExcluded"
+      },
+      "activation": "bIsActivated_770",
+      "controlSize": 1,
+      "captionSize": 3
+    }
+  ],
+  "grid": "col",
+  "customGrid": true
+}

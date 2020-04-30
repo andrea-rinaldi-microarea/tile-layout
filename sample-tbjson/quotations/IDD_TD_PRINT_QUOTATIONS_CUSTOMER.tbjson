@@ -1,0 +1,88 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_CUSTOMER",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllCustomer"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_CUSTOMERS_ALL",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 52,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustomerSel"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_CUSTOMERS_SELECTION",
+      "tabStop": false,
+      "text": "Selection",
+      "type": "Radio",
+      "width": 53,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "parent": "IDC_STEXPECTEDEN_CUSTOMERS_SELECTION",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "FromCustomer",
+        "hotLink": "HKLFromCustomer",
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_CUSTOMER_START",
+      "masterType": "Customer",
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2,
+      "marginLeft": 55,
+      "controlCaption": "From"
+    },
+    {
+      "anchor": "COL1",
+      "parent": "IDC_STEXPECTEDEN_CUSTOMERS_SELECTION",
+      "marginLeft": 55,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "ToCustomer",
+        "hotLink": "HKLToCustomer",
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "controlCaption": "To",
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_STEXPECTEDEN_CUSTOMER_END",
+      "masterType": "Customer",
+      "type": "Edit",
+      "width": 92,
+      "controlSize": 4,
+      "captionSize": 2
+    }
+  ],
+  "name": "Customer",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "Customer",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

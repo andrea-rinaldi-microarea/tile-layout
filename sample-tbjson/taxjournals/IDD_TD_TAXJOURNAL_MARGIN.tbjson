@@ -1,0 +1,34 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_MARGIN",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 161,
+  "height": 16,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "Margin",
+  "text": "Margin Regime",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_MARGIN_TAX",
+      "type": "Check",
+      "text": "For margin Tax only  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.MarginTAX"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

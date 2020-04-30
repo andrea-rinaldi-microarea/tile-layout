@@ -1,0 +1,56 @@
+﻿{
+  "context": "uicustquotaloading",
+  "height": 60,
+  "id": "IDD_TD_HEAD_CUSTQUOTA_LOAD_MAIN",
+  "items": [
+    {
+      "href": "M.ERP.Core.Constants.CoreLen"
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotaLoading.QuotationNo"
+      },
+      "controlCaption": "Number",
+      "captionWidth": 45,
+      "controlClass": "NoNonFiscalNBEdit",
+      "numberer": {
+        "serviceNs": "ERP.IdsMng.Components.NumNotFiscManager"
+      },
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_QUOTATIONNO",
+      "textLimit": {
+        "const": "LEN_NO_DOC"
+      },
+      "type": "Edit",
+      "width": 57,
+      "controlSize": 3,
+      "captionSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotaLoading.QuotationDate"
+      },
+      "controlCaption": "Of",
+      "captionWidth": 45,
+      "controlClass": "DateEdit",
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_QUOTATIONDATE",
+      "type": "Edit",
+      "width": 57,
+      "controlSize": 3,
+      "captionSize": 3
+    }
+  ],
+  "name": "CustQuotaLoadHeadMain",
+  "size": "Mini",
+  "text": "Document Data",
+  "tileStyle": "Header",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col col-md-6",
+  "customGrid": true
+}

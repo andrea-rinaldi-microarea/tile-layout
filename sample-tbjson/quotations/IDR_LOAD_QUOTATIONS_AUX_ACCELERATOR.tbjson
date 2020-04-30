@@ -1,0 +1,14 @@
+﻿{
+  "id": "IDR_LOAD_QUOTATIONS_AUX_ACCELERATOR",
+  "type": 66,
+  "accelerators": [
+    {
+      "id": "ID_QUOTATIONS_TST_OPEN_BROWSER",
+      "key": 81, // Q
+      "virtualKey": true,
+      "control": true,
+      "alt": true,
+      "noInvert": true
+    }
+  ]
+}

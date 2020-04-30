@@ -1,0 +1,112 @@
+﻿{
+  "context": "uicustquota",
+  "height": 43,
+  "id": "IDD_TD_FOOT_CUSTQUOTA_SHIPPING_TOTALS",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Shipping.NoOfPacks"
+      },
+      "border": true,
+      "controlClass": "IntegerEdit",
+      "controlCaption": "No. of Packs",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CSP_TOT_NO_PACKS",
+      "type": "Edit",
+      "width": 57,
+      "stateData": {
+        "binding": {
+          "datasource": "Shipping.NoOfPacksIsAuto"
+        },
+        "invertState": true
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Shipping.GrossVolume"
+      },
+      "border": true,
+      "controlClass": "DoubleEdit",
+      "controlCaption": "Gross Volume",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CSP_TOT_GROSSVOLUME",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 57,
+      "stateData": {
+        "binding": {
+          "datasource": "Shipping.GrossVolumeIsAuto"
+        },
+        "invertState": true
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CSP_TOT_NO_PACKS",
+      "marginLeft": 100,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Shipping.NetWeight"
+      },
+      "border": true,
+      "controlClass": "DoubleEdit",
+      "controlCaption": "Net Weight",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CSP_TOT_WEIGHT_NET",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 57,
+      "stateData": {
+        "binding": {
+          "datasource": "Shipping.NetWeightIsAuto"
+        },
+        "invertState": true
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CSP_TOT_GROSSVOLUME",
+      "marginLeft": 100,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Shipping.GrossWeight"
+      },
+      "border": true,
+      "controlClass": "DoubleEdit",
+      "controlCaption": "Gross Weight",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CSP_TOT_WEIGHT_GROSS",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 57,
+      "stateData": {
+        "binding": {
+          "datasource": "Shipping.GrossWeightIsAuto"
+        },
+        "invertState": true
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "tabStop": false,
+  "type": "Tile",
+  "width": 325,
+  "name": "ShippingTotals",
+  "text": "Shipping Totals",
+  "collapsedTitle": "{{CollapsedTitleShippingTotals}}",
+  "size": "Standard",
+  "collapsible": true,
+  "collapsed": true,
+  "tileStyle": "Footer",
+  "hasStaticArea": true,
+  "grid": "col"
+}

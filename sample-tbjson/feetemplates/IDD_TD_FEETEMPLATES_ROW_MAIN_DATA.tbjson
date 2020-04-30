@@ -1,0 +1,48 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_ROW_MAIN_DATA",
+  "type": "Tile",
+  "name": "MainData",
+  "size": "Standard",
+  "text": "Main Data",
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 58,
+  "hasStaticArea": true,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_PARTICIPA_DESCRIPTION",
+      "controlCaption": "Fee Line Description",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 190,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "Detail.Description"
+      },
+      "captionSize": 3,
+      "controlSize": 8
+    },
+    {
+      "id": "IDC_FEETEMPLATES_AMOUNTGENERIC",
+      "controlCaption": "General Line Amount",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 84,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "binding": {
+        "datasource": "Detail.Amount"
+      },
+      "captionSize": 3,
+      "controlSize": 4
+    }
+  ],
+  "grid": "col"
+}

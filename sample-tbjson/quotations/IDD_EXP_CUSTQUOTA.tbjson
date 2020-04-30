@@ -1,0 +1,286 @@
+﻿{
+  "id": "IDD_EXP_CUSTQUOTA",
+  "rcId": 13841,
+  "type": 66,
+  "text": "Customer Quotations",
+  "x": 0,
+  "y": 0,
+  "width": 212,
+  "height": 190,
+  "child": true,
+  "context": "uixmlcustquota",
+  "items": [
+    {
+      "id": "IDC_EXP_CUSTQUOTA_DOCDATEEVERYONE",
+      "type": 10,
+      "text": "All",
+      "x": 10,
+      "y": 18,
+      "width": 86,
+      "height": 10,
+      "group": true,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_DOCDATESEL",
+      "type": 10,
+      "text": "Selection",
+      "x": 10,
+      "y": 28,
+      "width": 87,
+      "height": 10,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_FROMDOCDATE",
+      "type": 13,
+      "x": 10,
+      "y": 50,
+      "width": 51,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_TODOCDATE",
+      "type": 13,
+      "x": 10,
+      "y": 76,
+      "width": 51,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_DOCNOEVERYONE",
+      "type": 10,
+      "text": "All",
+      "x": 117,
+      "y": 18,
+      "width": 84,
+      "height": 10,
+      "group": true,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_DOCNOSEL",
+      "type": 10,
+      "text": "Selection",
+      "x": 117,
+      "y": 28,
+      "width": 83,
+      "height": 10,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_FROMDOCNO",
+      "type": 13,
+      "x": 117,
+      "y": 50,
+      "width": 60,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_TODOCNO",
+      "type": 13,
+      "x": 117,
+      "y": 76,
+      "width": 60,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_CUSTALL",
+      "type": 10,
+      "text": "All",
+      "x": 13,
+      "y": 110,
+      "width": 84,
+      "height": 10,
+      "group": true,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_CUSTSEL",
+      "type": 10,
+      "text": "Selection",
+      "x": 13,
+      "y": 121,
+      "width": 84,
+      "height": 10,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_FROMCUSTOMER",
+      "type": 13,
+      "x": 13,
+      "y": 142,
+      "width": 84,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_TOCUSTOMER",
+      "type": 13,
+      "x": 13,
+      "y": 169,
+      "width": 84,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_CONTALL",
+      "type": 10,
+      "text": "All",
+      "x": 115,
+      "y": 110,
+      "width": 87,
+      "height": 10,
+      "group": true,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_CONTSEL",
+      "type": 10,
+      "text": "Selection",
+      "x": 115,
+      "y": 121,
+      "width": 85,
+      "height": 10,
+      "auto": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_FROMCONT",
+      "type": 13,
+      "x": 115,
+      "y": 142,
+      "width": 84,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_EXP_CUSTQUOTA_ACONT",
+      "type": 13,
+      "x": 115,
+      "y": 169,
+      "width": 84,
+      "height": 12,
+      "autoHScroll": true
+    },
+    {
+      "id": "IDC_STATIC_1",
+      "type": 9,
+      "text": "Quotation Date",
+      "x": 6,
+      "y": 5,
+      "width": 98,
+      "height": 88
+    },
+    {
+      "id": "IDC_STATIC_2",
+      "type": 2,
+      "text": "From...",
+      "x": 10,
+      "y": 40,
+      "width": 87,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_3",
+      "type": 2,
+      "text": "To...",
+      "x": 10,
+      "y": 64,
+      "width": 88,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_4",
+      "type": 9,
+      "text": "Quotation No.",
+      "x": 111,
+      "y": 5,
+      "width": 96,
+      "height": 88
+    },
+    {
+      "id": "IDC_STATIC_5",
+      "type": 2,
+      "text": "From...",
+      "x": 117,
+      "y": 40,
+      "width": 76,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_6",
+      "type": 2,
+      "text": "To...",
+      "x": 117,
+      "y": 64,
+      "width": 82,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_7",
+      "type": 9,
+      "text": "Customer Code",
+      "x": 6,
+      "y": 97,
+      "width": 98,
+      "height": 88
+    },
+    {
+      "id": "IDC_STATIC_8",
+      "type": 2,
+      "text": "From...",
+      "x": 13,
+      "y": 132,
+      "width": 83,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_9",
+      "type": 2,
+      "text": "To...",
+      "x": 13,
+      "y": 156,
+      "width": 84,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC_10",
+      "type": 9,
+      "text": "Contact Code",
+      "x": 111,
+      "y": 97,
+      "width": 96,
+      "height": 88
+    },
+    {
+      "id": "IDC_STATIC_11",
+      "type": 2,
+      "text": "From...",
+      "x": 115,
+      "y": 132,
+      "width": 85,
+      "height": 8,
+      "textAlign": 0
+    },
+    {
+      "id": "IDC_STATIC",
+      "type": 2,
+      "text": "To...",
+      "x": 115,
+      "y": 156,
+      "width": 84,
+      "height": 8,
+      "textAlign": 0
+    }
+  ]
+}

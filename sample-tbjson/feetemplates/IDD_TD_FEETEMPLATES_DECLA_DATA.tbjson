@@ -1,0 +1,88 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_DECLA_DATA",
+  "name": "DeclarationData",
+  "type": "Tile",
+  "text": "Declaration Data",
+  "size": "Standard",
+  "collapsible": true,
+  "width": 325,
+  "height": 66,
+  "overlapped": true,
+  "context": "uifeetemplates",
+  "hasStaticArea": true,
+  "items": [
+    {
+      "auto": true,
+      "height": 64,
+      "id": "IDC_FEETEMPLATES_REASON",
+      "sort": true,
+      "controlCaption": "Duty Code",
+      "anchor": "COL1",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 61,
+      "controlClass": "StringComboDropDown",
+      "binding": {
+        "datasource": "FeeTemplates.Duty",
+        "hotLink": "HKLDutyCodes",
+        "buttonId": 0,
+        "hotLinkNS": "ERP.Payees.Dbl.DutyCodes",
+        "mustExistData": true
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "border": true,
+      "group": true,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_DESCRI_REASON_PAYMENT",
+      "noPrefix": true,
+      "anchor": "COL1",
+      "type": "Label",
+      "width": 168,
+      "controlClass": "StringStatic",
+      "binding": {
+        "datasource": "HKLDutyCodes.Description"
+      },
+      "captionSize": 3,
+      "controlSize": 7
+    },
+    {
+      "autoHScroll": true,
+      "border": true,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_FRAME",
+      "controlCaption": "Frame 770",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 48,
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "FeeTemplates.Form770Frame"
+      },
+      "activation": "bIsActivated_770",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "height": 10,
+      "id": "IDC_FEETEMPLATES_COMPENYES_DEPR",
+      "labelOnLeft": true,
+      "text": "Administrator fee ",
+      "textAlign": "Right",
+      "anchor": "COL1",
+      "type": "Check",
+      "vertAlign": "Top",
+      "width": 109,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "FeeTemplates.DirectorRemuneration"
+      },
+      "activation": "bIsActivated_770",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "grid": "col"
+}

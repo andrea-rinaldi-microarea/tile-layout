@@ -1,0 +1,63 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_POSTALITE",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "PostaLiteNo"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_POSTALITE_NO",
+      "tabStop": false,
+      "text": "Not Sent",
+      "type": "Radio",
+      "width": 98,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "PostaLiteYes"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_POSTALITE_YES",
+      "tabStop": false,
+      "text": "Sent",
+      "type": "Radio",
+      "width": 98,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllPostaLite"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_POSTALITE_EVERYONE",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 96,
+      "controlSize": 1,
+      "captionSize": 2
+    }
+  ],
+  "name": "PostaLite",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "PostaLite",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

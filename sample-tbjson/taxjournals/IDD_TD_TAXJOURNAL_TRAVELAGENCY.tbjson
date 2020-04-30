@@ -1,0 +1,51 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_TRAVELAGENCY",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 161,
+  "height": 28,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "TravelAgency",
+  "text": "Travel Agency",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_TRAVEL",
+      "type": "Check",
+      "text": "Travel Agency Journal  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.IsTravelAgencyJournal"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_TAXJOURN_TRAVEL_CALC",
+      "type": "Check",
+      "text": "Travel Agency TAX calculation  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.InTravelAgencyCalculation"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

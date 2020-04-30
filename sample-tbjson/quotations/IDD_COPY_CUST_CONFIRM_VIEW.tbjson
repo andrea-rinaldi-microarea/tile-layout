@@ -1,0 +1,35 @@
+﻿{
+  "id": "IDD_COPY_CUST_CONFIRM_VIEW",
+  "name": "CustomerConfirmCopy",
+  "text":  "Confirm Customer Code",
+  "type": 1/*View*/,
+  "items": [
+    {
+      "id": "IDC_TB_ACTIVITY_DOCUMENT_TG",
+      "name": "ActivityTileGroup",
+      "clipChildren": true,
+      "type": 72 /*TileGroup*/,
+      "layoutType": 4 /*VBOX*/,
+      "items": [
+        {
+          "href": "Framework.TbGes.UITileDialog.IDD_TB_HEADER_TILE"
+        },
+        {
+          "href": "M.Framework.TbGes.TbActivityDocument.IDC_TB_ACTIVITY_DOCUMENT_ACTIONS",
+          "name": "actions",
+          "layoutType": 1 /*COLUMN*/,
+          "layoutAlign": 0 /*BEGIN*/,
+          "collapsible": false,
+          "showAsTile": true,
+          "text": "Actions",
+          "type": 88 /*FilterGroup*/,
+          "items": [
+            {
+              "href": "IDD_TD_CUST_CONFIRM_CODE"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

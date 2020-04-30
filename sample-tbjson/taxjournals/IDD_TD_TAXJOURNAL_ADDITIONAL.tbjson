@@ -1,0 +1,70 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_ADDITIONAL",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 161,
+  "height": 28,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "Additional",
+  "text": "Additional Options",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_ISEXCLUDED_VAT",
+      "type": "Check",
+      "text": "Tax Settlement Excluded  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.ExcludedFromVAT"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_TAXJOURN_SPECIAL_PRINT",
+      "type": "Check",
+      "text": "Special print layout  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.SpecialPrint"
+      },
+      "activation": "NOT ERP.MasterData_BG",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "id": "IDC_TAXJOURN_NO_POSTPONE_SALES_TAX",
+      "type": "Check",
+      "text": "No Postpone Sales Tax  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.NoPostponeSalesTax"
+      },
+      "activation": "ERP.Accounting_IT && bPostponeSalesTax",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

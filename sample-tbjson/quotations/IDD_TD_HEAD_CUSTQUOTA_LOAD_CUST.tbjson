@@ -1,0 +1,71 @@
+﻿{
+  "context": "uicustquotaloading",
+  "height": 56,
+  "id": "IDD_TD_HEAD_CUSTQUOTA_LOAD_CUST",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotaLoading.Customer",
+        "hotLink": "HKLMasterCustomer",
+        "hotLinkNS": "ERP.CustomersSuppliers.Dbl.CustSupp"
+      },
+      "controlCaption": "Customer",
+      "captionWidth": 45,
+      "controlClass": "CustSuppTaxIdNumberEdit",
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CUSTOMER",
+      "masterType": "Customer",
+      "type": "Edit",
+      "width": 80,
+      "controlSize": 3,
+      "captionSize": 3
+    },
+    {
+      "anchor": "IDC_LOAD_QUOTATION_CUSTOMER",
+      "captionWidth": 56,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotaLoading.Contact",
+        "hotLink": "HKLQuotationCustomer",
+        "hotLinkNS": "ERP.Contacts.Dbl.Contacts"
+      },
+      "controlClass": "ContactsMasterEdit",
+      "numberer": {
+        "serviceNs": "ERP.Contacts.Components.ContactsCounterManagerObj"
+      },
+      "controlCaption": "Contact",
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CUSTOMER_QUOTATION",
+      "type": "Edit",
+      "width": 78,
+      "controlSize": 3,
+      "captionSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "marginLeft": 45,
+      "binding": {
+        "datasource": "CustDescription"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 36,
+      "id": "IDC_LOAD_QUOTATION_CUSTDESCRIPTION",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 218,
+      "controlSize": 9,
+      "captionSize": 3,
+      "customSize": true
+    }
+  ],
+  "name": "CustQuotaLoadHeadCust",
+  "text": "Customer Data",
+  "tileStyle": "Header",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col col-md-6"
+}

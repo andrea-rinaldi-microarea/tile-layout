@@ -1,0 +1,115 @@
+﻿{
+  "context": "uicustquotaloading",
+  "hasStaticArea": true,
+  "height": 177,
+  "id": "IDD_TD_FOOT_CUSTQUOTA_LOAD_TOTALS",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaSummaryLoading.GoodsAmount"
+      },
+      "border": true,
+      "controlCaption": "Goods Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CCO_TOT_GOODS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotaSummaryLoading.ServiceAmounts"
+      },
+      "border": true,
+      "controlCaption": "Services Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CCO_TOT_SERVICEAMOUNTS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotaSummaryLoading.GeneralDiscountTot"
+      },
+      "border": true,
+      "controlCaption": "Discount Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CCO_TOT_GEN_DISCOUNTS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotaSummaryLoading.PayableAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "controlCaption": "Total to Be Paid",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CCO_TOT_FROM_PAY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_LOAD_QUOTATION_CCO_TOT_FROM_PAY",
+      "captionWidth": 80,
+      "activation": "ERP.Currencies",
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "controlCaption": "In Base Currency",
+      "binding": {
+        "datasource": "CustQuotaSummaryLoading.PayableAmountInBaseCurr"
+      },
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_LOAD_QUOTATION_CCO_PAYABLEAMOUNTINBASECURR_CURRENCY_BASE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "CustQuotaLoadFootTotals",
+  "size": "Wide",
+  "text": "Totals",
+  "tileStyle": "Footer",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

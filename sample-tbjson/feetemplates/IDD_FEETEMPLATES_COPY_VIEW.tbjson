@@ -1,0 +1,34 @@
+﻿{
+  "id": "IDD_FEETEMPLATES_COPY_VIEW",
+  "name": "TemplateCopy",
+  "text": "Copy Fee Templates",
+  "type": 1/*View*/,
+  "items": [
+    {
+      "id": "IDC_TB_ACTIVITY_DOCUMENT_TG",
+      "name": "ActivityTileGroup",
+      "clipChildren": true,
+      "type": 72 /*TileGroup*/,
+      "layoutType": 4 /*VBOX*/,
+      "items": [
+        {
+          "href": "Framework.TbGes.UITileDialog.IDD_TB_HEADER_TILE"
+        },
+        {
+          "href": "M.Framework.TbGes.TbActivityDocument.IDC_TB_ACTIVITY_DOCUMENT_ACTIONS",
+          "name": "actions",
+          "layoutType": 1 /*COLUMN*/,
+          "layoutAlign": 0 /*BEGIN*/,
+          "showAsTile": true,
+          "text": "{{ActionsPanelText}}",
+          "type": 88, //FilterGroup
+          "items": [
+            {
+              "href": "IDD_TD_FEETEMPLATES_COPY"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

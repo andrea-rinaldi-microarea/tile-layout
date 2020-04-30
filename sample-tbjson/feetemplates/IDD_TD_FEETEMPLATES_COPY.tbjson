@@ -1,0 +1,37 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_COPY",
+  "type": "Tile",
+  "name": "Copy",
+  "size": "Standard",
+  "text": "Copy from",
+  "pinnable": false,
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 47,
+  "hasStaticArea": true,
+  "child": true,
+  "tileStyle": "Filter",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_FEES_COPY",
+      "controlCaption": "Template",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 85,
+      "height": 12,
+      "autoHScroll": true,
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "Template",
+        "hotLink": "HKLFeeTemplate",
+        "hotLinkNS": "ERP.Payees.Dbl.FeeTemplates",
+        "enableAddOnFly": false,
+        "mustExistData": true
+      },
+      "captionSize": 2,
+      "controlSize": 4
+    }
+  ],
+  "grid": "col"
+}

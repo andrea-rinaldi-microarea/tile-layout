@@ -1,0 +1,16 @@
+﻿{
+  "href": "M.Framework.TbGes.TbGes.IDD_FINDER_FRAME",
+  "name": "CustQuotaLoadingFrame",
+  "items": [
+    {
+      "href": "IDD_LOAD_QUOTATION_TOOLBAR"
+    },
+    {
+      "href": "IDD_LOAD_QUOTATION_VIEW"
+    },
+    {
+      "activation": "ERP.Inventory",
+      "href": "M.ERP.Inventory.UIItemData.IDD_ITEM_DATA_MANAGER_DOCK_PANE"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+﻿{
+  "href": "M.Framework.TbGes.TbGes.IDD_MASTER_FRAME",
+  "id": "IDD_FEETEMPLATES",
+  "name": "FeeTemplates",
+  "items": [
+    {
+      "href": "IDD_FEETEMPLATES_TOOLBAR"
+    },
+    {
+      "href": "IDD_FEETEMPLATES_VIEW"
+    }
+  ]
+}

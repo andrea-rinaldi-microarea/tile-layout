@@ -1,0 +1,140 @@
+﻿{
+  "collapsed": true,
+  "collapsible": true,
+  "collapsedTitle": "{{CollapsedTitleTotals}}",
+  "context": "uicustquota",
+  "height": 42,
+  "id": "IDD_TD_FOOT_CUSTQUOTA_TOTALS",
+  "items": [
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.DiscountFormula"
+      },
+      "controlCaption": "Additional Discount",
+      "controlClass": "DiscountEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_SUMMARY_DISCOUNT",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "binding": {
+        "datasource": "CustQuotasSummary.TaxableAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "controlCaption": "Taxable Amount",
+      "captionWidth": 70,
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_TAXABLE_AMOUNT",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "activation": "!ERP.MasterData_BR",
+      "binding": {
+        "datasource": "CustQuotasSummary.FreeSamplesDocCurr"
+      },
+      "border": true,
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_FREESAMPLES_CURRENCY",
+      "noPrefix": true,
+      "textAlign": "Right",
+      "type": "Label",
+      "width": 68,
+      "controlCaption": "Total Free Samples",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotasSummary.TotalAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "captionWidth": 70,
+      "controlCaption": "Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_DOC",
+      "noPrefix": true,
+      "textAlign": "Right",
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.Discounts"
+      },
+      "controlCaption": "Discount Amount",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_AMOUNT_DISCOUNT",
+      "textAlign": "Right",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotasSummary.PayableAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "captionWidth": 70,
+      "controlCaption": "Total to Be Paid",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_FROM_PAY",
+      "noPrefix": true,
+      "textAlign": "Right",
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "TotalsFoot",
+  "text": "Totals",
+  "tileStyle": "Footer",
+  "type": "Tile",
+  "width": 345,
+  "hasStaticArea": true,
+  "grid": "col"
+}

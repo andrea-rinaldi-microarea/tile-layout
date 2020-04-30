@@ -1,0 +1,63 @@
+﻿{
+  "context": "uicustquotaprint",
+  "hasTitle": true,
+  "height": 45,
+  "id": "IDD_TD_PRINT_QUOTATIONS_EMAIL",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "MailNo"
+      },
+      "controlClass": "RadioButton",
+      "group": true,
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_MAIL_NO",
+      "tabStop": false,
+      "text": "Not Sent",
+      "type": "Radio",
+      "width": 98,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "MailYes"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_MAIL_YES",
+      "tabStop": false,
+      "text": "Sent",
+      "type": "Radio",
+      "width": 98,
+      "controlSize": 1,
+      "captionSize": 2
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "AllMailed"
+      },
+      "controlClass": "RadioButton",
+      "height": 10,
+      "id": "IDC_STEXPECTEDEN_MAIL_EVERYONE",
+      "tabStop": false,
+      "text": "All",
+      "type": "Radio",
+      "width": 96,
+      "controlSize": 1,
+      "captionSize": 2
+    }
+  ],
+  "name": "Email",
+  "pinnable": true,
+  "size": "Mini",
+  "text": "Email",
+  "tileStyle": "Filter",
+  "type": "Tile",
+  "width": 161,
+  "grid": "col",
+  "customGrid": true
+}

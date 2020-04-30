@@ -1,0 +1,389 @@
+﻿{
+  "context": "uicustquota",
+  "height": 142,
+  "collapsible": true,
+  "collapsed": true,
+  "id": "IDD_TD_CUSTQUOTA_ACCOUNTING",
+  "items": [
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.TaxJournal",
+        "hotLink": "HKLJournal",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.IdsMng.Dbl.IntraTaxJournals"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Journal",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_JOURNAL",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_RSN_JOURNAL",
+      "binding": {
+        "datasource": "HKLJournal.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_RSN_DESCRI_JOURNAL",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 159,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.ContractCode",
+        "hotLink": "HKLContractCodes",
+        "hotLinkNS": "ERP.Company.Dbl.ContractCodes"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Contract Code",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CONTRACTCODE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CONTRACTCODE",
+      "binding": {
+        "datasource": "HKLContractCodes.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CONTRACTCODE_DESCR",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 141,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.ProjectCode",
+        "hotLink": "HKLProjectCodes",
+        "hotLinkNS": "ERP.Company.Dbl.ProjectCodes"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Project Code",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_PROJECTCODE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 97,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_PROJECTCODE",
+      "binding": {
+        "datasource": "HKLProjectCodes.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_PROJECTCODE_DESCR",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 124,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.TaxCommunication",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_GROUPING_CODE_SEPARATOR",
+      "linePosition": 1,
+      "tabStop": false,
+      "text": "Tax Communication",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "activation": "ERP.TaxCommunication",
+      "binding": {
+        "datasource": "CustomerQuotation.TaxCommunicationGroup",
+        "hotLink": "HKLTaxCommunicationGroup",
+        "hotLinkNS": "ERP.Accounting_IT.Dbl.TaxCommunicationGroup"
+      },
+      "border": true,
+      "controlClass": "StringEdit",
+      "controlCaption": "Grouping Code",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TAX_GROUP",
+      "type": "Edit",
+      "width": 97,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_TAX_GROUP",
+      "activation": "ERP.TaxCommunication",
+      "binding": {
+        "datasource": "HKLTaxCommunicationGroup.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_TAX_GROUP_DESCR",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 126,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CASH_ON_DELIVERY_SEPARATOR",
+      "linePosition": 1,
+      "tabStop": false,
+      "text": "Cash on Delivery",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.CashOnDeliveryPercentage"
+      },
+      "border": true,
+      "controlClass": "PercentEdit",
+      "controlCaption": "Percentage",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_PERC_CASHONDELIVERY",
+      "type": "Edit",
+      "width": 30,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_EXPENSES_PERC_CASHONDELIVERY",
+      "marginLeft": 90,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.CashOnDeliveryCharges"
+      },
+      "border": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "controlCaption": "Amount",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_EXPENSES_CASHONDELIVERY",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CUST_QUOTA_ADVANCES_SEPARATOR",
+      "linePosition": 1,
+      "tabStop": false,
+      "text": "Advances",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.Advance"
+      },
+      "border": true,
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "controlCaption": "Amount",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_AMOUNT_ADVANCES",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bCostAccountingIsActivated || bJobsIsActivated || bProductLinesIsActivated",
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CUST_QUOTA_COST_ACC_SEPARATOR",
+      "linePosition": 1,
+      "tabStop": false,
+      "text": "Cost Accounting",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "activation": "ERP.Jobs",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustomerQuotation.Job",
+        "hotLink": "HKLJobs",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.Jobs.Dbl.Jobs"
+      },
+      "border": true,
+      "controlCaption": "Job",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_JOB",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_JOB",
+      "activation": "ERP.Jobs",
+      "binding": {
+        "datasource": "HKLJobs.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_JOB",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 144,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "activation": "ERP.CostAccounting",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.CostCenter",
+        "hotLink": "HKLCostCenters",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.CostAccounting.Dbl.CostCenters"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Cost Center",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_CSTCENTER",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_CSTCENTER",
+      "activation": "ERP.CostAccounting",
+      "binding": {
+        "datasource": "HKLCostCenters.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_CSTCENTER",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL2",
+      "activation": "ERP.ProductLines",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "CustomerQuotation.ProductLine",
+        "hotLink": "HKLProductLine",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.ProductLines.Dbl.ProductLines"
+      },
+      "controlClass": "StringComboDropDown",
+      "controlCaption": "Product Line",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_PRODUCTLINE",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_PRODUCTLINE",
+      "activation": "ERP.ProductLines",
+      "binding": {
+        "datasource": "HKLProductLine.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_PRODUCTLINE",
+      "noPrefix": true,
+      "tabStop": false,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "Accounting",
+  "size": "Wide",
+  "tabStop": false,
+  "text": "Accounting",
+  "type": "Tile",
+  "width": 654,
+  "hasStaticArea": true,
+  "grid": "col"
+}

@@ -1,0 +1,324 @@
+﻿{
+  "context": "uicustquota",
+  "height": 126,
+  "id": "IDD_TD_CUSTQUOTA_TOTALS",
+  "items": [
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotasSummary.GoodsAmount"
+      },
+      "border": true,
+      "controlCaption": "Goods",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_GOODS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotasSummary.ServiceAmounts"
+      },
+      "border": true,
+      "controlCaption": "Services",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_SERVICEAMOUNTS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "activation": "!ERP.MasterData_BR",
+      "binding": {
+        "datasource": "CustQuotasSummary.FreeSamplesDocCurr"
+      },
+      "border": true,
+      "controlCaption": "Free Samples",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_FREESAMPLES_CURRENCY",
+      "noPrefix": true,
+      "textAlign": "Right",
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CCO_TOT_FREESAMPLES_CURRENCY",
+      "marginLeft": 89,
+      "activation": "!ERP.MasterData_BR",
+      "binding": {
+        "datasource": "CustQuotasSummary.FreeSamples"
+      },
+      "border": true,
+      "captionFont": {
+        "italic": true
+      },
+      "controlCaption": "in Base Currency",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_FREESAMPLES",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_DISCOUNT",
+      "linePosition": 1,
+      "text": "Discounts",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotasSummary.DiscountOnGoods"
+      },
+      "border": true,
+      "controlCaption": "Goods",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_DISCOUNTS_GOODS_DETAIL",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CCO_TOT_DISCOUNTS_GOODS_DETAIL",
+      "marginLeft": 89,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.Discounts"
+      },
+      "controlCaption": "Discount Amount",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_AMOUNT_DISCOUNT",
+      "stateData": {
+        "binding": {
+          "datasource": "CustQuotasSummary.DiscountsIsAuto"
+        },
+        "invertState": true
+      },
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotasSummary.DiscountOnServices"
+      },
+      "border": true,
+      "controlCaption": "Services",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_DISCOUNTS_SERVICEAMOUNTS_DETAIL",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CCO_TOT_DISCOUNTS_SERVICEAMOUNTS_DETAIL",
+      "marginLeft": 89,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.DiscountFormula"
+      },
+      "controlCaption": "Additional Discount",
+      "controlClass": "DiscountEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_SUMMARY_DISCOUNT",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "CustQuotasSummary.GeneralDiscountTot"
+      },
+      "border": true,
+      "controlCaption": "Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_GEN_DISCOUNTS",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotasSummary.TotalAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "controlCaption": "Document Total",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_DOC",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CCO_TOT_DOC",
+      "marginLeft": 89,
+      "activation": "ERP.Currencies",
+      "binding": {
+        "datasource": "CustQuotasSummary.TotalAmountDocCurr"
+      },
+      "border": true,
+      "captionFont": {
+        "italic": true
+      },
+      "controlCaption": "in Foreign Currency",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_DOC_IN_CURRENCY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotasSummary.Advance"
+      },
+      "border": true,
+      "controlCaption": "Advances",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_AMOUNT_ADVANCES",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "CustQuotasSummary.Allowances"
+      },
+      "controlCaption": "Allowances",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_AMOUNT_ALLOWANCES",
+      "type": "Edit",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "CustQuotasSummary.PayableAmount"
+      },
+      "border": true,
+      "captionFont": {
+        "bold": true,
+        "italic": true
+      },
+      "controlCaption": "Total to Be Paid",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_TOT_FROM_PAY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_CCO_TOT_FROM_PAY",
+      "marginLeft": 89,
+      "activation": "ERP.Currencies",
+      "binding": {
+        "datasource": "CustQuotasSummary.PayableAmountInBaseCurr"
+      },
+      "border": true,
+      "captionFont": {
+        "italic": true
+      },
+      "controlCaption": "in Base Currency",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{MoneyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_CCO_PAYABLEAMOUNTINBASECURR_CURRENCY_BASE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "Totals",
+  "size": "Wide",
+  "text": "Totals",
+  "collapsedTitle": "{{CollapsedTitleTotals}}",
+  "type": "Tile",
+  "width": 654,
+  "hasStaticArea": true,
+  "grid": "col"
+}

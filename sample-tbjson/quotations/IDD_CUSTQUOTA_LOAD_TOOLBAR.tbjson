@@ -1,0 +1,29 @@
+﻿{
+  "id": "IDD_EXTDOC_TOOLBAR",
+  "items": [
+    {
+      "id": "ID_EXTDOC_TOOLBAR_MAIN",
+      "name": "Main",
+      "type": 14 /*Toolbar*/,
+      "items": [
+        {
+          "icon": "Image.ERP.Core.Images.25x25.LoadDocument.png",
+          "id": "ID_INVOICE_DOC_LOAD_DOCUMENT",
+          "name": "LoadDocument",
+          "hint": "Load Document",
+          "text": "Load",
+          "isDropdown": true,
+          "type": 15, /*ToolbarButton*/
+          "items": [
+            {
+              "activation": "Defined('bLoadQuotationsActivated')",
+              "id": "ID_QUOTATIONS_TST_OPEN_BROWSER",
+              "text": "Customer Quotation",
+              "type": 29 /*MenuItem*/
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

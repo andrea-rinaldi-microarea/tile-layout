@@ -1,0 +1,71 @@
+﻿{
+  "id": "IDD_TD_FEETEMPLATES_ROW_CONTRIBUTION",
+  "type": "Tile",
+  "name": "Contribution",
+  "size": "Mini",
+  "text": "Contribution Parameters",
+  "x": 0,
+  "y": 0,
+  "width": 161,
+  "height": 58,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_INPSINCLUDED",
+      "type": "Check",
+      "text": "INPS Calculation",
+      "anchor": "COL1",
+      "width": 127,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.INPS"
+      },
+      "activation": "bIsActivated_INPS",
+      "controlSize": 1,
+      "captionSize": 3
+    },
+    {
+      "id": "IDC_FEETEMPLATES_PARTICIPAENA",
+      "type": "Check",
+      "text": "ENASARCO Calculation",
+      "anchor": "COL1",
+      "width": 127,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.ENASARCO"
+      },
+      "activation": "bIsActivated_Enasarco",
+      "controlSize": 1,
+      "captionSize": 3
+    },
+    {
+      "id": "IDC_FEETEMPLATES_CPA",
+      "type": "Check",
+      "text": "Professional Fund Contribution",
+      "anchor": "COL1",
+      "width": 127,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "Detail.CPA"
+      },
+      "activation": "bIsActivated_770",
+      "controlSize": 1,
+      "captionSize": 3
+    }
+  ],
+  "grid": "col",
+  "customGrid": true
+}

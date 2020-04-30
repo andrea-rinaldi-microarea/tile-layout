@@ -1,0 +1,195 @@
+﻿{
+  "collapsible": true,
+  "collapsed": true,
+  "context": "uicustquota",
+  "height": 115,
+  "id": "IDD_TD_CUSTQUOTA_TAX_SUMMARY",
+  "items": [
+    {
+      "allowCallDialog": false,
+      "allowDelete": false,
+      "allowInsert": false,
+      "addRowEnabled": false,
+      "insertRowEnabled": false,
+      "deleteRowEnabled": false,
+      "binding": {
+        "datasource": "TaxSummary"
+      },
+      "height": 115,
+      "id": "IDC_QUOTATIONS_CCO_BODY_TAXSUMMARY",
+      "items": [
+        {
+          "binding": {
+            "datasource": "TaxSummary.TaxCode"
+          },
+          "controlClass": "StringStatic",
+          "grayed": true,
+          "id": "IDC_QUOTATIONS_RIV_COD_TAX",
+          "name": "TaxCode",
+          "noChangeGrayed": true,
+          "text": "Tax Code",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.AccountingRules",
+          "binding": {
+            "datasource": "TaxSummary.Offset",
+            "hotLink": {
+              "name": "HKLTaxSummaryOffset",
+              "namespace": "ERP.ChartOfAccounts.Dbl.PostableChartOfAccounts"
+            }
+          },
+          "controlClass": "StringStatic",
+          "grayed": true,
+          "height": 23,
+          "id": "IDC_QUOTATIONS_TAX_SUMMARY_OFFSET",
+          "name": "Offset",
+          "noChangeGrayed": true,
+          "text": "Offset",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.AccountingRules",
+          "type": "ColTitle",
+          "controlClass": "StringStatic",
+          "maxValue": 32,
+          "id": "IDC_QUOTATIONS_TAX_SUMMARY_OFFSET_DESCRI",
+          "text": "Offset Description",
+          "name": "OffsetDescription",
+          "binding": {
+            "datasource": "HKLTaxSummaryOffset.Description"
+          },
+          "hidden": true
+        },
+        {
+          "binding": {
+            "datasource": "TaxSummary.TaxableAmount"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{MoneyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TAXABLEAMOUNT_TAX",
+          "name": "TaxableAmount",
+          "noChangeGrayed": true,
+          "text": "Taxable Amount",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "TaxSummary.TaxAmount"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{MoneyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TAXAMOUNT_TAX",
+          "name": "TaxAmount",
+          "noChangeGrayed": true,
+          "text": "Tax",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.MasterData_ES",
+          "binding": {
+            "datasource": "TaxSummary.AdditionalTaxAmount"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{MoneyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_ADDITIONALTAXAMOUNT_TAX",
+          "name": "AdditionalTaxAmount",
+          "noChangeGrayed": true,
+          "text": "Additional Tax",
+          "type": "ColTitle"
+        },
+        {
+          "binding": {
+            "datasource": "TaxSummary.TotalAmount"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{MoneyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TOTALAMOUNT_TAX",
+          "name": "TotalAmount",
+          "noChangeGrayed": true,
+          "text": "Total",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "bUseTaxSummaryInDocCurr",
+          "binding": {
+            "datasource": "TaxSummary.TaxableAmountDocCurr"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{CurrencyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TAXABLEAMOUNT_CURRENCY",
+          "name": "TaxableAmountDocCurr",
+          "noChangeGrayed": true,
+          "text": "Taxable Amount (Foreign Currency)",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "bUseTaxSummaryInDocCurr",
+          "binding": {
+            "datasource": "TaxSummary.TaxAmountDocCurr"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{CurrencyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TAXAMOUNT_CURRENCY",
+          "name": "TaxAmountDocCurr",
+          "noChangeGrayed": true,
+          "text": "Tax (Foreign Currency)",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "ERP.MasterData_ES && bUseTaxSummaryInDocCurr",
+          "binding": {
+            "datasource": "TaxSummary.AdditionalTaxAmountDocCurr"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{CurrencyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_ADDITIONALTAXAMOUNT_CURRENCY",
+          "name": "AdditionalTaxAmountDocCurr",
+          "noChangeGrayed": true,
+          "text": "Additional Tax (Foreign Currency)",
+          "type": "ColTitle"
+        },
+        {
+          "activation": "bUseTaxSummaryInDocCurr",
+          "binding": {
+            "datasource": "TaxSummary.TotalAmountDocCurr"
+          },
+          "controlClass": "MoneyStatic",
+          "numberDecimal": "{{CurrencyDecimal}}",
+          "grayed": true,
+          "hasFooter": true,
+          "id": "IDC_QUOTATIONS_RIV_TOTALAMOUNT_CURRENCY",
+          "name": "TotalAmountDocCurr",
+          "noChangeGrayed": true,
+          "text": "Total (Foreign Currency)",
+          "type": "ColTitle"
+        }
+      ],
+      "name": "TaxSummary",
+      "showDataTip": true,
+      "showStatusBar": true,
+      "type": "BodyEdit",
+      "width": 325,
+      "anchor": "COL1"
+    }
+  ],
+  "name": "Tax Summary",
+  "text": "Tax Summary",
+  "collapsedTitle": "{{CollapsedTitleTaxSummary}}",
+  "type": "Tile",
+  "width": 325
+}

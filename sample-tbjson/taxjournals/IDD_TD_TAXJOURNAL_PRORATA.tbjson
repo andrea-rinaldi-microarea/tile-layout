@@ -1,0 +1,34 @@
+﻿{
+  "id": "IDD_TD_TAXJOURNAL_PRORATA",
+  "type": "Tile",
+  "x": 0,
+  "y": 0,
+  "width": 161,
+  "height": 16,
+  "child": true,
+  "context": "uitaxjournals",
+  "name": "ProRata",
+  "text": "Pro-rata",
+  "size": "Standard",
+  "items": [
+    {
+      "id": "IDC_TAXJOURN_ISEXCLUDED_PRORATA",
+      "type": "Check",
+      "text": "Pro-rata Excluded  ",
+      "width": 109,
+      "height": 10,
+      "textAlign": "Right",
+      "auto": true,
+      "labelOnLeft": true,
+      "controlClass": "CheckBox",
+      "binding": {
+        "datasource": "TaxJournals.ExcludedFromProRata"
+      },
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

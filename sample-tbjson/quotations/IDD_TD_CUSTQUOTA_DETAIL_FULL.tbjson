@@ -1,0 +1,348 @@
+﻿{
+  "id": "IDD_TD_CUSTQUOTA_DETAIL_FULL",
+  "rcId": 13614,
+  "type": "Tile",
+  "size": "AutoFill",
+  "text": "Detail",
+  "name": "Detail",
+  "width": 325,
+  "height": 126,
+  "child": true,
+  "context": "uicustquota",
+  "items": [
+    {
+      "id": "IDC_CUSTQUOTA_DOC_BODY_DETAIL",
+      "type": "BodyEdit",
+      "showHeaderToolbar": true,
+      "width": 325,
+      "height": 126,
+      "clipChildren": true,
+      "ownerDraw": true,
+      "name": "Detail",
+      "binding": {
+        "datasource": "Detail"
+      },
+      "rowView": "IDD_QUOTATIONS_DETAIL_ROWVIEW_FULL",
+      "allowInsert": true,
+      "allowDelete": true,
+      "text": "Lines",
+      "items": [
+        {
+          "id": "IDC_CUSTQUOTA_DOC_BODY_DETAIL_TOOLBAR",
+          "type": "Toolbar",
+          "items": [
+            {
+              "enabled": "{{bEnableBtn}}",
+              "icon": "Image.Framework.TbFrameworkImages.Images.25x25.Edit.png",
+              "id": "ID_QUOTATIONS_DOC_BE_FORCE_CHANGE_ITM",
+              "name": "Forceitemchange",
+              "text": "Force item change",
+              "hint": "Force item change",
+              "type": "ToolbarButton"
+            },
+            {
+              "environment": "desktop",
+              "href": "D.ERP.Items.ItemsSearchByProducers.IDD_RESEARCH_MAN_ITEM_TOOLBAR_BE"
+            },
+            {
+              "href": "M.ERP.LotsSerials.UISerialsManager.IDD_SERIALS_MANAGER_TOOLBAR_BE"
+            },
+            {
+              "href": "D.ERP.SmartCode.SmartCodeHelp.IDD_SMARTCODE_BE_TOOLBAR"
+            }
+          ]
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_POSITION"
+        },
+        {
+          "id": "IDC_QUOTATIONS_DETAIL_BE_LINETYPE",
+          "type": "ColTitle"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DOC_DETAIL_DRAWING"
+        },
+        {
+          "id": "IDC_QUOTATIONS_DETAIL_ITEM",
+          "type": "ColTitle"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DOC_DETAIL_VARIANT"
+        },
+        {
+          "id": "IDC_QUOTATIONS_DETAIL_COMPLETEDESCRI",
+          "text": "Item Description",
+          "type": "ColTitle"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_UOM"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Quantity",
+          "id": "IDC_QUOTATIONS_DETAIL_QTY"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_VAL_UNIT"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_DISCOUNT"
+        },
+        {
+          "environment": "desktop",
+          "id": "IDC_QUOTATIONS_DETAIL_PRICE_NET",
+          "type": "ColTitle"
+        },
+        {
+          "environment": "web",
+          "id": "IDC_QUOTATIONS_DETAIL_PRICE_NET",
+          "type": "ColTitle",
+          "controlClass": "MoneyStatic"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_TAXCODE"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Tax Code Description",
+          "id": "IDC_QUOTATIONS_DETAIL_TAXCODEDESCRI",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_TOT_TAXABLEAMOUNT"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Total",
+          "id": "IDC_QUOTATIONS_DETAIL_TOTALAMOUNT",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Tax",
+          "id": "IDC_QUOTATIONS_DETAIL_TOT_TAXAMOUNT",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_TOT_DISCOUNT",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_1"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_1_DESCRI",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_2"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_2_DESCRI",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_DATE_DELIVEXPECTED"
+        },
+        {
+          "type": "ColTitle",
+          "text": "No Print",
+          "id": "IDC_QUOTATIONS_DETAIL_NOTPRINT"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Not in Order",
+          "id": "IDC_QUOTATIONS_DETAIL_NOTINORDER"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_CSTCENTER",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Center Description",
+          "id": "IDC_QUOTATIONS_DETAIL_DESCRI_CSTCENTER",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_JOB",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Job Description",
+          "id": "IDC_QUOTATIONS_DETAIL_DESCRI_JOB",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_PRODUCTLINE"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Product Line Description",
+          "id": "IDC_QUOTATIONS_DETAIL_DESCRI_PRODUCTLINE",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_OFFSET",
+          "hidden": true,
+          "grayed": true,
+          "text": "Offset",
+          "activation": "ERP.ChartOfAccounts"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_OFFSET_DESCRI",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true,
+          "text": "Offset Description",
+          "activation": "ERP.ChartOfAccounts"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_DEPARTMENT",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Department Description",
+          "id": "IDC_QUOTATIONS_DETAIL_DEPARTMENTDESCRI",
+          "hidden": true,
+          "noChangeGrayed": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Additional Qty 1",
+          "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY1",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Additional Qty 2",
+          "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY2",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Additional Qty 3",
+          "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY3",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Additional Qty 4",
+          "id": "IDC_QUOTATIONS_DETAIL_ADDITQTY4",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Sale Type",
+          "id": "IDC_QUOTATIONS_DETAIL_SALETYPE",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_PACKSUOM",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_NOOFPACKS",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_GROSSWEIGHT",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_NETWEIGHT",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "Gross Volume",
+          "id": "IDC_QUOTATIONS_DETAIL_GROSSVOLUME",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "External Line Ref.",
+          "id": "IDC_QUOTATIONS_DETAIL_EXTERNALLINEREFERENCE",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "text": "External Doc. Ref. No.",
+          "id": "IDC_QUOTATIONS_DETAIL_EXTREFERENCEDOCNO",
+          "hidden": true,
+          "grayed": true
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_NOTES"
+        },
+        {
+          "type": "ColTitle",
+          "id": "IDC_QUOTATIONS_DETAIL_PRICELIST"
+        },
+        {
+          "type": "ColTitle",
+          "text": "Price List Description",
+          "id": "IDC_QUOTATIONS_DETAIL_DESCRI_PRICELIST"
+        }
+      ]
+    }
+  ]
+}

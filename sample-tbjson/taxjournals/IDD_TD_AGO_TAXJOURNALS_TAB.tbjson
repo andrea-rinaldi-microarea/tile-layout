@@ -1,0 +1,31 @@
+﻿{
+  "id": "IDD_TD_AGO_TAXJOURNALS_TAB",
+  "type": "Tile",
+  "name": "AGO",
+  "text": "AGO",
+  "size": "Standard",
+  "x": 0,
+  "y": 0,
+  "width": 153,
+  "height": 24,
+  "child": true,
+  "hasStaticArea": true,
+  "items": [
+    {
+      "id": "IDC_AGO_TAXJOURNALS_TAB_AGOSECTION",
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "TaxJournals.AGOSection"
+      },
+      "type": "Edit",
+      "width": 42,
+      "height": 12,
+      "autoHScroll": true,
+      "controlCaption": "Tax Section",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "grid": "col"
+}

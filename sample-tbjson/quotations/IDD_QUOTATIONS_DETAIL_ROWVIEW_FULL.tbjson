@@ -1,0 +1,74 @@
+﻿{
+	"id": "IDD_QUOTATIONS_DETAIL_ROWVIEW_FULL",
+	"type": 66,
+	"width": 460,
+	"height": 277,
+    "child": true,
+    "name" :  "CustQuotaDetailRowView",
+	"context": "uicustquota",
+	"items": [
+		{
+			"id": "IDC_HS_CUSTQUOTA_DETAIL",
+			"type": 79, /*HeaderStrip*/			
+			"width": 459,
+			"height": 20,
+			"binding": {
+				"datasource": "Detail.Item, Detail.Description"
+			}
+		},
+		{
+			"id": "IDC_TM_CUST_QUOTA_DETAIL",
+			"type": 76 /*TileManager*/,
+			"vertical": false,
+			"width": 458,
+			"height": 257,
+			"items": [
+				{
+					"id": "IDC_TM_CUST_QUOTA_DETAIL_MAIN_DATA",
+					"text": "Main &Data",
+					"tooltip": "Main Data",
+					"type": 72, /*TileGroup*/
+					"name": "MainData",
+					"icon": "Image.ERP.Core.Images.25x25.Sales.png",
+					"layoutType": 4, /*VBOX*/
+          "items": [
+            {
+              "href": "IDD_TD_RW_CUSTQUOTA_MAIN_DATA"
+            },
+            {
+              "href": "IDD_TD_RW_CUSTQUOTA_TOTALS"
+            }
+          ]
+				},
+				{
+					"id": "IDC_TM_CUST_QUOTA_DETAIL_OTHER_DATA",
+					"text": "O&ther Data",
+					"tooltip": "Other Data",
+					"type": 72, /*TileGroup*/
+					"name": "OtherData",
+					"icon": "Image.ERP.Core.Images.25x25.SalesMore.png",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_RW_CUSTQUOTA_OTHER_DATA"
+						}
+					]
+				},
+				{
+					"id": "IDC_TM_CUST_QUOTA_DETAIL_ADMIN_DATA",
+					"text": "&Administrative Data",
+					"tooltip": "Administrative Data",
+					"type": 72, /*TileGroup*/
+					"name": "AdministrativeData",
+					"icon": "Image.ERP.Core.Images.25x25.Accounting.png",
+					"layoutType": 4, /*VBOX*/
+					"items": [
+						{
+							"href": "IDD_TD_RW_CUSTQUOTA_ACCOUNTING"
+						}
+					]
+				}
+			]
+		}
+	]
+}

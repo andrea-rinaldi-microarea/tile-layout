@@ -1,0 +1,48 @@
+﻿{
+  "id": "IDD_LOAD_QUOTATION_VIEW",
+  "name": "CustQuotaLoading",
+  "text": "Search Customer Quotations",
+  "type": 1/*View*/,
+  "child": true,
+  "context": "uicustquotaloading",
+  "items": [
+    {
+      "id": "IDC_TG_HEAD_CUSTQUOTA_LOAD",
+      "name": "CustQuotaLoadHeadTileGrp",
+      "type": 72/*TileGroup*/,
+      "layoutType": 4/*VBOX*/,
+      "items": [
+        {
+          "type": 78/*LayoutContainer*/,
+          "layoutType": 3/*HBOX*/,
+          "items": [
+            {
+              "href": "IDD_TD_HEAD_CUSTQUOTA_LOAD_MAIN"
+            },
+            {
+              "href": "IDD_TD_HEAD_CUSTQUOTA_LOAD_CUST"
+            }
+          ]
+        },
+        {
+          "href": "IDD_TD_CUSTQUOTA_LOAD_MAIN_DATA"
+        },
+        {
+          "href": "IDD_TD_CUSTQUOTA_LOAD_OTHER_DATA"
+        },
+        {
+          "href": "IDD_TD_CUSTQUOTA_LOAD_DETAIL"
+        },
+        {
+          "type": 78/*LayoutContainer*/,
+          "layoutType": 1/*COLUMN*/,
+          "items": [
+            {
+              "href": "IDD_TD_FOOT_CUSTQUOTA_LOAD_TOTALS"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

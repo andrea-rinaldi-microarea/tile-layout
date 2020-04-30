@@ -1,0 +1,85 @@
+﻿{
+  "id": "IDD_TD_CUSTQUOTA_SALESPEOPLE",
+  "type": "Tile",
+  "width": 654,
+  "height": 126,
+  "size": "Wide",
+  "child": true,
+  "context": "uicustquota",
+  "text": "Salespeople",
+  "name": "Salespeople",
+  "items": [
+    {
+      "anchor": "COL1",
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "CustomerQuotation.Salesperson",
+        "hotLink": "HKLSalesperson",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.SalesPeople.Dbl.SalesPeople"
+      },
+      "id": "IDC_QUOTATIONS_ADT_SALESPERSON",
+      "controlCaption": "Salesperson",
+      "type": "Edit",
+      "width": 62,
+      "height": 12,
+      "autoHScroll": true,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "StringEdit",
+      "binding": {
+        "datasource": "CustomerQuotation.AreaManager",
+        "hotLink": "HKLAreaManager",
+        "mustExistData": true,
+        "hotLinkNS": "ERP.SalesPeople.Dbl.SalesPeople"
+      },
+      "id": "IDC_QUOTATIONS_ADT_AREAMANAGER",
+      "controlCaption": "Area Manager",
+      "type": "Edit",
+      "width": 62,
+      "height": 12,
+      "autoHScroll": true,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_SALESPERSON",
+      "controlClass": "StringStatic",
+      "binding": {
+        "datasource": "HKLSalesperson.Name"
+      },
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_SALESPERSON",
+      "type": "Label",
+      "width": 154,
+      "height": 24,
+      "border": true,
+      "group": false,
+      "noPrefix": true,
+      "textAlign": "Left",
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "IDC_QUOTATIONS_ADT_AREAMANAGER",
+      "controlClass": "StringStatic",
+      "binding": {
+        "datasource": "HKLAreaManager.Name"
+      },
+      "id": "IDC_QUOTATIONS_ADT_DESCRI_AREAMANAGER",
+      "type": "Label",
+      "width": 154,
+      "height": 24,
+      "border": true,
+      "group": false,
+      "noPrefix": true,
+      "textAlign": "Left",
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "hasStaticArea": true,
+  "grid": "col"
+}

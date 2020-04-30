@@ -1,0 +1,272 @@
+﻿{
+  "context": "uicustquota",
+  "hasStaticArea": true,
+  "height": 177,
+  "id": "IDD_TD_RW_CUSTQUOTA_ACCOUNTING",
+  "items": [
+    {
+      "activation": "bAccountingTypeIsEnabled",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AccountingTypePhase1",
+        "hotLink": {
+          "enableAddOnFly": false,
+          "mustExistData": true,
+          "name": "HKLAccountingTypePhase1",
+          "namespace": "ERP.Items.Dbl.AccountingType"
+        }
+      },
+      "controlCaption": "Accounting Type Phase 1",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_1",
+      "name": "AccountingTypePhase1",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bAccountingTypeIsEnabled",
+      "anchor": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_1",
+      "binding": {
+        "datasource": "HKLAccountingTypePhase1.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_1_DESCRI",
+      "name": "AccountingTypePhase1Descri",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "bAccountingTypeIsEnabled",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.AccountingTypePhase2",
+        "hotLink": {
+          "enableAddOnFly": false,
+          "mustExistData": true,
+          "name": "HKLAccountingTypePhase2",
+          "namespace": "ERP.Items.Dbl.AccountingType"
+        }
+      },
+      "controlCaption": "Accounting Type Phase 2",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_2",
+      "name": "AccountingTypePhase2",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bAccountingTypeIsEnabled",
+      "anchor": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_2",
+      "binding": {
+        "datasource": "HKLAccountingTypePhase2.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_ACC_TYPE_PHASE_2_DESCRI",
+      "name": "AccountingTypePhase2Descri",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.ChartOfAccounts",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Offset",
+        "hotLink": {
+          "mustExistData": true,
+          "name": "HKLOffsetDetail",
+          "namespace": "ERP.ChartOfAccounts.Dbl.ChartOfAccountsByAccountType"
+        }
+      },
+      "controlCaption": "Offset",
+      "controlClass": "AccountEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_OFFSET",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 97,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "ERP.ChartOfAccounts",
+      "anchor": "IDC_QUOTATIONS_DETAIL_OFFSET",
+      "binding": {
+        "datasource": "HKLOffsetDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_OFFSET_DESCRI",
+      "marginLeft": -44,
+      "name": "OffsetDescri",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 167,
+      "captionSize": 3,
+      "controlSize": 7
+    },
+    {
+      "activation": "bCostAccountingIsEnabled",
+      "id": "IDC_STATIC_RW_CUST_QUOTA_COST_ACCOUNTING",
+      "type": "Label",
+      "text": "Cost Accounting",
+      "width": 325,
+      "height": 8,
+      "textAlign": "Left",
+      "controlClass": "LabelStatic",
+      "linePosition": 1,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "activation": "ERP.Jobs",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Detail.Job",
+        "hotLink": {
+          "mustExistData": true,
+          "name": "HKLJobsDetail",
+          "namespace": "ERP.Jobs.Dbl.Jobs"
+        }
+      },
+      "controlCaption": "Job",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_JOB",
+      "type": "Edit",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.Jobs",
+      "anchor": "IDC_QUOTATIONS_DETAIL_JOB",
+      "binding": {
+        "datasource": "HKLJobsDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DESCRI_JOB",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.CostAccounting",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Detail.CostCenter",
+        "hotLink": {
+          "mustExistData": true,
+          "name": "HKLCostCentersDetail",
+          "namespace": "ERP.CostAccounting.Dbl.CostCenters"
+        }
+      },
+      "controlCaption": "Cost Center",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_DETAIL_CSTCENTER",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.CostAccounting",
+      "anchor": "IDC_QUOTATIONS_DETAIL_CSTCENTER",
+      "binding": {
+        "datasource": "HKLCostCentersDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DESCRI_CSTCENTER",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.ProductLines",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Detail.ProductLine",
+        "hotLink": {
+          "mustExistData": true,
+          "name": "HKLProductLineDetail",
+          "namespace": "ERP.ProductLines.Dbl.ProductLines"
+        }
+      },
+      "controlCaption": "Product Line",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_QUOTATIONS_DETAIL_PRODUCTLINE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.ProductLines",
+      "anchor": "IDC_QUOTATIONS_DETAIL_PRODUCTLINE",
+      "binding": {
+        "datasource": "HKLProductLineDetail.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_QUOTATIONS_DETAIL_DESCRI_PRODUCTLINE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "Accounting",
+  "text": "Accounting",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}
