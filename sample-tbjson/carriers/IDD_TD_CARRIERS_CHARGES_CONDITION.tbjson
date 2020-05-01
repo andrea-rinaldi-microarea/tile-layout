@@ -1,0 +1,125 @@
+﻿{
+  "collapsible": true,
+  "collapsed": true,
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "height": 43,
+  "id": "IDD_TD_CARRIERS_CHARGES_CONDITION",
+  "items": [
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.PackCharges"
+      },
+      "controlCaption": "Lump-sum Expenses",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{NACurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_CARRIERS_PACKCHARGES",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "controlClass": "LabelStatic",
+      "font": {
+        "italic": true
+      },
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_PER_PACK",
+      "text": "per Pack",
+      "type": "Label",
+      "width": 68,
+      "anchor": "IDC_CARRIERS_PACKCHARGES",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.ShippingCharges"
+      },
+      "controlCaption": "Lump-sum Expenses",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_CARRIERS_SHIPPINGCHARGES",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "controlClass": "LabelStatic",
+      "font": {
+        "italic": true
+      },
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_EXPENSES",
+      "text": "Shipping",
+      "type": "Label",
+      "width": 98,
+      "anchor": "IDC_CARRIERS_SHIPPINGCHARGES",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.ChargesPercOnTotAmt"
+      },
+      "controlCaption": "% Expenses on Goods Total",
+      "controlClass": "PercentEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_PERCONCHARGES",
+      "type": "Edit",
+      "width": 30,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "binding": {
+        "datasource": "Carriers.Allowed"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_CARRIERS_INABBONAMENTO",
+      "labelOnLeft": true,
+      "text": "Subscription  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "binding": {
+        "datasource": "Carriers.InsuredGood"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_CARRIERS_INSUREDGOOD",
+      "labelOnLeft": true,
+      "text": "Insured Goods  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 1
+    }
+  ],
+  "name": "CarriersChargesConditions",
+  "size": "Wide",
+  "text": "Charges Conditions",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

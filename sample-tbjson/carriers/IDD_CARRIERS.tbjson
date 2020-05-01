@@ -1,0 +1,9 @@
+﻿{
+	"href": "M.Framework.TbGes.TbGes.IDD_MASTER_FRAME",
+	"name": "CarriersFrame",
+    "items": [
+    {
+      "href": "IDD_CARRIERS_VIEW"
+    }
+  ]
+}

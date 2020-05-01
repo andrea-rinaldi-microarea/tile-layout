@@ -85,18 +85,20 @@ h6 {
 }
 
 .tile {
-    border: 1px solid #dee2e6;
+    --tile-padding: .74rem;
+    padding: var(--tile-padding);
+    border: 1px solid #eee;
     background-color: #fbfbfb;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,.04);
-    height:15rem;
     flex:1;
     min-width: 38rem;
     margin-right: var(--spacing);
     margin-bottom: var(--spacing);
+    box-sizing: border-box;
 }
 
 .tile-title {
-    padding: .55rem .85rem .45rem .65rem;
+    padding-bottom: var(--tile-padding);
     z-index: 1;
 }
 
@@ -118,4 +120,83 @@ h6 {
     color: #005890;
     margin-bottom: 0;
     white-space: nowrap;
+}
+
+.tile-content {
+}
+
+.tile-control-group {
+    display: flex;
+    flex-direction: row;
+    padding: 2px;
+    min-height:2.2rem;
+}
+
+.tile-control-caption {
+    display: flex;
+    align-items: center;
+    min-height: 2.2rem;
+}
+.tile-control-caption label {
+    text-align: right;
+    width: inherit;
+    margin-right: 5px;
+}
+
+.tile-control {
+
+}
+
+.tile-control input, select {
+    width:100%;
+    font-weight: 600;
+    border: none;
+    border-bottom: 1px solid #d0d0d0!important;
+    background: #f2f2f2;
+    padding: 4px 4px 2px;
+}
+
+.tile-row {
+    display: flex;
+}
+
+.size-1 {
+    width:3rem;
+}
+.size-2{
+    width:6rem;
+}
+.size-3{
+    width:9rem;
+}
+.size-4{
+    width:12rem;
+}
+.size-5{
+    width:15rem;
+}
+.size-6{
+    width:18rem;
+}
+.size-7{
+    width:21rem;
+}
+.size-8
+{
+    width:24rem;
+}
+.size-9{
+    width:27rem;
+}
+.size-10{
+    width:30rem;
+}
+.size-11{
+    width:33rem;
+}
+.size-12{
+    width:36rem;
+}
+.size-100{
+    width:100%;
 }

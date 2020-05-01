@@ -1,0 +1,167 @@
+﻿{
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "collapsible": true,
+  "height": 99,
+  "id": "IDD_TD_CARRIERS_ADDRESS",
+  "items": [
+    {
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Carriers.Address"
+      },
+      "controlCaption": "Address",
+      "controlClass": "AddressEdit",
+      "height": 24,
+      "id": "IDC_CARRIERS_ADDRESS",
+      "multiline": true,
+      "type": "Edit",
+      "vScroll": true,
+      "wantReturn": true,
+      "width": 210,
+      "anchor": "COL1",
+      "selector": {
+        "address": "Carriers.Address",
+        "city": "Carriers.City",
+        "county": "Carriers.County",
+        "zipCode": "Carriers.ZIPCode",
+        "country": "Carriers.Country",
+        "streetNo": "Carriers.StreetNo",
+        "region": "Carriers.District"
+      },
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Address2"
+      },
+      "controlCaption": "Additional Address",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_ADDRESS2",
+      "type": "Edit",
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "environment": "desktop",
+      "binding": {
+        "datasource": "Carriers.City",
+        "hotLink": {
+          "name": "HKLMunicipalities",
+          "namespace": "ERP.Company.Dbl.Municipalities",
+          "auxKeys": [
+            "ISOCountryCode"
+          ]
+        }
+      },
+      "controlCaption": "Municipality",
+      "controlClass": "MunicipalityWithButtonEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_CITY",
+      "type": "Edit",
+      "width": 210,
+      "autoHScroll": true,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "environment": "web",
+      "binding": {
+        "datasource": "Carriers.City",
+        "hotLink": {
+          "name": "HKLMunicipalities",
+          "namespace": "ERP.Company.Dbl.Municipalities",
+          "auxKeys": [
+            "ISOCountryCode"
+          ]
+        }
+      },
+      "controlCaption": "Municipality",
+      "height": 12,
+      "id": "IDC_CARRIERS_CITY",
+      "type": "Edit",
+      "width": 210,
+      "anchor": "COL1",
+      "href": "M.ERP.Core.MunicipalityControlBehaviour.IDD_MUNICIPALITY_CONTROLBEHAVIOUR",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.ZIPCode"
+      },
+      "controlCaption": "ZIP Code",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_ZIPCODE",
+      "type": "Edit",
+      "width": 40,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "binding": {
+        "datasource": "Carriers.County",
+        "hotLink": {
+          "name": "HKLCounties",
+          "namespace": "ERP.Company.Dbl.Counties",
+          "auxKeys": [
+            "ISOCountryCode"
+          ]
+        },
+        "buttonId": 0
+      },
+      "activation": "!ERP.MasterData_DE && !ERP.MasterData_BR",
+      "controlCaption": "County",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_COUNTY",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 40,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "auto": true,
+      "binding": {
+        "datasource": "Carriers.Country",
+        "hotLink": "HKLCountries",
+        "hotLinkNS": "ERP.Company.Dbl.Countries",
+        "buttonId": 0
+      },
+      "controlCaption": "Country",
+      "controlClass": "StringComboDropDownList",
+      "vScroll": true,
+      "comboType": 1,
+      "sort": true,
+      "height": 12,
+      "id": "IDC_CARRIERS_STATUS",
+      "type": "Combo",
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    }
+  ],
+  "name": "CarriersAddress",
+  "text": "Address Data",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}

@@ -1,0 +1,90 @@
+﻿{
+  "collapsible": true,
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "height": 84,
+  "id": "IDD_TD_CARRIERS_CONTACTS",
+  "items": [
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Telephone1"
+      },
+      "controlCaption": "Phone 1",
+      "controlClass": "PhoneEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_PHONE1",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Telephone2"
+      },
+      "controlCaption": "Phone 2",
+      "controlClass": "PhoneEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_PHONE2",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Telex"
+      },
+      "controlCaption": "Other Phones",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_TELEX",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Fax"
+      },
+      "controlCaption": "Fax",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_FAX",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Carriers.EMail"
+      },
+      "controlCaption": "Email",
+      "controlClass": "EmailAddressEdit",
+      "height": 24,
+      "id": "IDC_CARRIERS_EMAILADDRESS",
+      "multiline": true,
+      "type": "Edit",
+      "width": 178,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7
+    }
+  ],
+  "name": "CarriersContacts",
+  "text": "Contacts",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}

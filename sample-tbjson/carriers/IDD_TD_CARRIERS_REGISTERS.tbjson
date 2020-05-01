@@ -1,0 +1,47 @@
+﻿{
+  "collapsible": true,
+  "collapsed": true,
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "height": 30,
+  "id": "IDD_TD_CARRIERS_REGISTERS",
+  "items": [
+    {
+      "activation": "!ERP.MasterData_BR",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.TaxOffice"
+      },
+      "controlCaption": "Tax Office",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_TAXOFFICE",
+      "type": "Edit",
+      "width": 154,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.CompanyAdditionalData",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.CompanyRegistrNo"
+      },
+      "controlCaption": "Register of Companies",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_COMP_REG",
+      "type": "Edit",
+      "width": 55,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 3
+    }
+  ],
+  "name": "CarriersRegisters",
+  "text": "Registers",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}
