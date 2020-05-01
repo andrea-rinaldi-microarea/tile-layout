@@ -2,10 +2,21 @@ html {
     height: 100%;
     margin: 0;
     font-family: "Open Sans",sans-serif!important;
+    font-size: 12px;
 }
 
 body {
     margin: 0;
+}
+
+/* preso da Bootstrap*/
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+
+h6 {
+    font-size: inherit;
 }
 
 .container{
@@ -51,26 +62,60 @@ body {
     /* height:100%; */
 }
 
-.tile-group.hbox {
+.layout-container {
+    
+}
+
+.hbox {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
 }
 
-.tile-group.column {
+.vbox {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.column {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-
 .tile {
     border: 1px solid #dee2e6;
     background-color: #fbfbfb;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,.04);
-    height:10rem;
+    height:15rem;
     flex:1;
-    min-width: 15rem;
+    min-width: 38rem;
     margin-right: var(--spacing);
     margin-bottom: var(--spacing);
+}
+
+.tile-title {
+    padding: .55rem .85rem .45rem .65rem;
+    z-index: 1;
+}
+
+.tile-title div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 6px;
+}
+
+.tile-title h6 {
+    height: 1.25rem;
+    line-height: 1.30rem;
+    text-transform: uppercase;
+    /* font-size: 12px; */
+    font-weight: 600;
+    color: #005890;
+    margin-bottom: 0;
+    white-space: nowrap;
 }

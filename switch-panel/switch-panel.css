@@ -1,6 +1,6 @@
 #switch-panel {
-    height: 3em;
-    padding-top: 0.8em;
+    height: 3rem;
+    padding-top: 0.8rem;
     border-bottom: 1px lightgray solid;
     font-size: small;
 }
@@ -10,5 +10,5 @@
 }
 
 .container {
-    min-height: calc(100vh - 4.5em);
+    min-height: calc(100vh - 4.5rem);
 }
