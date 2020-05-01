@@ -1,0 +1,81 @@
+﻿const IDD_TD_FEETEMPLATES_PERCENTAGES = {
+  "id": "IDD_TD_FEETEMPLATES_PERCENTAGES",
+  "name": "Percentages",
+  "type": "Tile",
+  "text": "Percentages",
+  "size": "Standard",
+  "width": 325,
+  "height": 58,
+  "context": "uifeetemplates",
+  "hasStaticArea": true,
+  "items": [
+    {
+      "autoHScroll": true,
+      "border": true,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_TAXPERC",
+      "controlCaption": "Tax %",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 46,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.TaxPerc"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "autoHScroll": true,
+      "border": true,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_WITHHOLDINGTAXPERC",
+      "controlCaption": "WT %",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 46,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.WithholdingTaxPerc"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "comboType": 2,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_COMBO_WT",
+      "type": "Combo",
+      "width": 70,
+      "anchor": "IDC_FEETEMPLATES_WITHHOLDINGTAXPERC",
+      "controlClass": "StringComboDropDownList",
+      "controlBehaviour": {
+        "name": "ComboWT",
+        "itemSource": true,
+        "namespace": "ERP.Core.Components.RadioComboControlBehaviour"
+      },
+      "binding": {
+        "datasource": "ComboWT"
+      },
+      "captionSize": 0,
+      "controlSize": 3
+    },
+    {
+      "autoHScroll": true,
+      "border": true,
+      "height": 12,
+      "id": "IDC_FEETEMPLATES_BASEPERC",
+      "controlCaption": "WT Base",
+      "anchor": "COL1",
+      "type": "Edit",
+      "width": 46,
+      "controlClass": "PercentEdit",
+      "binding": {
+        "datasource": "FeeTemplates.WithholdingTaxBasePerc"
+      },
+      "captionSize": 3,
+      "controlSize": 2
+    }
+  ],
+  "grid": "col"
+}

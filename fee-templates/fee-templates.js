@@ -8,14 +8,7 @@ var feeTemplates = {
         utils.createField("Description", 3, 7)
     ]);
         
-    utils.addTile($("#lc1"), "IDD_TD_FEETEMPLATES_PERCENTAGES", "Percentages", [
-        utils.createField("Tax %", 3, 2),
-        utils.createRow([
-            utils.createField("WT %", 3, 2),
-            utils.createField("", 0, 3, "enum")    
-        ]),
-        utils.createField("WT Base", 3, 2)
-    ]);
+    view.addTile($("#lc1"), IDD_TD_FEETEMPLATES_PERCENTAGES);
 
     utils.addTile($("#lc2"), "IDD_TD_FEETEMPLATES_DECLA_DATA", "Declaration data", [
         utils.createRow([
@@ -33,7 +26,8 @@ var feeTemplates = {
         ]),
     ]);
 
-    utils.addTile($("#lc3"), "IDD_TD_FEETEMPLATES_ENASARCO", "ENASARCO");
+    
+    view.addTile($("#lc3"), IDD_TD_FEETEMPLATES_ENASARCO);
 
     utils.addTile($("#lc4"), "IDD_TD_FEETEMPLATES_DETAIL", "details");
 
