@@ -15,11 +15,16 @@ var utils = {
         return template;
     }
 
-    utils.addTile = function(elem, id, title) {
+    utils.addTile = function(elem, id, title, fields) {
         var tile = $(utils.render(tileTemplate, {
             "title": title
         }));
         tile.attr("id", id);
+        if (fields) {
+            fields.forEach(field => {
+                tile.append(field);
+            });
+        }
         elem.append(tile);
     }
 
@@ -28,13 +33,15 @@ var utils = {
             "caption": caption
         }));
         field.children(".tile-control").addClass("size-" + controlSize);
-        field.find(".tile-control :input").hide();
+        field.find(".tile-control .input").hide();
         if (controlType == "enum") {
             field.find(".tile-control .enum").show();
         } else if (controlType == "combo") {
             field.find(".tile-control .combo").show();
+        } else if (controlType == "checkbox") {
+            field.find(".tile-control .checkbox").show();
         } else {
-            field.find(".tile-control input").show();
+            field.find(".tile-control .text").show();
         }
         if (captionSize > 0) {
             field.children(".tile-control-caption").addClass("size-" + captionSize);

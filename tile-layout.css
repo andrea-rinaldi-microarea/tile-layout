@@ -156,6 +156,17 @@ h6 {
     padding: 4px 4px 2px;
 }
 
+.tile-control .checkbox {
+    display: flex;
+    align-items: center;
+    min-height: 2.2rem;
+}
+
+.tile-control input[type=checkbox] {
+    height: 1.4rem;
+    margin: -9px;
+}
+
 .tile-row {
     display: flex;
 }
