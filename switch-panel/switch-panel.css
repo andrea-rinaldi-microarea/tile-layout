@@ -1,0 +1,14 @@
+#switch-panel {
+    height: 3em;
+    padding-top: 0.8em;
+    border-bottom: 1px lightgray solid;
+    font-size: small;
+}
+
+#switch-panel-screen-size {
+    display: flex;
+}
+
+.container {
+    min-height: calc(100vh - 4.5em);
+}

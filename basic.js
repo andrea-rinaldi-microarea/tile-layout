@@ -2,7 +2,7 @@ var basic = {
 };
 
 ( basic => {
-
+    
     var tpl = $(tileTemplate);
 
     for (t = 0; t < 2; t++) {
