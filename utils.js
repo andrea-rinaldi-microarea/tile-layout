@@ -1,6 +1,5 @@
 var utils = {
-    render(template, props) {},
-    addTile(elem, id, title) {}
+    render(template, props) {}
 };
 ( utils => {
 

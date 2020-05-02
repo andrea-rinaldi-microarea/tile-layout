@@ -1,5 +1,5 @@
 var view = {
-    addTile(elem, jsonTile) {},
+    addView(elem, jsonView) {}
 };
 ( view => {
 
@@ -72,11 +72,17 @@ var view = {
             return col;
     }
 
-    view.addTile = function(elem, jsonTile) {
+    function createTile(jsonTile) {
+        if (!jsonTile) return;
+
         var tile = $(utils.render(tileTemplate, {
             "title": jsonTile.text
         }));
-        tile.attr("id", jsonTile.id);
+
+        if (!jsonTile.text || jsonTile.text == "") {
+            tile.children(".tile-title").hide();
+        }
+
         for (c = 1; c <= 4; c++) {
             var col = createColumn("COL" + c, jsonTile);
             if (!col)
@@ -84,9 +90,39 @@ var view = {
             tile.children(".tile-content").append(col);
         }
         var noAnchor = createColumn(null, jsonTile);
-        if (noAnchor)
+        if (noAnchor) {
             tile.children(".tile-content").append(noAnchor);
-        elem.append(tile);
+        }
+
+        return tile;
+    }
+
+    function createLayoutContainer(item, jsonTiles) {
+        var lc = $(layoutContainerTemplate);
+        if (item.items) {
+            item.items.forEach(itm => {
+                lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href)));
+            });
+        } else {
+            lc.append(createTile(jsonTiles.find(tile => tile.id == item.href)));
+        }
+        return lc;
+    }
+
+    function createTilegroup(item, jsonTiles) {
+        var tg = $(tileGroupTemplate);
+        item.items.forEach(item => {
+            tg.append(createLayoutContainer(item, jsonTiles));
+        });
+        return tg;
+    }
+
+    view.addView = function(elem, jsonView, jsonTiles) {
+        var view = $("<div/>");
+        jsonView.items.forEach(item => {
+            view.append(createTilegroup(item, jsonTiles));
+        });
+        elem.append(view);
     }
 
 })(view);

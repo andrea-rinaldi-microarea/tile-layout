@@ -7,9 +7,9 @@ var switchPanel = {
     var radio = $('#switch-panel-screen-size input:radio');
     radio.click(function() {
         if (this.value == "") {
-            $(".container")[0].style.maxWidth= "";
+            $("#mainView")[0].style.maxWidth= "";
         } else {
-            $(".container").css({
+            $("#mainView").css({
                 "maxWidth": this.value
               });            
         }
