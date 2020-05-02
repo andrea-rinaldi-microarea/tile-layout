@@ -1,0 +1,184 @@
+﻿const IDD_TD_CARRIERS_ADDRESS_BR = {
+  "collapsible": true,
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "height": 144,
+  "id": "IDD_TD_CARRIERS_ADDRESS_BR",
+  "items": [
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.ZIPCode"
+      },
+      "controlCaption": "ZIP Code",
+      "controlClass": "ZIPCodeEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_ZIPCODE_BR",
+      "type": "Edit",
+      "width": 72,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Carriers.Address"
+      },
+      "controlCaption": "Address",
+      "controlClass": "AddressEdit",
+      "height": 24,
+      "id": "IDC_CARRIERS_ADDRESS",
+      "multiline": true,
+      "type": "Edit",
+      "vScroll": true,
+      "wantReturn": true,
+      "width": 210,
+      "anchor": "COL1",
+      "selector": {
+        "address": "Carriers.Address",
+        "city": "Carriers.City",
+        "county": "Carriers.County",
+        "zipCode": "Carriers.ZIPCode",
+        "country": "Carriers.Country",
+        "streetNo": "Carriers.StreetNo",
+        "region": "Carriers.District"
+      },
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.StreetNo"
+      },
+      "controlCaption": "Street No.",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_STREETNO",
+      "type": "Edit",
+      "width": 40,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Address2"
+      },
+      "controlCaption": "Additional Address",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_ADDRESS2",
+      "type": "Edit",
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.District"
+      },
+      "controlCaption": "District",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_DISTRICT",
+      "type": "Edit",
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Carriers.FederalState",
+        "hotLink": "HKLFederalStates",
+        "hotLinkNS": "ERP.Company.Dbl.FederalStates"
+      },
+      "controlCaption": "Federal State",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_FEDERALSTATE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 40,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Carriers.City",
+        "hotLink": {
+          "name": "HKLMunicipalities",
+          "namespace": "ERP.Company.Dbl.Municipalities",
+          "auxKeys": [
+            "ISOCountryCode"
+          ]
+        }
+      },
+      "controlCaption": "Municipality",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_CITY",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "auto": true,
+      "binding": {
+        "datasource": "Carriers.Country",
+        "hotLink": "HKLCountries",
+        "hotLinkNS": "ERP.Company.Dbl.Countries",
+        "buttonId": 0
+      },
+      "controlCaption": "Country",
+      "controlClass": "StringComboDropDownList",
+      "vScroll": true,
+      "comboType": 1,
+      "sort": true,
+      "height": 12,
+      "id": "IDC_CARRIERS_STATUS",
+      "type": "Combo",
+      "width": 210,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 7,
+      "customSize": true
+    },
+    {
+      "id": "IDC_CARRIERS_FEDSTATEREG",
+      "href": "ERP.CustomersSuppliers.CustomersSuppliersControls.IDD_FEDSTATEREG_EDIT",
+      "type": "Edit",
+      "width": 86,
+      "height": 12,
+      "binding": {
+        "datasource": "Carriers.FedStateReg"
+      },
+      "controlCaption": "Federal State Register",
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    }
+  ],
+  "name": "CarriersAddress",
+  "text": "Address Data",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}
