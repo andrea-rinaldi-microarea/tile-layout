@@ -46,7 +46,7 @@
         "datasource": "HKLDutyCodes.Description"
       },
       "captionSize": 0,
-      "controlSize": 7
+      "controlSize": 6
     },
     {
       "autoHScroll": true,

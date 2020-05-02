@@ -48,7 +48,7 @@
         "datasource": "HKLINPSParameters.INPSMethodDescri"
       },
       "captionSize": 0,
-      "controlSize": 7
+      "controlSize": 6
     }
   ],
   "grid": "col"

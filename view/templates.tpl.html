@@ -10,26 +10,44 @@ const tileTemplate = `
 </div>
 `
 
-const tileControlTemplate = `
-<div class="tile-control-group">
-    <div class="tile-control-caption"><label>{caption}</label></div>
-    <div class="tile-control">
-        <input class="input text" type="text" >
-        <select class="input enum" >
-            <option>option 1</option>
-            <option>option 2</option>
-            <option>option 3</option>
-        </select>
-        <select class="input combo" >
-        </select>
-        <div class="input checkbox">
-            <input type="checkbox" >
-        </div>
-    </div>
+const tileRowTemplate = `
+<div class="tile-row">
 </div>
 `
 
-const tileRowTemplate = `
-<div class="tile-row">
+const tileControlGroupTemplate = `
+<div class="tile-control-group">
+    <div class="tile-control-caption"><label>{caption}</label></div>
+</div>
+`
+
+const tileControlTextTemplate = `
+<div class="tile-control">
+    <input type="text" >
+</div>
+`
+
+const tileControlEnumTemplate = `
+<div class="tile-control">
+    <select>
+        <option>value 1</option>
+        <option>value 2</option>
+        <option>value 3</option>
+    </select>
+</div>
+`
+
+const tileControlComboTemplate = `
+<div class="tile-control">
+    <select>
+    </select>
+</div>
+`
+
+const tileControlCheckboxTemplate = `
+<div class="tile-control">
+    <div class="checkbox-wrapper">
+        <input type="checkbox" >
+    </div>
 </div>
 `

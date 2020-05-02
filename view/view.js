@@ -17,7 +17,25 @@ var view = {
     }
 
     function createField(item) {
-        return utils.createField(item.text || item.controlCaption, item.captionSize, item.controlSize, controlType(item.controlClass));
+        var field = $(utils.render(tileControlGroupTemplate, {
+            "caption": item.text || item.controlCaption
+        }));
+        if (item.type == "Combo" && item.comboType && item.comboType == 2) {
+            field.append($(tileControlEnumTemplate));
+        } else if (item.type == "Combo" && (!item.comboType || item.comboType != 2)) {
+            field.append($(tileControlComboTemplate));
+        } else if (item.type == "Check") {
+            field.append($(tileControlCheckboxTemplate));
+        } else {
+            field.append($(tileControlTextTemplate));
+        }
+        field.children(".tile-control").addClass("size-" + item.controlSize);
+        if (item.captionSize > 0) {
+            field.children(".tile-control-caption").addClass("size-" + item.captionSize);
+        } else {
+            field.children(".tile-control-caption").hide();
+        }
+        return field;
     }
 
     view.addTile = function(elem, jsonTile) {
