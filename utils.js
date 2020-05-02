@@ -1,9 +1,7 @@
 var utils = {
     render(template, props) {},
     addTile(elem, id, title) {},
-    addFields(tile, fields) {},
-    createField(label, captionSize, controlSize) {},
-    createRow(fields) {}
+    createField(label, captionSize, controlSize) {}
 };
 ( utils => {
 
@@ -50,20 +48,5 @@ var utils = {
         }
         return field;
     }
-
-    utils.addFields = function(tile, fields) {
-        fields.forEach(field => {
-            tile.append(field);
-        });
-    }
-
-    utils.createRow = function(fields) {
-        var row = $(tileRowTemplate);
-        fields.forEach(field => {
-            row.append(field);
-        });
-        return row;
-    }
-
 
 })(utils);

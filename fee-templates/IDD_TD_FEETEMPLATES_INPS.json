@@ -1,0 +1,55 @@
+﻿const IDD_TD_FEETEMPLATES_INPS = {
+  "id": "IDD_TD_FEETEMPLATES_INPS",
+  "type": "Tile",
+  "name": "INPS",
+  "size": "Standard",
+  "text": "INPS",
+  "collapsible": true,
+  "x": 0,
+  "y": 0,
+  "width": 325,
+  "height": 58,
+  "hasStaticArea": true,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_HELP_ON_METHODS",
+      "controlCaption": "Calculation Method",
+      "anchor": "COL1",
+      "type": "Combo",
+      "width": 54,
+      "height": 56,
+      "tabStop": true,
+      "vScroll": true,
+      "comboType": 1,
+      "auto": true,
+      "controlClass": "IntegerComboDropDownList",
+      "binding": {
+        "datasource": "FeeTemplates.INPSCalculationType",
+        "hotLink": "HKLINPSParameters",
+        "buttonId": 0,
+        "hotLinkNS": "ERP.Payees.Dbl.INPSParameters"
+      },
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "id": "IDC_FEETEMPLATES_DESCRI_METHODINPS",
+      "anchor": "IDC_FEETEMPLATES_HELP_ON_METHODS",
+      "type": "Label",
+      "width": 168,
+      "height": 12,
+      "border": true,
+      "noPrefix": true,
+      "textAlign": "Left",
+      "controlClass": "StringStatic",
+      "binding": {
+        "datasource": "HKLINPSParameters.INPSMethodDescri"
+      },
+      "captionSize": 0,
+      "controlSize": 7
+    }
+  ],
+  "grid": "col"
+}
