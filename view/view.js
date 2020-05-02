@@ -11,6 +11,25 @@ var view = {
         return row;
     }
 
+    function createBodyEdit(item) {
+        var be = $(tileControlBodyeditTemplate);
+        var header = $("<div/>", {class: "bodyedit-header" });
+        item.items.forEach( col => {
+            var col = $("<div/>", { class: "bodyedit-cell size-4", text: col.text });
+            header.append(col);
+        });
+        be.children(".bodyedit").append(header);
+        for (r = 0; r < 5; r++) {
+            var row = $("<div/>", { style: "display: flex;"});
+            item.items.forEach( col => {
+                var col = $("<div/>", { class: "bodyedit-cell size-4"});
+                row.append(col);
+            });
+            be.children(".bodyedit").append(row);
+        }
+        return be;
+    }
+
     function createField(item) {
         var field = $(utils.render(tileControlGroupTemplate, {
             "caption": item.text || item.controlCaption
@@ -25,9 +44,11 @@ var view = {
             field.append($(tileControlEditTemplate));
         } else if (item.type == "Label") {
             field.append($(tileControlLabelTemplate));
+        } else if (item.type == "BodyEdit") {
+            field.append(createBodyEdit(item));
         }
         if (field.children(".tile-control")) {
-            field.children(".tile-control").addClass("size-" + item.controlSize);
+            field.children(".tile-control").addClass(item.controlSize ? ("size-" + item.controlSize) : "size-100" );
         }
         if (item.captionSize > 0) {
             field.children(".tile-control-caption").addClass("size-" + item.captionSize);
@@ -56,24 +77,15 @@ var view = {
             "title": jsonTile.text
         }));
         tile.attr("id", jsonTile.id);
-        // if (jsonTile.items) {
-        //     var col1 = $(tileColumnTemplate);
-        //     jsonTile.items.filter(i => i.anchor == "COL1").forEach(item => {
-        //         if (item.anchor != "COL1" && item.anchor != "COL2" && item.anchor != "")
-        //             return;
-        //         var fields = [ createField(item) ];
-        //         jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {
-        //             fields.push(createField(anchored));
-        //         });
-        //         col1.append(createRow(fields));
-        //     });
-        // }
         for (c = 1; c <= 4; c++) {
             var col = createColumn("COL" + c, jsonTile);
             if (!col)
                 break;
             tile.children(".tile-content").append(col);
         }
+        var noAnchor = createColumn(null, jsonTile);
+        if (noAnchor)
+            tile.children(".tile-content").append(noAnchor);
         elem.append(tile);
     }
 

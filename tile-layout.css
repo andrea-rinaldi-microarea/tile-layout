@@ -131,6 +131,7 @@ h6 {
 }
 
 .tile-content {
+    max-width: 100%!important;
 }
 
 .tile-control-group {
@@ -138,6 +139,7 @@ h6 {
     flex-direction: row;
     padding: 2px;
     min-height:2.2rem;
+    max-width: 100%!important;
 }
 
 .tile-control-caption {
@@ -152,7 +154,7 @@ h6 {
 }
 
 .tile-control {
-
+    max-width: 100%!important;
 }
 
 .tile-control input, select {
@@ -181,14 +183,37 @@ h6 {
     height: 1.85rem;
 }
 
+.tile-control .bodyedit {
+    overflow: auto;
+}
+
+.tile-control .bodyedit-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    background: #f2f2f2;
+}
+
+.tile-control .bodyedit-cell {
+    border: 1px solid #eee;
+    height: 1.1rem;
+    padding: 5px 0 5px 0;
+    padding-top: 0.5rem;
+    text-align: center;
+    min-width: 12rem;
+}
+
 .tile-row {
     display: flex;
+    max-width: 100%!important;
+    overflow: hidden;
 }
 
 .tile-column {
     display: flex;
     flex-direction: column;
     flex: 1;
+    max-width: 100%!important;
 }
 
 .size-1 {
