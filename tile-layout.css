@@ -134,6 +134,19 @@ h6 {
     max-width: 100%!important;
 }
 
+.tile-column {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    max-width: 100%!important;
+}
+
+.tile-row {
+    display: flex;
+    max-width: 100%!important;
+    overflow: hidden;
+}
+
 .tile-control-group {
     display: flex;
     flex-direction: row;
@@ -147,6 +160,7 @@ h6 {
     align-items: center;
     min-height: 2.2rem;
 }
+
 .tile-control-caption label {
     text-align: right;
     width: inherit;
@@ -177,9 +191,8 @@ h6 {
     margin: -9px;
 }
 
-.tile-control .label-static {
+.tile-control .string-static {
     border: 1px solid #eee;
-    /* border-bottom: 1px solid #d0d0d0!important; */
     height: 1.85rem;
 }
 
@@ -203,17 +216,18 @@ h6 {
     min-width: 12rem;
 }
 
-.tile-row {
-    display: flex;
-    max-width: 100%!important;
-    overflow: hidden;
+.tile-control-group .label-static hr {
+    height: 1px;
+    background: #005890;
+    border: none;
+    margin-bottom: 0;
 }
 
-.tile-column {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    max-width: 100%!important;
+.tile-control-group .label-static label {
+    color: #005890;
+    line-height: 1.2rem;
+    padding: 2px;
+    min-height: 1.3rem;
 }
 
 .size-1 {

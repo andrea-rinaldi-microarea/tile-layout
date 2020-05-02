@@ -42,15 +42,17 @@ var view = {
             field.append($(tileControlCheckboxTemplate));
         } else if (item.type == "Edit") {
             field.append($(tileControlEditTemplate));
-        } else if (item.type == "Label") {
+        } else if (item.type == "Label" && item.controlClass != "LabelStatic") {
             field.append($(tileControlLabelTemplate));
+        } else if (item.type == "Label" && item.controlClass == "LabelStatic") {
+            field = $(utils.render(tileControlLabelStaticTemplate, { "caption": item.text }));
         } else if (item.type == "BodyEdit") {
             field.append(createBodyEdit(item));
         }
         if (field.children(".tile-control")) {
             field.children(".tile-control").addClass(item.controlSize ? ("size-" + item.controlSize) : "size-100" );
         }
-        if (item.captionSize > 0) {
+        if (item.captionSize > 0 && (item.text || item.controlCaption)) {
             field.children(".tile-control-caption").addClass("size-" + item.captionSize);
         } else {
             field.children(".tile-control-caption").hide();

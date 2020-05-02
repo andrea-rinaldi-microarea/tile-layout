@@ -1,0 +1,46 @@
+﻿const IDD_TD_CARRIERS_TRANSPORTATION_FORM = {
+  "collapsible": true,
+  "collapsed": true,
+  "context": "uicarriers",
+  "hasStaticArea": true,
+  "height": 30,
+  "id": "IDD_TD_CARRIERS_TRANSPORTATION_FORM",
+  "items": [
+    {
+      "binding": {
+        "datasource": "Carriers.TransportationForm"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_CARRIERS_ENABLE_TRANSPORTATION_FORM",
+      "labelOnLeft": true,
+      "text": "Use Transportation Form  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.RoadHaulageContractorRegister"
+      },
+      "controlCaption": "Road Haulage Contractor",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_ROAD_HAULAGE_CONTRACTOR_REGISTER",
+      "type": "Edit",
+      "width": 86,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 4
+    }
+  ],
+  "name": "CarriersTransportationForm",
+  "text": "Transportation Form",
+  "type": "Tile",
+  "width": 325,
+  "grid": "col"
+}

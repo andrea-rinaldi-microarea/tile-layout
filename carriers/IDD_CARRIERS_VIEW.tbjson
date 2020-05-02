@@ -1,0 +1,57 @@
+﻿const IDD_CARRIERS_VIEW = {
+  "id": "IDD_CARRIERS_VIEW",
+  "text": "Carriers",
+  "name": "Carriers",
+  "type": "View",
+  "child": true,
+  "items": [
+    {
+      "id": "IDC_TG_CARRIERS",
+      "name": "CarriersGrp",
+      "type": 72/*TileGroup*/,
+      "layoutType": 4/*VBOX*/,
+      "items": [
+        {
+          "href": "IDD_TD_CARRIERS_MAIN"
+        },
+        {
+          "id": "IDD_LC_CARRIERS",
+          "type": 78 /*LayoutContainer*/,
+          "layoutType": 1 /*COLUMN*/,
+          "collapsible": true,
+          "items": [
+            {
+              "activation": "ERP.MasterData_BR",
+              "href": "IDD_TD_CARRIERS_ADDRESS_BR"
+            },
+            {
+              "activation": "Not ERP.MasterData_BR",
+              "href": "IDD_TD_CARRIERS_ADDRESS"
+            },
+            {
+              "href": "IDD_TD_CARRIERS_CONTACTS"
+            }
+          ]
+        },
+        {
+          "type": 78 /*LayoutContainer*/,
+          "layoutType": 1 /*COLUMN*/,
+          "collapsible": true,
+          "items": [
+            {
+              "activation": "Not ERP.MasterData_BR",
+              "href": "IDD_TD_CARRIERS_REGISTERS"
+            },
+            {
+              "href": "IDD_TD_CARRIERS_TRANSPORTATION_FORM"
+            }
+          ]
+        },
+
+        {
+          "href": "IDD_TD_CARRIERS_CHARGES_CONDITION"
+        }
+      ]
+    }
+  ]
+}
