@@ -12,17 +12,4 @@ var utils = {
         return template;
     }
 
-    utils.addTile = function(elem, id, title, fields) {
-        var tile = $(utils.render(tileTemplate, {
-            "title": title
-        }));
-        tile.attr("id", id);
-        if (fields) {
-            fields.forEach(field => {
-                tile.append(field);
-            });
-        }
-        elem.append(tile);
-    }
-
 })(utils);

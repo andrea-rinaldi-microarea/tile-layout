@@ -3,11 +3,6 @@ var view = {
 };
 ( view => {
 
-    function controlType(controlClass) {
-        if (controlClass == "CheckBox") return "checkbox";
-        return null;
-    }
-    
     function createRow(fields) {
         var row = $(tileRowTemplate);
         fields.forEach(field => {
@@ -26,10 +21,14 @@ var view = {
             field.append($(tileControlComboTemplate));
         } else if (item.type == "Check") {
             field.append($(tileControlCheckboxTemplate));
-        } else {
-            field.append($(tileControlTextTemplate));
+        } else if (item.type == "Edit") {
+            field.append($(tileControlEditTemplate));
+        } else if (item.type == "Label") {
+            field.append($(tileControlLabelTemplate));
         }
-        field.children(".tile-control").addClass("size-" + item.controlSize);
+        if (field.children(".tile-control")) {
+            field.children(".tile-control").addClass("size-" + item.controlSize);
+        }
         if (item.captionSize > 0) {
             field.children(".tile-control-caption").addClass("size-" + item.captionSize);
         } else {

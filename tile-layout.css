@@ -175,6 +175,12 @@ h6 {
     margin: -9px;
 }
 
+.tile-control .label-static {
+    border: 1px solid #f2f2f2;
+    border-bottom: 1px solid #d0d0d0!important;
+    height: 1.85rem;
+}
+
 .tile-row {
     display: flex;
 }

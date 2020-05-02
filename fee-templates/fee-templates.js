@@ -14,6 +14,6 @@ var feeTemplates = {
     
     view.addTile($("#lc3"), IDD_TD_FEETEMPLATES_ENASARCO);
 
-    utils.addTile($("#lc4"), "IDD_TD_FEETEMPLATES_DETAIL", "details");
+    view.addTile($("#lc4"), IDD_TD_FEETEMPLATES_DETAIL);
 
 }) (feeTemplates);

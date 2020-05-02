@@ -1,0 +1,129 @@
+﻿const IDD_TD_FEETEMPLATES_DETAIL = {
+  "id": "IDD_TD_FEETEMPLATES_DETAIL",
+  "type": "Tile",
+  "name": "Detail",
+  "size": "AutoFill",
+  "text": "",
+  "x": 0,
+  "y": 0,
+  "width": 415,
+  "height": 118,
+  "child": true,
+  "context": "uifeetemplates",
+  "items": [
+    {
+      "id": "IDC_FEETEMPLATES_BODYEDIT",
+      "type": "BodyEdit",
+      "x": 0,
+      "y": 0,
+      "width": 414,
+      "height": 118,
+      "clipChildren": true,
+      "ownerDraw": true,
+      "name": "Detail",
+      "text": "Lines",
+      "binding": {
+        "datasource": "Detail"
+      },
+      "rowView": "IDD_FEETEMPLATES_DETAIL",
+      "items": [
+        {
+          "type": "ColTitle",
+          "controlClass": "StringEdit",
+          "id": "IDC_FEETEMPLATES_PARTICIPA_DESCRIPTION",
+          "text": "Description",
+          "name": "Description",
+          "binding": {
+            "datasource": "Description"
+          }
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "MoneyEdit",
+          "numberDecimal": "{{MoneyDecimal}}",
+          "id": "IDC_FEETEMPLATES_AMOUNTGENERIC",
+          "text": "Line Amount",
+          "name": "Amount",
+          "binding": {
+            "datasource": "Amount"
+          }
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_TAXINCLUDED",
+          "text": "Tax",
+          "name": "TaxIncluded",
+          "binding": {
+            "datasource": "Tax"
+          }
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_WTINCLUDED",
+          "text": "WT",
+          "name": "WTIncluded",
+          "binding": {
+            "datasource": "WithholdingTax"
+          }
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_PARTICIPAENA",
+          "text": "ENASARCO",
+          "name": "ENASARCOIncluded",
+          "binding": {
+            "datasource": "ENASARCO"
+          },
+          "activation": "bIsActivated_Enasarco"
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_INPSINCLUDED",
+          "text": "INPS (Social Security)",
+          "name": "INPSIncluded",
+          "binding": {
+            "datasource": "INPS"
+          },
+          "activation": "bIsActivated_INPS"
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_DOPERATIONAMT",
+          "text": "Excl. Double WT",
+          "name": "ExcludeDouble",
+          "binding": {
+            "datasource": "WithholdingTaxExcluded"
+          },
+          "activation": "bIsActivated_770"
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_CHARGE_ANTICIALA",
+          "text": "Prepaid Charge",
+          "name": "AdvancedExpense",
+          "binding": {
+            "datasource": "IsAnAdvanceExpense"
+          },
+          "activation": "bIsActivated_770"
+        },
+        {
+          "type": "ColTitle",
+          "controlClass": "CheckBox",
+          "id": "IDC_FEETEMPLATES_CPA",
+          "text": "CPA",
+          "name": "CPA",
+          "binding": {
+            "datasource": "CPA"
+          },
+          "activation": "bIsActivated_770"
+        }
+      ]
+    }
+  ]
+}
