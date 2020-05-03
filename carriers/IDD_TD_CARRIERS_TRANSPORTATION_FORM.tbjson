@@ -19,7 +19,7 @@
       "type": "Check",
       "width": 109,
       "anchor": "COL1",
-      "captionSize": 3,
+      "captionSize": 4,
       "controlSize": 1
     },
     {
@@ -34,7 +34,7 @@
       "type": "Edit",
       "width": 86,
       "anchor": "COL1",
-      "captionSize": 3,
+      "captionSize": 4,
       "controlSize": 4
     }
   ],

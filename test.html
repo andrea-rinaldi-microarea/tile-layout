@@ -1,0 +1,218 @@
+<html>
+    <style>
+        :root {
+            /* --base-size: 3rem; */
+        }
+        html {
+            font-size: 12px;
+            --base-size: 3rem;
+        }
+        body {
+            font-family: "Open Sans",sans-serif!important;
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 1000px;
+            width: 100%;
+            height: 100%;
+            background-color:#eee;
+            padding-top: 15em;
+            margin-right:auto;
+            margin-left:auto;
+        }
+
+        .tilegroup {
+            width:100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            border: 1px solid green;
+            padding-left: 0.8em;
+            padding-top: 0.8em;
+            box-sizing: border-box;
+        }
+
+        .tile {
+            min-width: calc(calc(12 * var(--base-size)) + 1.3em);
+            flex: 1;
+            height: 9em;
+            background-color: #fbfbfb;
+            box-shadow: 5px 5px 5px 0 rgba(0,0,0,.04);
+            margin-right: 0.8em;
+            margin-bottom: 0.8em;
+            box-sizing: border-box;
+            padding: 0.5em;
+        }
+
+        .row {
+            width: 100%;
+            border: 1px solid goldenrod;
+            min-height: 1.5em;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .size-3{
+            width: 9rem;
+        }
+        .size-4{
+            width:12rem;
+        }
+        .size-5{
+            width:15rem;
+        }
+        .size-6{
+            width:18rem;
+        }
+        .size-7{
+            width:21rem;
+        }
+
+        .perc-3{
+            width: 25%;
+        }
+        .perc-4{
+            width: 33%;
+        }
+        .perc-5{
+            width: 42%;
+        }
+        .perc-6{
+            width: 50%;
+        }
+        .perc-7{
+            width: 58%;
+        }
+
+        .min-size-3{
+            min-width: calc(3 * var(--base-size) );
+            
+        }
+        .min-size-4{
+            min-width:calc(4 * var(--base-size) );
+        }
+        .min-size-5{
+            min-width:calc(5 * var(--base-size) );
+        }
+        .min-size-6{
+            min-width:calc(6 * var(--base-size) );
+        }
+        .min-size-7{
+            min-width:calc(7 * var(--base-size) );
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+        }
+
+        .caption {
+            border: 1px solid blue;
+            padding: 5px;
+            text-align: end;
+            box-sizing: border-box;
+        }
+        .control {
+            border: 1px solid blue;
+            background-color:lightcyan;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .static {
+            border: 1px solid blue;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        .whitespace {
+            border: 1px solid transparent;
+            padding: 5px;
+            color: lightgray;
+            box-sizing: border-box;
+        }
+    </style>
+<body>
+    <script>
+        var base = 3;
+    </script>
+    <div class="container">
+        <button onclick="document.documentElement.style.setProperty('--base-size', (base++) + 'rem');">+</button>
+        <button onclick="document.documentElement.style.setProperty('--base-size', (--base) + 'rem');">-</button>
+        <div class="tilegroup">
+            <div class="tile">
+                percentuale, control group
+                <div class="row">
+                    <div class="control-group">
+                        <div class="caption perc-3">caption</div>
+                        <div class="control perc-4">control</div>
+                        <div class="whitespace perc-5" >whitespace</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control-group">
+                        <div class="caption perc-3">caption</div>
+                        <div class="control perc-4">control</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="control-group">
+                        <div class="caption perc-3">caption</div>
+                        <div class="control perc-5">control</div>
+                        <div class="static perc-4" >static</div>
+                    </div>
+                </div>
+            </div>
+            <div class="tile">
+                percentuale
+                <div class="row">
+                    <div class="caption perc-3">caption</div>
+                    <div class="control perc-4">control</div>
+                    <div class="static perc-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption perc-3">caption</div>
+                    <div class="control perc-5">control</div>
+                    <!-- <div class="whitespace perc-4">whitespace</div> -->
+                </div>
+            </div>
+            <div class="tile">
+                percentuale + min size
+                <div class="row">
+                    <div class="caption perc-3 min-size-3">caption</div>
+                    <div class="control perc-4 min-size-4">control</div>
+                    <div class="static perc-5 min-size-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption perc-3 min-size-3">caption</div>
+                    <div class="control perc-5 min-size-5">control</div>
+                    <!-- <div class="whitespace perc-4 min-size-4">whitespace</div> -->
+                </div>
+                <div class="row">
+                    <div class="caption perc-3 min-size-3">caption</div>
+                    <div class="control perc-5 min-size-5">control</div>
+                    <div class="whitespace perc-4 min-size-4">whitespace</div>
+                </div>
+            </div>
+            <div class="tile">
+                size
+                <div class="row">
+                    <div class="caption size-3">caption</div>
+                    <div class="control size-4">control</div>
+                    <div class="static size-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption size-3">caption</div>
+                    <div class="control size-5">control</div>
+                    <div class="whitespace size-4">whitespace</div>
+                </div>
+                <div class="row">
+                    <div class="caption size-3">caption</div>
+                    <div class="control size-5">control</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

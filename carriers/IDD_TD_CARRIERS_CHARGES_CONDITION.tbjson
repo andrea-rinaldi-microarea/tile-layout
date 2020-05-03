@@ -67,7 +67,7 @@
       "width": 98,
       "anchor": "COL2",
       // "anchor": "IDC_CARRIERS_SHIPPINGCHARGES",
-      "captionSize": 4,
+      "captionSize": 5,
       "controlSize": 4
     },
     {
@@ -98,7 +98,7 @@
       "type": "Check",
       "width": 109,
       "anchor": "COL2",
-      "captionSize": 4,
+      "captionSize": 5,
       "controlSize": 1
     },
     {
@@ -114,7 +114,7 @@
       "type": "Check",
       "width": 109,
       "anchor": "COL2",
-      "captionSize": 4,
+      "captionSize": 5,
       "controlSize": 1
     }
   ],
