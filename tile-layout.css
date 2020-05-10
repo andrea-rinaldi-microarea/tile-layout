@@ -1,3 +1,8 @@
+:root {
+    --base-size: 3rem;
+    --max-width: inherit;
+}
+
 html {
     height: 100%;
     margin: 0;
@@ -20,17 +25,18 @@ h6 {
 }
 
 .container{
-    width:100%;
-    /* padding-right:15px;
-    padding-left:15px; */
-    margin-right:auto;
-    margin-left:auto;
+    width: 100%;
+    height: 100%;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+    margin-right: auto;
+    margin-left: auto;
 }
 
 .container-fluid{
     width:100%;
-    /* padding-right:15px;
-    padding-left:15px; */
+    max-width: var(--max-width);
+    height: 100%;
     margin-right:auto;
     margin-left:auto;
 }
@@ -99,7 +105,7 @@ h6 {
     background-color: #fbfbfb;
     box-shadow: 5px 5px 5px 0 rgba(0,0,0,.04);
     flex:1;
-    min-width: 37rem;
+    min-width: calc((10 * var(--base-size)) + 1.3em);
     margin-right: var(--spacing);
     margin-bottom: var(--spacing);
     box-sizing: border-box;
@@ -123,7 +129,6 @@ h6 {
     height: 1.25rem;
     line-height: 1.30rem;
     text-transform: uppercase;
-    /* font-size: 12px; */
     font-weight: 600;
     color: #005890;
     margin-bottom: 0;
@@ -143,6 +148,7 @@ h6 {
 
 .tile-row {
     display: flex;
+    flex-direction: row;
     max-width: 100%!important;
     overflow: hidden;
 }
@@ -153,6 +159,7 @@ h6 {
     padding: 2px;
     min-height:2.2rem;
     max-width: 100%!important;
+    box-sizing: border-box;
 }
 
 .tile-control-caption {
@@ -162,13 +169,14 @@ h6 {
 }
 
 .tile-control-caption label {
-    text-align: right;
-    width: inherit;
+    text-align: end;
+    width: 100%;
     margin-right: 5px;
 }
 
 .tile-control {
     max-width: 100%!important;
+    box-sizing: border-box;
 }
 
 .tile-control input, select {
@@ -194,6 +202,7 @@ h6 {
 .tile-control .string-static {
     border: 1px solid #eee;
     height: 1.85rem;
+    box-sizing: border-box;
 }
 
 .tile-control .bodyedit {
@@ -231,40 +240,40 @@ h6 {
 }
 
 .size-1 {
-    width:3rem;
+    width: calc(1 * var(--base-size) );
 }
 .size-2{
-    width:6rem;
+    width: calc(2 * var(--base-size) );
 }
 .size-3{
-    width: 9rem;
+    width: calc(3 * var(--base-size) );
 }
 .size-4{
-    width:12rem;
+    width: calc(4 * var(--base-size) );
 }
 .size-5{
-    width:15rem;
+    width: calc(5 * var(--base-size) );
 }
 .size-6{
-    width:18rem;
+    width: calc(6 * var(--base-size) );
 }
 .size-7{
-    width:21rem;
+    width: calc(7 * var(--base-size) );
 }
 .size-8{
-    width:24rem;
+    width: calc(8 * var(--base-size) );
 }
 .size-9{
-    width:27rem;
+    width: calc(9 * var(--base-size) );
 }
 .size-10{
-    width:30rem;
+    width: calc(10 * var(--base-size) );
 }
 .size-11{
-    width:33rem;
+    width: calc(11 * var(--base-size) );
 }
 .size-12{
-    width:36rem;
+    width: calc(12 * var(--base-size) );
 }
 .size-100{
     width:100%;

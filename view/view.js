@@ -43,7 +43,7 @@ var view = {
         } else if (item.type == "Edit") {
             field.append($(tileControlEditTemplate));
         } else if (item.type == "Label" && item.controlClass != "LabelStatic") {
-            field.append($(tileControlLabelTemplate));
+            field.append($(utils.render(tileControlLabelTemplate, { "placeholder": item.placeholder })));
         } else if (item.type == "Label" && item.controlClass == "LabelStatic") {
             field = $(utils.render(tileControlLabelStaticTemplate, { "caption": item.text }));
         } else if (item.type == "BodyEdit") {
@@ -103,7 +103,11 @@ var view = {
         var lc = $(layoutContainerTemplate);
         if (item.items) {
             item.items.forEach(itm => {
-                lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href)));
+                if (itm.href) {
+                    lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href)));
+                } else {
+                    lc.append(createLayoutContainer(itm, jsonTiles));
+                }
             });
         } else {
             lc.append(createTile(jsonTiles.find(tile => tile.id == item.href)));
