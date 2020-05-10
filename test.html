@@ -1,11 +1,10 @@
 <html>
     <style>
         :root {
-            /* --base-size: 3rem; */
+            --base-size: 3rem;
         }
         html {
             font-size: 12px;
-            --base-size: 3rem;
         }
         body {
             font-family: "Open Sans",sans-serif!important;
@@ -88,7 +87,6 @@
 
         .min-size-3{
             min-width: calc(3 * var(--base-size) );
-            
         }
         .min-size-4{
             min-width:calc(4 * var(--base-size) );
@@ -101,6 +99,38 @@
         }
         .min-size-7{
             min-width:calc(7 * var(--base-size) );
+        }
+
+        .max-size-3{
+            max-width: calc(4 * var(--base-size) );
+        }
+        .max-size-4{
+            max-width:calc(5 * var(--base-size) );
+        }
+        .max-size-5{
+            max-width:calc(6 * var(--base-size) );
+        }
+        .max-size-6{
+            max-width:calc(7 * var(--base-size) );
+        }
+        .max-size-7{
+            max-width:calc(8 * var(--base-size) );
+        }
+
+        .flex-3{
+            flex: 3;
+        }
+        .flex-4{
+            flex: 4;
+        }
+        .flex-5{
+            flex: 5;
+        }
+        .flex-6{
+            flex: 6;
+        }
+        .flex-7{
+            flex: 7;
         }
 
         .control-group {
@@ -130,6 +160,7 @@
             border: 1px solid transparent;
             padding: 5px;
             color: lightgray;
+            border: 1px solid lightgray;
             box-sizing: border-box;
         }
     </style>
@@ -138,7 +169,7 @@
         var base = 3;
     </script>
     <div class="container">
-        <button onclick="document.documentElement.style.setProperty('--base-size', (base++) + 'rem');">+</button>
+        <button onclick="document.documentElement.style.setProperty('--base-size', (++base) + 'rem');">+</button>
         <button onclick="document.documentElement.style.setProperty('--base-size', (--base) + 'rem');">-</button>
         <div class="tilegroup">
             <div class="tile">
@@ -196,6 +227,24 @@
                 </div>
             </div>
             <div class="tile">
+                percentuale + max size
+                <div class="row">
+                    <div class="caption perc-3 max-size-3">caption</div>
+                    <div class="control perc-4 max-size-4">control</div>
+                    <div class="static perc-5 max-size-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption perc-3 max-size-3">caption</div>
+                    <div class="control perc-5 max-size-5">control</div>
+                    <!-- <div class="whitespace perc-4 max-size-4">whitespace</div> -->
+                </div>
+                <div class="row">
+                    <div class="caption perc-3 max-size-3">caption</div>
+                    <div class="control perc-5 max-size-5">control</div>
+                    <div class="whitespace perc-4 max-size-4">whitespace</div>
+                </div>
+            </div>
+            <div class="tile">
                 size
                 <div class="row">
                     <div class="caption size-3">caption</div>
@@ -210,6 +259,40 @@
                 <div class="row">
                     <div class="caption size-3">caption</div>
                     <div class="control size-5">control</div>
+                </div>
+            </div>
+            <div class="tile">
+                flex + min-size
+                <div class="row">
+                    <div class="caption flex-3 min-size-3">caption</div>
+                    <div class="control flex-4 min-size-4">control</div>
+                    <div class="static flex-5 min-size-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption flex-3 min-size-3">caption</div>
+                    <div class="control flex-5 min-size-5">control</div>
+                    <div class="whitespace flex-4 min-size-4">whitespace</div>
+                </div>
+                <div class="row">
+                    <div class="caption flex-3 min-size-3">caption</div>
+                    <div class="control flex-5 min-size-5">control</div>
+                </div>
+            </div>
+            <div class="tile">
+                flex + min-size + max-size
+                <div class="row">
+                    <div class="caption flex-3 min-size-3 max-size-3">caption</div>
+                    <div class="control flex-4 min-size-4 max-size-4">control</div>
+                    <div class="static flex-5 min-size-5 max-size-5" >static</div>
+                </div>
+                <div class="row">
+                    <div class="caption flex-3 min-size-3 max-size-3">caption</div>
+                    <div class="control flex-5 min-size-5 max-size-5">control</div>
+                    <div class="whitespace flex-4 min-size-4 max-size-4">whitespace</div>
+                </div>
+                <div class="row">
+                    <div class="caption flex-3 min-size-3 max-size-3">caption</div>
+                    <div class="control flex-5 min-size-5 max-size-5">control</div>
                 </div>
             </div>
         </div>
