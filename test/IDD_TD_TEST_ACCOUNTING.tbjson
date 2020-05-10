@@ -1,0 +1,1075 @@
+﻿const IDD_TD_TEST_ACCOUNTING = {
+  "context": "uisalesdoc",
+  "hasStaticArea": true,
+  "height": 254,
+  "collapsible": true,
+  "collapsed": true,
+  "id": "IDD_TD_TEST_ACCOUNTING",
+  "items": [
+    {
+      "activation": "DocumentDoAccounting()",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.AccTpl",
+        "hotLink": "HKLAccTpl",
+        "hotLinkNS": "ERP.Accounting.Dbl.AccountingTemplatesByTaxSign",
+        "mustExistData": true
+      },
+      "controlCaption": "Accounting Template",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_OPERATIONE_WITH",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "DocumentDoAccounting()",
+      "anchor": "IDC_DOC_OPERATIONE_WITH",
+      "binding": {
+        "datasource": "HKLAccTpl.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_OPERATION_WITH",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.InvoicingAccTpl",
+        "hotLink": "HKLAccTplDocSumm",
+        "hotLinkNS": "ERP.Accounting.Dbl.AccountingTemplatesByTaxSign",
+        "mustExistData": true
+      },
+      "controlCaption": "Accounting Template",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_OPERATIONE_WITH_DOC_SUMM",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "IDC_DOC_OPERATIONE_WITH_DOC_SUMM",
+      "binding": {
+        "datasource": "HKLAccTplDocSumm.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_OPERATION_WITH_DOC_SUMM",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "(DocumentDoAccounting() && !bIsActivated_MasterData_BR) || bIsNonCollectedReceipt || bIsProformaInvoice",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.TaxJournal",
+        "hotLink": "HKLJournal",
+        "hotLinkNS": "ERP.IdsMng.Dbl.TaxJournalsExcludedFromVAT",
+        "mustExistData": true
+      },
+      "controlCaption": "Journal",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_JOURNAL",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "(DocumentDoAccounting() && !bIsActivated_MasterData_BR) || bIsNonCollectedReceipt || bIsProformaInvoice",
+      "anchor": "IDC_DOC_JOURNAL",
+      "binding": {
+        "datasource": "HKLJournal.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_JOURNAL",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.InvoicingTaxJournal",
+        "hotLink": "HKLJournalDocSumm",
+        "hotLinkNS": "ERP.IdsMng.Dbl.IntraTaxJournals",
+        "mustExistData": true
+      },
+      "controlCaption": "{{sJournalDocSumm}}",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_JOURNAL_DOC_SUMM",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "IDC_DOC_JOURNAL_DOC_SUMM",
+      "binding": {
+        "datasource": "HKLJournalDocSumm.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_JOURNAL_DOC_SUMM",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "bVisible_SaleDocAccountingGroup",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.InvoicingAccGroup",
+        "hotLink": "HKLAccGroupDocSumm",
+        "hotLinkNS": "ERP.Accounting.Dbl.AccountingGroups"
+      },
+      "controlCaption": "Accounting Group",
+      "controlClass": "StringComboDropDown",
+      "height": 30,
+      "id": "IDC_DOC_OPERAT_WITH_GROUP_SUMM",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 40,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "activation": "bVisible_SaleDocAccountingGroup",
+      "anchor": "IDC_DOC_OPERAT_WITH_GROUP_SUMM",
+      "binding": {
+        "datasource": "HKLAccGroupDocSumm.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_DOC_OPERAT_WITH_GROUP_SUMM_DESCR",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 182,
+      "captionSize": 3,
+      "controlSize": 7
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.ContractCode",
+        "hotLink": "HKLContractCodes",
+        "hotLinkNS": "ERP.Company.Dbl.ContractCodes"
+      },
+      "controlCaption": "Contract Code",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_CONTRACTCODE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_DOC_CONTRACTCODE",
+      "binding": {
+        "datasource": "HKLContractCodes.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_DOC_CONTRACTCODE_DESCR",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 142,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.ProjectCode",
+        "hotLink": "HKLProjectCodes",
+        "hotLinkNS": "ERP.Company.Dbl.ProjectCodes"
+      },
+      "controlCaption": "Project Code",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_PROJECTCODE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 98,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "IDC_DOC_PROJECTCODE",
+      "binding": {
+        "datasource": "HKLProjectCodes.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_STATIC_DOC_PROJECTCODE_DESCR",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 124,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "activation": "DocumentDoAccounting() && bIsActivated_Accounting_IT && !bIsInvoiceForAdvance && !bIsReceipt",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "Charges.CreditNotePreviousPeriod"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_DOC_TAX_CREDITNOTE",
+      "labelOnLeft": true,
+      "multiline": true,
+      "text": "Variation Note  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "activation": "DocumentDoAccounting() && bIsActivated_Accounting_IT && !bIsInvoiceForAdvance && !bIsReceipt",
+      "anchor": "IDC_DOC_TAX_CREDITNOTE",
+      "font": {
+        "italic": true
+      },
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_DOC_TAX_CREDITNOTE",
+      "text": "related to an invoice of the previous year",
+      "type": "Label",
+      "width": 211,
+      "captionSize": 8,
+      "controlSize": 8
+    },
+    {
+      "activation": "DocumentDoAccounting() && bIsActivated_AP_AR && bIsCreditNote",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "PymtScheduleSearch"
+      },
+      "controlClass": "Button",
+      "controlCaption": "Link Payment Schedule",
+      "height": 12,
+      "id": "IDC_SALES_LINK_PAYABLERECEIVABLE",
+      "ownerDraw": true,
+      "type": "Button",
+      "width": 16,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "activation": "DocumentDoAccounting() && bIsActivated_AP_AR && bIsCreditNote",
+      "anchor": "IDC_SALES_LINK_PAYABLERECEIVABLE",
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.PymtSchedId",
+        "hotLink": "HKLPayablesReceivables",
+        "hotLinkNS": "ERP.Sales.Components.Receivables"
+      },
+      "border": true,
+      "controlClass": "LongStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_SALEDOC_PAYABLERECEIVABLE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 0,
+      "captionSize": 0,
+      "controlSize": 1
+    },
+    {
+      "activation": "DocumentDoAccounting() && bIsActivated_AP_AR && bIsCreditNote",
+      "anchor": "IDC_SALEDOC_PAYABLERECEIVABLE",
+      "binding": {
+        "buttonId": 0,
+        "datasource": "PymtScheduleDescri"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_SALEDOC_DESCRI_PAYABLERECEIVABLE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 202,
+      "captionSize": 3,
+      "controlSize": 8
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.InvoiceTypes",
+        "hotLink": "HKLInvoiceType",
+        "hotLinkNS": "ERP.Sales.Dbl.InvoiceType"
+      },
+      "controlCaption": "Grouping Code",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_INVOICE_TYPE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "!DocumentDoAccounting() && !bIsReturnToSupplier",
+      "anchor": "IDC_DOC_INVOICE_TYPE",
+      "binding": {
+        "datasource": "HKLInvoiceType.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_INVOICETYPES",
+      "type": "Label",
+      "width": 154,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "ERP.TaxExigibilityDelivery && !DocumentDoAccounting() && (bIsPickingRequest || bIsProformaInvoice || bIsDN || bIsSubCNT_DN || bIsNonCollectedReceipt)",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "SaleDocument.NoChangeExigibility"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_DOC_NOT_MODIF_EXIGIB_INV",
+      "labelOnLeft": true,
+      "text": "Does not Change  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "activation": "ERP.TaxExigibilityDelivery && !DocumentDoAccounting() && (bIsPickingRequest || bIsProformaInvoice || bIsDN || bIsSubCNT_DN || bIsNonCollectedReceipt)",
+      "anchor": "IDC_DOC_NOT_MODIF_EXIGIB_INV",
+      "font": {
+        "italic": true
+      },
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_DOC_NOT_MODIF_EXIGIB_INV",
+      "text": "Invoice Exigibility  ",
+      "type": "Label",
+      "width": 173,
+      "captionSize": 7,
+      "controlSize": 7
+    },
+    {
+      "activation": "(DocumentDoAccounting() && !bIsReceipt && bWithholdingTaxIsActivated) || (!DocumentDoAccounting() && bIsProformaInvoice && bWithholdingTaxIsActivated)",
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_DOC_ENASARCO_STATIC_BOX3",
+      "linePosition": 1,
+      "text": "ENASARCO",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "activation": "(DocumentDoAccounting() && !bIsReceipt && bWithholdingTaxIsActivated) || (!DocumentDoAccounting() && bIsProformaInvoice && bWithholdingTaxIsActivated)",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.ENASARCOSalesPerc"
+      },
+      "controlCaption": "Percentage",
+      "controlClass": "PercentEdit",
+      "height": 12,
+      "id": "IDC_DOC_ENASARCO_PERC",
+      "minValue": -100,
+      "maxValue": 100,
+      "numberDecimal": 3,
+      "type": "Edit",
+      "width": 30,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "activation": "(DocumentDoAccounting() && !bIsReceipt && bWithholdingTaxIsActivated) || (!DocumentDoAccounting() && bIsProformaInvoice && bWithholdingTaxIsActivated)",
+      "anchor": "COL1",
+      "binding": {
+        "datasource": "Charges.ENASARCOSalesAmount"
+      },
+      "border": true,
+      "controlCaption": "Amount",
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_ENASARCO_CHARGES",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 68,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_TaxCommunication",
+      "anchor": "COL1",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_SALES_DOC_TAX_COMMUNICATION",
+      "linePosition": 1,
+      "text": "Tax Communication",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "activation": "bIsActivated_TaxCommunication",
+      "anchor": "COL1",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "SaleDocument.TaxCommunicationGroup",
+        "hotLink": "HKLTaxCommunicationGroup",
+        "hotLinkNS": "ERP.Accounting_IT.Dbl.TaxCommunicationGroup"
+      },
+      "controlCaption": "Grouping Code for",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_DOC_TAX_GROUP",
+      "type": "Edit",
+      "width": 97,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "bIsActivated_TaxCommunication",
+      "anchor": "IDC_DOC_TAX_GROUP",
+      "binding": {
+        "datasource": "HKLTaxCommunicationGroup.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_TAX_GROUP_DESCRI",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 125,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "activation": "bIsActivated_TaxCommunication",
+      "anchor": "COL1",
+      "auto": true,
+      "binding": {
+        "datasource": "SaleDocument.TaxCommunicationOperation"
+      },
+      "comboType": 2,
+      "controlCaption": "Indicates if this operation must be considered",
+      "controlClass": "EnumCombo",
+      "height": 45,
+      "id": "IDC_DOC_TAX_OPERATION",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 91,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "!ERP.Business_BR",
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.ReturnedMaterial"
+      },
+      "controlCaption": "Return from Customer",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_DOC_AMOUNT_RETURN",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_SALES_DOC_CASH_ON_DELIVERY",
+      "linePosition": 1,
+      "text": "Cash on Delivery",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.CashOnDeliveryPercentage"
+      },
+      "controlCaption": "Percentage",
+      "controlClass": "PercentEdit",
+      "height": 12,
+      "id": "IDC_DOC_PERC_CASHONDELIVERY",
+      "type": "Edit",
+      "width": 30,
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "anchor": "IDC_DOC_PERC_CASHONDELIVERY",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.CashOnDeliveryCharges"
+      },
+      "controlCaption": "Amount",
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_DOC_CHARGES_CASHONDELIVERY",
+      "type": "Edit",
+      "width": 68,
+      "marginLeft": 84,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_SALES_DOC_ADVANCES",
+      "linePosition": 1,
+      "text": "Advances",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "Charges.PostAdvancesToAcc"
+      },
+      "controlClass": "CheckBox",
+      "height": 8,
+      "id": "IDC_DOC_POSTACCOUNTING_ADVANCES",
+      "labelOnLeft": true,
+      "text": "Collected concurrently  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "href": "M.ERP.Core.Constants.CoreLen"
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "IDC_DOC_POSTACCOUNTING_ADVANCES",
+      "marginLeft": 105,
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "SaleDocument.PureJECollectionPaymentNo"
+      },
+      "controlCaption": "Document No.",
+      "controlClass": "NoNonFiscalNBEdit",
+      "numberer": {
+        "serviceNs": "ERP.IdsMng.Components.NumNotFiscManager",
+        "useFormatMask": false
+      },
+      "height": 12,
+      "id": "IDC_DOC_PURE_JE_ADVANCES",
+      "textLimit": {
+        "const": "LEN_NO_DOC_EXTENDED"
+      },
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "Charges.PaymentTerm"
+      },
+      "comboType": 2,
+      "controlCaption": "Payment Type",
+      "controlClass": "EnumCombo",
+      "height": 64,
+      "id": "IDC_DOC_INSTALLMENTTYPE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 115,
+      "captionSize": 3,
+      "controlSize": 5
+    },
+    {
+      "anchor": "COL2",
+      "controlCaption": "Amount",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.Advance"
+      },
+      "captionFont": {
+        "italic": true
+      },
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_DOC_AMOUNT_ADVANCES",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "COL2",
+      "controlCaption": "Offset",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.AdvanceOffset",
+        "hotLink": "HKLAdvanceOffset",
+        "hotLinkNS": "ERP.ChartOfAccounts.Dbl.ChartOfAccountsByAccountType",
+        "mustExistData": true
+      },
+      "controlClass": "AccountEdit",
+      "height": 12,
+      "id": "IDC_DOC_OFFSETT_ADVANCES",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "IDC_DOC_OFFSETT_ADVANCES",
+      "binding": {
+        "datasource": "HKLAdvanceOffset.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_OFFS_ADVANCES",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 106,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "COL2",
+      "controlCaption": "Amount",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.Advance2"
+      },
+      "captionFont": {
+        "italic": true
+      },
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_DOC_AMOUNT_ADVANCES2",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "COL2",
+      "controlCaption": "Offset",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.AdvanceOffset2",
+        "hotLink": "HKLAdvanceOffset2",
+        "hotLinkNS": "ERP.ChartOfAccounts.Dbl.ChartOfAccountsByAccountType",
+        "mustExistData": true
+      },
+      "controlClass": "AccountEdit",
+      "height": 12,
+      "id": "IDC_DOC_OFFSETT_ADVANCES2",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "IDC_DOC_OFFSETT_ADVANCES2",
+      "binding": {
+        "datasource": "HKLAdvanceOffset2.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_OFFS_ADVANCES2",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 106,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "COL2",
+      "controlCaption": "Amount",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.Advance3"
+      },
+      "captionFont": {
+        "italic": true
+      },
+      "controlClass": "MoneyEdit",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "height": 12,
+      "id": "IDC_DOC_AMOUNT_ADVANCES3",
+      "type": "Edit",
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "COL2",
+      "controlCaption": "Offset",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Charges.AdvanceOffset3",
+        "hotLink": "HKLAdvanceOffset3",
+        "hotLinkNS": "ERP.ChartOfAccounts.Dbl.ChartOfAccountsByAccountType",
+        "mustExistData": true
+      },
+      "controlClass": "AccountEdit",
+      "height": 12,
+      "id": "IDC_DOC_OFFSETT_ADVANCES3",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 57,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Accounting",
+      "anchor": "IDC_DOC_OFFSETT_ADVANCES3",
+      "binding": {
+        "datasource": "HKLAdvanceOffset3.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_OFFS_ADVANCES3",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 106,
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "anchor": "COL2",
+      "binding": {
+        "datasource": "AdvanceInstallmentSearch"
+      },
+      "controlClass": "Button",
+      "controlCaption": "Link Already Posted Amount Advance",
+      "height": 12,
+      "id": "IDC_LINK_INSTALMENT_ADVANCE",
+      "ownerDraw": true,
+      "type": "Button",
+      "width": 16,
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "anchor": "IDC_LINK_INSTALMENT_ADVANCE",
+      "binding": {
+        "datasource": "Charges.PrePayedAdvance"
+      },
+      "border": true,
+      "controlClass": "MoneyStatic",
+      "numberDecimal": "{{CurrencyDecimal}}",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_AMOUNT_ADVANCE_ADVANCED",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 57,
+      "captionSize": 0,
+      "controlSize": 3
+    },
+    {
+      "anchor": "IDC_DOC_AMOUNT_ADVANCE_ADVANCED",
+      "binding": {
+        "buttonId": 0,
+        "datasource": "AdvanceInstallmentDescri",
+        "hotLink": "HKLAdvances",
+        "hotLinkNS": "ERP.Sales.Components.Advance",
+        "mustExistData": true
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_INSTALMENT_ADVANCE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 147,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "bIsNotaFiscaForCustomer",
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "DBTNotaFiscalForCustomerSummary.AdvancePymtCash",
+        "hotLink": "HKLAdvancePymtCash",
+        "hotLinkNS": "ERP.AP_AR.Dbl.PaymentCashes"
+      },
+      "controlCaption": "Advance Cash",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_ADVANCE_PYM_CASH_BR",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsNotaFiscaForCustomer",
+      "anchor": "IDC_DOC_ADVANCE_PYM_CASH_BR",
+      "marginLeft": 55,
+      "binding": {
+        "datasource": "DBTNotaFiscalForCustomerSummary.AdvancePymtAccount",
+        "hotLink": "HKLAdvancePymtAccount",
+        "hotLinkNS": "ERP.ChartOfAccounts.Dbl.ChartOfAccounts"
+      },
+      "controlCaption": "Account",
+      "controlClass": "AccountEdit",
+      "height": 12,
+      "id": "IDC_DOC_ADVANCE_PYM_ACCOUNT_BR",
+      "type": "Edit",
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Jobs || bIsActivated_CostAccounting || bIsActivated_ProductLines",
+      "anchor": "COL2",
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_SALES_DOC_COST_ACCOUNTING",
+      "linePosition": 1,
+      "text": "Cost Accounting",
+      "type": "Label",
+      "width": 325,
+      "captionSize": 3,
+      "controlSize": 12
+    },
+    {
+      "activation": "bIsActivated_Jobs",
+      "anchor": "COL2",
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "SaleDocument.Job",
+        "hotLink": "HKLJobs",
+        "hotLinkNS": "ERP.Jobs.Dbl.Jobs",
+        "mustExistData": true
+      },
+      "controlCaption": "Job",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_DOC_JOB",
+      "type": "Edit",
+      "width": 80,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_Jobs",
+      "anchor": "IDC_DOC_JOB",
+      "binding": {
+        "datasource": "HKLJobs.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_JOB",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 142,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "bIsActivated_CostAccounting",
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.CostCenter",
+        "hotLink": "HKLCostCenters",
+        "hotLinkNS": "ERP.CostAccounting.Dbl.CostCenters",
+        "mustExistData": true
+      },
+      "controlCaption": "Cost Center",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_CSTCENTER",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_CostAccounting",
+      "anchor": "IDC_DOC_CSTCENTER",
+      "binding": {
+        "datasource": "HKLCostCenters.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_CSTCENTER",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "activation": "bIsActivated_ProductLines",
+      "anchor": "COL2",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "SaleDocument.ProductLine",
+        "hotLink": "HKLProductLine",
+        "hotLinkNS": "ERP.ProductLines.Dbl.ProductLines",
+        "mustExistData": true
+      },
+      "controlCaption": "Product Line",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_DOC_PRODUCTLINE",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "bIsActivated_ProductLines",
+      "anchor": "IDC_DOC_PRODUCTLINE",
+      "binding": {
+        "datasource": "HKLProductLine.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "group": true,
+      "height": 12,
+      "id": "IDC_DOC_DESCRI_PRODUCTLINE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 160,
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "SaleDocAccountingData",
+  "size": "Wide",
+  "text": "Accounting",
+  "type": "Tile",
+  "width": 654,
+  "grid": "col"
+}

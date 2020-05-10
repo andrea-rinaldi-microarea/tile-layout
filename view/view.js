@@ -72,6 +72,7 @@ var view = {
         if (!jsonTile.items) return;
         var col = $(tileColumnTemplate);
         jsonTile.items.forEach(item => {
+            // if (item.activation) return;
             if (!item.anchor.startsWith("COL")) return;
             var fields = [ createField(item) ];
             jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {
@@ -89,6 +90,7 @@ var view = {
         var col = $(tileColumnTemplate);
         var colWidth = 0;
         jsonTile.items.filter(i => i.anchor == anchor && i.block == block).forEach(item => {
+            // if (item.activation) return;
             var fields = [ createField(item) ];
             var rowWidth = fieldWidth(item);
             jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {

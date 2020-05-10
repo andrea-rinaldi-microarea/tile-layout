@@ -6,6 +6,9 @@ const IDD_TEST_VIEW = {
             "items": [
                 {
                     "href": "IDD_TD_TEST_MISC"
+                },
+                {
+                    "href": "IDD_TD_TEST_ACCOUNTING"
                 }
             ]
         }

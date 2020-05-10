@@ -4,7 +4,8 @@ var test = {
 ( test => {
 
     var tiles =  [
-        IDD_TD_TEST_MISC
+        IDD_TD_TEST_MISC,
+        IDD_TD_TEST_ACCOUNTING
     ];
 
     var extensions =  [
