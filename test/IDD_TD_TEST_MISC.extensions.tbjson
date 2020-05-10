@@ -1,6 +1,7 @@
 const IDD_TD_TEST_MISC_EXTENSIONS = {
     "extends": "IDD_TD_TEST_MISC",
-    "variableBlockWidth": true,
+    // "variableBlockWidth": true,
+    // "newsletterColumns": true,
     "items": [
         {
             "id": "IDC_CARRIERS_CARRIER",

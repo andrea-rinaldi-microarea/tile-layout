@@ -5,8 +5,25 @@
     </head>
     <body>
         <style>
+
             .tile-control .string-static {
                 font-style: italic;
+            }
+            .tile-control-group {
+                height: 2.2rem;
+            }
+
+            .newsletter {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                height: calc(2.2rem * var(--rows-4-col));
+            }
+            @media (max-width:576px)
+            {
+                .newsletter {
+                    height: calc(2.2rem * var(--rows-1-col));
+                }
             }
         </style>
         <div id="mainView" class="container-fluid">

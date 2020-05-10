@@ -112,7 +112,7 @@ var view = {
         return $.extend(jsonTile, extension);
     }
 
-    function createTile(jsonTile, extension) {
+    function createTile(jsonTile) {
         if (!jsonTile) return;
 
         var tile = $(utils.render(tileTemplate, {
@@ -123,11 +123,22 @@ var view = {
             tile.children(".tile-title").hide();
         }
 
+        if (jsonTile.newsletterColumns) {
+            tile.children(".tile-content").addClass("newsletter");
+            //style="--rows-1-col:13; --rows-2-col:7; --rows-3-col:5; --rows-4-col:4"
+        } else {
+            tile.children(".tile-content").addClass("column");
+        }
+
+        var blockOrder = 1;
         for (c = 1; c <= 2; c++) {
+            // var col = $(tileColumnTemplate);
             for (b = 1; b <= 2; b++) {
                 var block = createColumn("COL" + c, "BLK" + b, jsonTile);
                 if (!block)
                     break;
+                // col.append(block);
+                block.addClass("order-" + blockOrder++);
                 tile.children(".tile-content").append(block);
             }
             var col = createColumn("COL" + c, null, jsonTile);
