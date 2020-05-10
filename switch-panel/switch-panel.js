@@ -8,7 +8,7 @@ var switchPanel = {
     $("body").prepend($(switchPanelForm));
 
     var currSize = -1;
-    var screenSizes = [ '400px', '540px', '720px', '960px', '1140px' ];
+    var screenSizes = [ '400px', '576px', '768px', '992px', '1200px', '1500px', '1650px' ];
     switchPanel.up = function() {
         if (currSize == screenSizes.length - 1) return;
         if (currSize == -1) currSize = screenSizes.length - 2;

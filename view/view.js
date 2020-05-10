@@ -60,31 +60,60 @@ var view = {
         return field;
     }
 
-    function createColumn(tag, jsonTile) {
-        if (!jsonTile.items) return;
-        var col = $(tileColumnTemplate);
-        jsonTile.items.filter(i => i.anchor == tag).forEach(item => {
-            var fields = [ createField(item) ];
-            jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {
-                fields.push(createField(anchored));
-            });
-            col.append(createRow(fields));
-        });
-        if (col.children().length > 0)
-            return col;
+    function fieldWidth(item) {
+        var w = item.controlSize ? item.controlSize : 0;
+        if (item.captionSize > 0 && (item.text || item.controlCaption)) {
+            w += item.captionSize;
+        }
+        return w;
     }
 
-    function createTile(jsonTile, extention) {
-        if (!jsonTile) return;
-
-        if (extention && extention.items && jsonTile.items) {
-            jsonTile.items.forEach(item => {
-                var itemExt = extention.items.find(i => i.id == item.id);
-                if (itemExt) {
-                    $.extend(true, item, itemExt);
-                }
-            })
+    function createColumn(anchor, block, jsonTile) {
+        if (!jsonTile.items) return;
+        var col = $(tileColumnTemplate);
+        var colWidth = 0;
+        jsonTile.items.filter(i => i.anchor == anchor && i.block == block).forEach(item => {
+            var fields = [ createField(item) ];
+            var rowWidth = fieldWidth(item);
+            jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {
+                fields.push(createField(anchored));
+                rowWidth += fieldWidth(anchored);
+            });
+            if (rowWidth > colWidth) {
+                colWidth = rowWidth;
+            }
+            col.append(createRow(fields));
+        });
+        if (col.children().length > 0) {
+            if (jsonTile.variableBlockWidth) {
+                col.addClass("flex-" + colWidth);
+            }
+            return col;
         }
+    }
+
+    function extendTile(jsonTile, extensions) {
+        if (!jsonTile || !extensions) return jsonTile;
+
+        var extension = extensions.find(ext => ext.extends == jsonTile.id);
+
+        if (!extension) return jsonTile;
+
+        if (jsonTile.items && extension.items) {
+            jsonTile.items.forEach(item => {
+                var itemExt = extension.items.find(i => i.id == item.id);
+                if (itemExt) {
+                    $.extend(item, itemExt);
+                }
+            });
+            delete extension.items;
+        }
+
+        return $.extend(jsonTile, extension);
+    }
+
+    function createTile(jsonTile, extension) {
+        if (!jsonTile) return;
 
         var tile = $(utils.render(tileTemplate, {
             "title": jsonTile.text
@@ -94,13 +123,19 @@ var view = {
             tile.children(".tile-title").hide();
         }
 
-        for (c = 1; c <= 4; c++) {
-            var col = createColumn("COL" + c, jsonTile);
-            if (!col)
-                break;
-            tile.children(".tile-content").append(col);
+        for (c = 1; c <= 2; c++) {
+            for (b = 1; b <= 2; b++) {
+                var block = createColumn("COL" + c, "BLK" + b, jsonTile);
+                if (!block)
+                    break;
+                tile.children(".tile-content").append(block);
+            }
+            var col = createColumn("COL" + c, null, jsonTile);
+            if (col) {
+                tile.children(".tile-content").append(col);
+            }
         }
-        var noAnchor = createColumn(null, jsonTile);
+        var noAnchor = createColumn(null, null, jsonTile);
         if (noAnchor) {
             tile.children(".tile-content").append(noAnchor);
         }
@@ -113,13 +148,13 @@ var view = {
         if (item.items) {
             item.items.forEach(itm => {
                 if (itm.href) {
-                    lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href), extensions.find(ext => ext.extends == itm.href)));
+                    lc.append(createTile(extendTile(jsonTiles.find(tile => tile.id == itm.href), extensions)));
                 } else {
                     lc.append(createLayoutContainer(itm, jsonTiles, extensions));
                 }
             });
         } else {
-            lc.append(createTile(jsonTiles.find(tile => tile.id == item.href), extensions.find(ext => ext.extends == item.href)));
+            lc.append(createTile(extendTile(jsonTiles.find(tile => tile.id == item.href), extensions)));
         }
         return lc;
     }
