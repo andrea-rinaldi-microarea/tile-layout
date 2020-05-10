@@ -74,8 +74,17 @@ var view = {
             return col;
     }
 
-    function createTile(jsonTile) {
+    function createTile(jsonTile, extention) {
         if (!jsonTile) return;
+
+        if (extention && extention.items && jsonTile.items) {
+            jsonTile.items.forEach(item => {
+                var itemExt = extention.items.find(i => i.id == item.id);
+                if (itemExt) {
+                    $.extend(true, item, itemExt);
+                }
+            })
+        }
 
         var tile = $(utils.render(tileTemplate, {
             "title": jsonTile.text
@@ -99,34 +108,34 @@ var view = {
         return tile;
     }
 
-    function createLayoutContainer(item, jsonTiles) {
+    function createLayoutContainer(item, jsonTiles, extensions) {
         var lc = $(layoutContainerTemplate);
         if (item.items) {
             item.items.forEach(itm => {
                 if (itm.href) {
-                    lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href)));
+                    lc.append(createTile(jsonTiles.find(tile => tile.id == itm.href), extensions.find(ext => ext.extends == itm.href)));
                 } else {
-                    lc.append(createLayoutContainer(itm, jsonTiles));
+                    lc.append(createLayoutContainer(itm, jsonTiles, extensions));
                 }
             });
         } else {
-            lc.append(createTile(jsonTiles.find(tile => tile.id == item.href)));
+            lc.append(createTile(jsonTiles.find(tile => tile.id == item.href), extensions.find(ext => ext.extends == item.href)));
         }
         return lc;
     }
 
-    function createTilegroup(item, jsonTiles) {
+    function createTilegroup(item, jsonTiles, extensions) {
         var tg = $(tileGroupTemplate);
         item.items.forEach(item => {
-            tg.append(createLayoutContainer(item, jsonTiles));
+            tg.append(createLayoutContainer(item, jsonTiles, extensions));
         });
         return tg;
     }
 
-    view.addView = function(elem, jsonView, jsonTiles) {
+    view.addView = function(elem, jsonView, jsonTiles, extensions) {
         var view = $("<div/>");
         jsonView.items.forEach(item => {
-            view.append(createTilegroup(item, jsonTiles));
+            view.append(createTilegroup(item, jsonTiles, extensions));
         });
         elem.append(view);
     }

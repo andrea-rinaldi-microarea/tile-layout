@@ -1,141 +1,287 @@
-const IDD_TD_TEST_MISC = {
-    "id": "IDD_TD_TEST_MISC",
-    "text": "Miscellaneous Data",
-    "items": [
-        {
-            "controlCaption": "cap-3 ctrl-2",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL1",
-            "anchor": "COL1",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 2
-        },
-        {
-            "controlCaption": "checkbox 3",
-            "controlClass": "CheckBox",
-            "id": "IDC_TEST_CONTROL2",
-            "anchor": "IDC_TEST_CONTROL1",
-            "type": "Check",
-            "captionSize": 3,
-            "controlSize": 1
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-8",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL3",
-            "anchor": "COL1",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 8
-        },
-        {
-            "controlCaption": "cap-3 ctrl-3",
-            "controlClass": "StringComboDropDown",
-            "id": "IDC_TEST_CONTROL4",
-            "anchor": "COL1",
-            "type": "Combo",
-            "captionSize": 3,
-            "controlSize": 3
-        },
-        {
-            "controlClass": "StringStatic",
-            "placeholder": "static-6",
-            "id": "IDC_TEST_CONTROL5",
-            "anchor": "IDC_TEST_CONTROL4",
-            "type": "Label",
-            "captionSize": 3,
-            "controlSize": 6
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-2",
-            "controlClass": "StringComboDropDown",
-            "id": "IDC_TEST_CONTROL6",
-            "anchor": "COL2",
-            "type": "Combo",
-            "captionSize": 3,
-            "controlSize": 2
-        },
-        {
-            "controlCaption": "cap-3 ctrl-4",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL7",
-            "anchor": "COL2",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 4
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-4",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL8",
-            "anchor": "COL2",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 4
-        },
-        {
-            "controlCaption": "cap-3 ctrl-3",
-            "controlClass": "StringComboDropDown",
-            "id": "IDC_TEST_CONTROL9",
-            "anchor": "COL3",
-            "type": "Combo",
-            "captionSize": 3,
-            "controlSize": 3
-        },
-        {
-            "controlClass": "StringStatic",
-            "placeholder": "static-6",
-            "id": "IDC_TEST_CONTROL10",
-            "anchor": "IDC_TEST_CONTROL9",
-            "type": "Label",
-            "captionSize": 3,
-            "controlSize": 6
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-3",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL11",
-            "anchor": "COL3",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 3
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-9",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL12",
-            "anchor": "COL3",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 9
-        },
-        {
-            "controlCaption": "checkbox 3",
-            "controlClass": "CheckBox",
-            "id": "IDC_TEST_CONTROL13",
-            "anchor": "COL4",
-            "type": "Check",
-            "captionSize": 3,
-            "controlSize": 1
-        },
-        {
-            "controlCaption": "cap-3 ctrl-6",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL14",
-            "anchor": "COL4",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 6
-        },
-        {
-            "controlCaption": "Lorem cap-3 ctrl-6",
-            "controlClass": "StringEdit",
-            "id": "IDC_TEST_CONTROL15",
-            "anchor": "COL4",
-            "type": "Edit",
-            "captionSize": 3,
-            "controlSize": 6
-        },
-]
+﻿const IDD_TD_TEST_MISC = {
+  "collapsible": false,
+  "context": "uicarriers",
+  "height": 107,
+  "id": "IDD_TD_TEST_MISC",
+  "items": [
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Carrier"
+      },
+      "controlCaption": "Carrier",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_CARRIER",
+      "type": "Edit",
+      "width": 48,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "binding": {
+        "datasource": "Carriers.Disabled"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_CARRIERS_ISDISABLED",
+      "labelOnLeft": true,
+      "tabStop": false,
+      "text": "Disabled  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 163,
+      "anchor": "IDC_CARRIERS_CARRIER",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.CompanyName"
+      },
+      "controlCaption": "Company Name",
+      "controlClass": "StringEdit",
+      "height": 24,
+      "id": "IDC_CARRIERS_COMPNAME",
+      "type": "Edit",
+      "width": 213,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 8
+    },
+    {
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Carriers.TitleCode",
+        "hotLink": "HKLTitles",
+        "hotLinkNS": "ERP.Company.Dbl.Titles"
+      },
+      "controlCaption": "Title",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_TITLECODE",
+      "sort": true,
+      "type": "Combo",
+      "vScroll": true,
+      "width": 57,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "binding": {
+        "datasource": "HKLTitles.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "height": 12,
+      "id": "IDC_CARRIERS_DESCRI_TITLECODE",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "anchor": "IDC_CARRIERS_TITLECODE",
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Carriers.ISOCountryCode",
+        "hotLink": "HKLISOCountryCodes",
+        "hotLinkNS": "ERP.Company.Dbl.ISOCountryCodes",
+        "mustExistData": "{{!bMasterDataBR}}",
+        "enableAddOnFly": "{{!bMasterDataBR}}"
+      },
+      "controlCaption": "ISO Country",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_ISOCOUNTRYCODE",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 28,
+      "anchor": "COL1",
+      "captionSize": 3,
+      "controlSize": 2
+    },
+    {
+      "autoHScroll": true,
+      "activation": "!ERP.MasterData_ES",
+      "binding": {
+        "datasource": "Carriers.FiscalCode"
+      },
+      "controlCaption": "Fiscal Code",
+      "controlClass": "CodeFiscalDataCarriersEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_CFISC",
+      "type": "Edit",
+      "width": 100,
+      "anchor": "COL1",
+      "selector": {
+        "isoCode": "Carriers.ISOCountryCode"
+      },
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.TaxIdNumber"
+      },
+      "controlCaption": "Tax Number",
+      "controlClass": "TaxIdNumberCarriersEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_TAXIDNUMBER",
+      "type": "Edit",
+      "width": 100,
+      "anchor": "COL1",
+      "selector": {
+        "isoCode": "Carriers.ISOCountryCode",
+        "naturalPerson": "Carriers.NaturalPerson",
+        "companyName": "Carriers.CompanyName",
+        "address": "Carriers.Address",
+        "city": "Carriers.City",
+        "county": "Carriers.County"
+      },
+      "captionSize": 3,
+      "controlSize": 4
+    },
+    {
+      "activation": "ERP.Currencies",
+      "auto": true,
+      "binding": {
+        "buttonId": 0,
+        "datasource": "Carriers.Currency",
+        "hotLink": "HKLCurrencies",
+        "hotLinkNS": "ERP.Currencies.Dbl.Currencies"
+      },
+      "controlCaption": "Currency",
+      "controlClass": "StringComboDropDown",
+      "height": 64,
+      "id": "IDC_CARRIERS_CURRENCY",
+      "type": "Combo",
+      "vScroll": true,
+      "width": 62,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "activation": "ERP.Currencies",
+      "binding": {
+        "datasource": "HKLCurrencies.Description"
+      },
+      "border": true,
+      "controlClass": "StringStatic",
+      "height": 12,
+      "id": "IDC_CARRIERS_DESCRI_CURRENCY",
+      "noPrefix": true,
+      "type": "Label",
+      "width": 154,
+      "anchor": "IDC_CARRIERS_CURRENCY",
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.EORICode"
+      },
+      "controlCaption": "EORI Code",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_EORICODE",
+      "type": "Edit",
+      "upperCase": true,
+      "width": 80,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 3
+    },
+    {
+      "autoVScroll": true,
+      "binding": {
+        "datasource": "Carriers.Notes"
+      },
+      "controlCaption": "Notes",
+      "controlClass": "StringEdit",
+      "height": 24,
+      "id": "IDC_CARRIERS_NOTES",
+      "multiline": true,
+      "type": "Edit",
+      "wantReturn": true,
+      "width": 218,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 9
+    },
+    {
+      "controlClass": "LabelStatic",
+      "group": true,
+      "height": 8,
+      "id": "IDC_STATIC_CARRIERS_NAT_PERSON",
+      "linePosition": 1,
+      "text": "Natural Person",
+      "type": "Label",
+      "width": 327,
+      "anchor": "COL2",
+      "captionSize": 3
+    },
+    {
+      "binding": {
+        "datasource": "Carriers.NaturalPerson"
+      },
+      "controlClass": "CheckBox",
+      "height": 10,
+      "id": "IDC_CARRIERS_NAT_PERSON",
+      "labelOnLeft": true,
+      "text": "Natural Person  ",
+      "textAlign": "Right",
+      "type": "Check",
+      "width": 109,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 1
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.Name"
+      },
+      "controlCaption": "Name",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_NAME",
+      "type": "Edit",
+      "width": 154,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 6
+    },
+    {
+      "autoHScroll": true,
+      "binding": {
+        "datasource": "Carriers.LastName"
+      },
+      "controlCaption": "Last Name",
+      "controlClass": "StringEdit",
+      "height": 12,
+      "id": "IDC_CARRIERS_LASTNAME",
+      "type": "Edit",
+      "width": 154,
+      "anchor": "COL2",
+      "captionSize": 3,
+      "controlSize": 6
+    }
+  ],
+  "name": "CarriersMain",
+  "size": "Wide",
+  "text": "Miscellaneous Data",
+  "type": "Tile",
+  "width": 654,
+  "hasStaticArea": true,
+  "grid": "col"
 }

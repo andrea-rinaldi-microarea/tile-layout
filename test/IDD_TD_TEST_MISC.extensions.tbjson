@@ -1,0 +1,58 @@
+const IDD_TD_TEST_MISC_EXTENSIONS = {
+    "extends": "IDD_TD_TEST_MISC",
+    "items": [
+        {
+            "id": "IDC_CARRIERS_CARRIER",
+            "controlCaption": "Code",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_CARRIERS_COMPNAME",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_CARRIERS_TITLECODE",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_CARRIERS_ISOCOUNTRYCODE",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_CFISC",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_TAXIDNUMBER",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_CURRENCY",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_CARRIERS_EORICODE",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_CARRIERS_NOTES",
+            "block": "BLK1",
+        },
+        {
+            "id": "IDC_STATIC_CARRIERS_NAT_PERSON",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_NAT_PERSON",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_NAME",
+            "block": "BLK2",
+        },
+        {
+            "id": "IDC_CARRIERS_LASTNAME",
+            "block": "BLK2",
+        },
+    ]
+}
