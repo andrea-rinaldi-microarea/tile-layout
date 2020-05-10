@@ -173,6 +173,10 @@ var view = {
             }
         }
 
+        if (jsonTile.size && jsonTile.size == "AutoFill") {
+            tile.addClass("tile-autofill");
+        }
+
         return tile;
     }
 

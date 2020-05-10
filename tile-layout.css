@@ -185,6 +185,14 @@ h6 {
     box-sizing: border-box;
 }
 
+.tile-autofill {
+    min-width: 1em; /* ?? senza questo non si dimensiona correttamente con il b.edit */
+}
+
+.tile-autofill .tile-control-group {
+    height: 100%!important;
+}
+
 .tile-control-caption {
     display: flex;
     align-items: center;
