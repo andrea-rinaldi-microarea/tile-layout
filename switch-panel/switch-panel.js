@@ -13,6 +13,19 @@ var switchPanel = {
             blockSwitch = 1;
         }
         $(":root").css("--block-switch", blockSwitch);
+        var rowsPerCols = null;
+        if (currSize == -1 /*auto*/ || currSize == 6 /*1650px*/) {
+            var rowsPerCols = "--rows-4-col";
+        } else if (currSize == 5 /*1500px*/ || currSize == 4 /*1200px*/) {
+            rowsPerCols = "--rows-3-col";
+        } else if (currSize == 3 /*992px*/) {
+            rowsPerCols = "--rows-2-col";
+        }
+        if (rowsPerCols) {
+            $(".newsletter").css("height",`calc(2.2rem * var(${rowsPerCols}))`);
+        } else {
+            $(".newsletter").css("height","auto");
+        }
     }
 
     var currSize = -1;
@@ -36,6 +49,7 @@ var switchPanel = {
         document.documentElement.style.setProperty('--max-width', 'inherit');
         $("#switch-panel-current-size")[0].innerHTML = "auto";
         setGlobalProperties();
+        $(".newsletter").css("height","");
     }
     $("#switch-panel-browser-size")[0].innerHTML = `(browser: ${$(window).width()})`;
     $(window).resize(function() {

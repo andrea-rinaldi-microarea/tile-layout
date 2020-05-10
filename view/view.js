@@ -68,6 +68,22 @@ var view = {
         return w;
     }
 
+    function createNewsletterColumn(jsonTile) {
+        if (!jsonTile.items) return;
+        var col = $(tileColumnTemplate);
+        jsonTile.items.forEach(item => {
+            if (!item.anchor.startsWith("COL")) return;
+            var fields = [ createField(item) ];
+            jsonTile.items.filter(i => i.anchor == item.id).forEach(anchored => {
+                fields.push(createField(anchored));
+            });
+            col.append(createRow(fields));
+        });
+        if (col.children().length > 0) {
+            return col;
+        }
+    }
+
     function createColumn(anchor, block, jsonTile) {
         if (!jsonTile.items) return;
         var col = $(tileColumnTemplate);
@@ -124,31 +140,37 @@ var view = {
         }
 
         if (jsonTile.newsletterColumns) {
-            tile.children(".tile-content").addClass("newsletter");
-            //style="--rows-1-col:13; --rows-2-col:7; --rows-3-col:5; --rows-4-col:4"
-        } else {
-            tile.children(".tile-content").addClass("column");
-        }
-
-        var blockOrder = 1;
-        for (c = 1; c <= 2; c++) {
-            // var col = $(tileColumnTemplate);
-            for (b = 1; b <= 2; b++) {
-                var block = createColumn("COL" + c, "BLK" + b, jsonTile);
-                if (!block)
-                    break;
-                // col.append(block);
-                block.addClass("order-" + blockOrder++);
-                tile.children(".tile-content").append(block);
-            }
-            var col = createColumn("COL" + c, null, jsonTile);
+            var col = createNewsletterColumn(jsonTile);
             if (col) {
+                col.addClass("newsletter");
+                col.css("--rows-2-col", Math.ceil(col.children().length / 2));
+                col.css("--rows-3-col", Math.ceil(col.children().length / 3));
+                col.css("--rows-4-col", Math.ceil(col.children().length / 4));
                 tile.children(".tile-content").append(col);
             }
-        }
-        var noAnchor = createColumn(null, null, jsonTile);
-        if (noAnchor) {
-            tile.children(".tile-content").append(noAnchor);
+        } else {
+            tile.children(".tile-content").addClass("column");
+
+            var blockOrder = 1;
+            for (c = 1; c <= 2; c++) {
+                // var col = $(tileColumnTemplate);
+                for (b = 1; b <= 2; b++) {
+                    var block = createColumn("COL" + c, "BLK" + b, jsonTile);
+                    if (!block)
+                        break;
+                    // col.append(block);
+                    block.addClass("order-" + blockOrder++);
+                    tile.children(".tile-content").append(block);
+                }
+                var col = createColumn("COL" + c, null, jsonTile);
+                if (col) {
+                    tile.children(".tile-content").append(col);
+                }
+            }
+            var noAnchor = createColumn(null, null, jsonTile);
+            if (noAnchor) {
+                tile.children(".tile-content").append(noAnchor);
+            }
         }
 
         return tile;

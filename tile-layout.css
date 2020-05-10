@@ -348,3 +348,32 @@ h6 {
 .flex-12 {
     flex: 12;
 }
+
+.newsletter .tile-row {
+    max-width: calc((11 * var(--base-size))) !important;
+}
+
+.newsletter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: calc(2.2rem * var(--rows-4-col));
+}
+@media (max-width:1561px)
+{
+    .newsletter {
+        height: calc(2.2rem * var(--rows-3-col));
+    }
+}
+@media (max-width:1158px)
+{
+    .newsletter {
+        height: calc(2.2rem * var(--rows-2-col));
+    }
+}
+@media (max-width:832px)
+{
+    .newsletter {
+        height: auto;
+    }
+}
