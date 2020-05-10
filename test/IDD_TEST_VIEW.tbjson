@@ -1,0 +1,13 @@
+const IDD_TEST_VIEW = {
+    "id": "IDD_TEST_VIEW",
+    "items": [
+        {
+            "id": "IDC_TG_TEST",
+            "items": [
+                {
+                    "href": "IDD_TD_TEST_MISC"
+                }
+            ]
+        }
+    ]
+}  

@@ -1,0 +1,141 @@
+const IDD_TD_TEST_MISC = {
+    "id": "IDD_TD_TEST_MISC",
+    "text": "Miscellaneous Data",
+    "items": [
+        {
+            "controlCaption": "cap-3 ctrl-2",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL1",
+            "anchor": "COL1",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 2
+        },
+        {
+            "controlCaption": "checkbox 3",
+            "controlClass": "CheckBox",
+            "id": "IDC_TEST_CONTROL2",
+            "anchor": "IDC_TEST_CONTROL1",
+            "type": "Check",
+            "captionSize": 3,
+            "controlSize": 1
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-8",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL3",
+            "anchor": "COL1",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 8
+        },
+        {
+            "controlCaption": "cap-3 ctrl-3",
+            "controlClass": "StringComboDropDown",
+            "id": "IDC_TEST_CONTROL4",
+            "anchor": "COL1",
+            "type": "Combo",
+            "captionSize": 3,
+            "controlSize": 3
+        },
+        {
+            "controlClass": "StringStatic",
+            "placeholder": "static-6",
+            "id": "IDC_TEST_CONTROL5",
+            "anchor": "IDC_TEST_CONTROL4",
+            "type": "Label",
+            "captionSize": 3,
+            "controlSize": 6
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-2",
+            "controlClass": "StringComboDropDown",
+            "id": "IDC_TEST_CONTROL6",
+            "anchor": "COL2",
+            "type": "Combo",
+            "captionSize": 3,
+            "controlSize": 2
+        },
+        {
+            "controlCaption": "cap-3 ctrl-4",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL7",
+            "anchor": "COL2",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 4
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-4",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL8",
+            "anchor": "COL2",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 4
+        },
+        {
+            "controlCaption": "cap-3 ctrl-3",
+            "controlClass": "StringComboDropDown",
+            "id": "IDC_TEST_CONTROL9",
+            "anchor": "COL3",
+            "type": "Combo",
+            "captionSize": 3,
+            "controlSize": 3
+        },
+        {
+            "controlClass": "StringStatic",
+            "placeholder": "static-6",
+            "id": "IDC_TEST_CONTROL10",
+            "anchor": "IDC_TEST_CONTROL9",
+            "type": "Label",
+            "captionSize": 3,
+            "controlSize": 6
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-3",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL11",
+            "anchor": "COL3",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 3
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-9",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL12",
+            "anchor": "COL3",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 9
+        },
+        {
+            "controlCaption": "checkbox 3",
+            "controlClass": "CheckBox",
+            "id": "IDC_TEST_CONTROL13",
+            "anchor": "COL4",
+            "type": "Check",
+            "captionSize": 3,
+            "controlSize": 1
+        },
+        {
+            "controlCaption": "cap-3 ctrl-6",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL14",
+            "anchor": "COL4",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 6
+        },
+        {
+            "controlCaption": "Lorem cap-3 ctrl-6",
+            "controlClass": "StringEdit",
+            "id": "IDC_TEST_CONTROL15",
+            "anchor": "COL4",
+            "type": "Edit",
+            "captionSize": 3,
+            "controlSize": 6
+        },
+]
+}
