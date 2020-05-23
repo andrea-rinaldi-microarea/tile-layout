@@ -3,3 +3,9 @@
 - evitare tile con pochi campi perchè deve apparire/scomparire, compattare in una tile più grande 
   ed usare le sezioni (righe blu) per fare apparire i blocchi
 - occupare negli header lo spazio vuoto a destra con dei gadget (es.: statistiche, ultimi documenti)
+
+
+bodyedit predimensionati ad altezza variabile
+possibilità di aumenta/diminuisci e salvataggio come preferenze
+in edit a perdita focus testa, tile di testa si chiude 
+status tile a testa chiusa restano a destra
