@@ -4,10 +4,10 @@
   "name": "FeeTemplates",
   "items": [
     {
-      "href": "IDD_FEETEMPLATES_TOOLBAR"
+      "href": "IDD_FEETEMPLATES_VIEW"
     },
     {
-      "href": "IDD_FEETEMPLATES_VIEW"
+      "href": "IDD_FEETEMPLATES_TOOLBAR"
     }
   ]
 }
